@@ -1,0 +1,246 @@
+.main-category
+  margin-top: 0
+.cat
+  &_woman
+    margin-top: -24px
+    &__header
+      margin-top: 30px
+    &__area
+      &_1
+        +media-lg(up)
+          +col(16)
+        +media-md(down)
+          +col(24)
+    &__item-title
+      width: 94px
+      height: 99px
+      border: 4px solid rgba(0,0,0, .1)
+      font-size: 28px
+      color: #000000
+      display: flex
+      flex-direction: column
+      position: relative
+      & > div
+        width: 250px
+        margin-left: 25px
+        margin-top: auto
+        margin-bottom: auto
+    &__item-preview
+      margin-top: 30px
+      margin-bottom: 30px
+      font-size: 14px
+      color: #5c5c5c
+      max-width: 410px
+    &__item
+      margin-top: 24px
+      text-decoration: none
+      display: flex
+      +media-md(down)
+        +col(24)
+      &__text
+        display: flex
+        flex-direction: column
+        & > button
+          max-width: 146px
+          margin-top: auto
+      &__img
+        display: flex
+        flex-direction: column-reverse
+        & > div
+          margin-top: auto
+          margin-left: auto
+          margin-right: auto
+          & > img
+            display: block
+            max-width: 100%
+        +hidden-xs()
+      &_00
+        padding: 30px 0 0 0
+        background-color: #d8f3e4
+        +media-lg(up)
+          +col(24)
+          & > div
+            &:first-child
+              margin-top: 50px
+              +offset(right, 1)
+              +col(13)
+            &:last-child
+              +offset(left, 2)
+              +col(8)
+      &_01, &_02
+        padding-top: 30px
+        background-color: #f5f5f5
+        +media-lg(up)
+          +col(12)
+          & > div
+            &:first-child
+              +offset(right, 2)
+              +col(11)
+            &:last-child
+              +col(11)
+      &_02
+        background-color: #fcefd4
+        // IE bug fix
+        @media all and (-ms-high-contrast:none)
+          margin-left: 11px
+      &_03
+        background-color: #e6f0f4
+        flex-wrap: wrap
+        +media-lg(up)
+          +col(8)
+        & > div
+          &:first-child
+            +offset(right, 2)
+            +offset(left, 2)
+            +media-lg(up)
+              +col(20)
+            +media-md(down)
+              margin-top: 30px
+              +col(10)
+          &:last-child
+            flex-direction: column
+            +offset(right, 2)
+            +offset(left, 2)
+            +media-lg(up)
+              +col(20)
+              order: -1
+            +media-lg(down)
+              & > div > img
+                max-width: 70%
+                margin: 0 auto
+            +media-md(down)
+              +col(10)
+
+            & > div
+              margin: 0 auto 0
+      &_04, &_07, &_11, &_12, &_15
+        background-color: #fff794
+        +media-lg(up)
+          +col(8)
+          & > div
+            &:first-child
+              margin-top: 80px
+              +offset(right, 2)
+              +col(11)
+            &:last-child
+              +col(11)
+      &_05, &_06, &_10, &_13, &_14
+        background-color: #f5e4e7
+        +media-lg(up)
+          +col(16)
+          & > div
+            &:first-child
+              margin-top: 50px
+              +offset(right, 1)
+              +col(13)
+            &:last-child
+              +offset(left, 2)
+              +col(8)
+      &_05, &_06
+        padding-top: 30px
+      &_06
+        background-color: #daf7da
+      &_07
+        background-color: #ffe2e2
+        & > div
+          &:first-child
+            .cat_woman__item-title > div
+              max-width: 150px
+
+      &_10
+        background-color: #e2fcc8
+        & > div
+          &:last-child > div
+            margin-bottom: auto
+      &_11
+        background-color: #ffef64
+        & > div
+          &:first-child
+            margin-top: 50px
+          &:last-child
+            margin-right: 0
+            margin-left: 24px
+      &_12
+        background-color: #f5f5f5
+        & > div
+          &:first-child
+            margin-top: 50px
+          &:last-child
+            flex-direction: column
+            & > div
+             margin-top: 0
+      &_13
+        background-color: #e5f5fd
+        & > div
+          &:last-child
+            flex-direction: column
+            & > div
+              margin-top: 0
+        
+      &_14
+        background-color: #f5e4e7
+      &_15
+        background-color: #fff794
+
+      &_14, &_15
+        & > div
+          &:last-child
+              & > div
+                margin-top: auto
+                margin-bottom: auto
+      &_00, &_01, &_02, &_03, &_04, &_05, &_06, &_07,
+      &_10, &_11, &_12, &_13, &_14, &_15
+        +media-md(down)
+          padding-top: 0
+        +media-xs(down)
+          padding-top: 30px
+        & > div
+          &:first-child
+            +media-md(down)
+              margin-top: 30px
+              +offset(right,2)
+              +col(10)
+            +media-xs(down)
+              margin-top: 0
+              +col(22)
+              +offset(right,1)
+          &:last-child
+            +media-md(down)
+              +offset(right,2)
+              +col(10)
+
+  &_man
+    margin-top: -24px
+    &__item-title
+      margin-top: 30px
+      & > div
+        display: inline-block
+        font-weight: 700
+        font-size: 28px
+    &__item-preview
+      margin-top: 20px
+      font-size: 14px
+    &__item
+      text-decoration: none
+      color: #000000
+      padding-bottom: 20px
+      margin-top: 24px
+      &_00
+        +media-md(up)
+          +col(16)
+        +media-sm(down)
+          +col(24)
+      &_01, &_02, &_03, &_04
+        +media-md(up)
+          +col(8)
+        +media-sm(down)
+          +col(12)
+      & > div
+        &:first-child
+          & > img
+            max-width: 100%
+            display: block
+      &_04
+        // IE bug fix
+        @media all and (-ms-high-contrast:none)
+          margin-left: 11px

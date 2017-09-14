@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-extralight.woff2') format('woff2');
+  src: url('/fonts/oswald-extralight.ttf') format('truetype');
+  src: url('/fonts/oswald-extralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-light.woff2') format('woff2');
+  src: url('/fonts/oswald-light.ttf') format('truetype');
+  src: url('/fonts/oswald-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-regular.woff2') format('woff2');
+  src: url('/fonts/oswald-regular.ttf') format('truetype');
+  src: url('/fonts/oswald-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-medium.woff2') format('woff2');
+  src: url('/fonts/oswald-medium.ttf') format('truetype');
+  src: url('/fonts/oswald-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-semibold.woff2') format('woff2');
+  src: url('/fonts/oswald-semibold.ttf') format('truetype');
+  src: url('/fonts/oswald-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-bold.woff2') format('woff2');
+  src: url('/fonts/oswald-bold.ttf') format('truetype');
+  src: url('/fonts/oswald-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/opensans-regular.woff2') format('woff2');
+  src: url('/fonts/opensans-regular.ttf') format('truetype');
+  src: url('/fonts/opensans-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/opensans-lightitalic.woff2') format('woff2');
+  src: url('/fonts/opensans-lightitalic.ttf') format('truetype');
+  src: url('/fonts/opensans-lightitalic.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url('/fonts/ptsans.woff2') format('woff2');
+  src: url('/fonts/ptsans.ttf') format('truetype');
+  src: url('/fonts/ptsans.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url('/fonts/ptsansbold.woff2') format('woff2');
+  src: url('/fonts/ptsansbold.ttf') format('truetype');
+  src: url('/fonts/ptsansbold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+//<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+//<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">

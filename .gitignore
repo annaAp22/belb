@@ -1,0 +1,26 @@
+/node_modules
+/vendor
+/public/robots.txt
+/public/storage
+/public/hot
+/public/uploads
+/public/css
+/storage/*.key
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+*.swp
+*.swo
+
+# Dev, debug, testing
+# SypexGeo driver JSON response
+/app/Location/Drivers/test.json
+/public/assets/uploads/
+/app/Http/Controllers/TestController.php
+/resources/views/layouts/test.blade.php
+/resources/views/users/*
+/public/custom/
+/composer.phar
+/config/debugbar.php
