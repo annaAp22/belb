@@ -142,9 +142,8 @@
 .form-main-callb
   display: flex
   flex-direction: column
-  width: 450px
-  margin-right: 97px
-  margin-left: auto
+  width: 100%
+  padding-left: 30px
   margin-top: 80px
   margin-bottom: 100px
   color: #292929
@@ -153,6 +152,7 @@
     font-size: 36px
     font-weight: 700
   &_text
+    max-width: 340px
     margin-bottom: 80px
     font-family: "Open Sans" ,sans-serif
     font-size: 24px
@@ -164,16 +164,29 @@
   &--hidden
     display: none
 
+.form-main-callb_line input
+  width: 100%
+  font-size: 18px
+  color: #484848
+  padding: 13px 60px 13px 15px
+  border: 1px solid #e2f1ff
+  box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.24)
+  &:focus, &:active
+    border: 1px solid #3a68a9
+    color: #000
+  &.error
+    border: 1px solid red
+
+//
 .form-main-callb__btn
+  position: absolute
+  top: 0
+  right: 0
+  display: inline-block
+  padding: 0
   width: 60px
   height: 48px
   background-color: #0069ac
+  &:hover, &:focus
+    background-color: #2d4f7e
 
-.form-main-callb button.icon-fade
-  height: 25px
-  position: absolute
-  top: 0
-  bottom: 0
-  margin: auto
-  right: 10px
-  cursor: pointer

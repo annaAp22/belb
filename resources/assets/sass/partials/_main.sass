@@ -32,7 +32,7 @@
       left: 5%
     &.right
       right: 5%
-      //transform: translateY(-50%) rotate(180deg)
+//transform: translateY(-50%) rotate(180deg)
 
 // Carousel pagination
 .carousel-pagination
@@ -57,8 +57,6 @@
       //border-width: 7px
       border-color: #3F67AC
 
-
-
 // Colored background
 .colored-bg
   &_f3f3f3
@@ -69,8 +67,9 @@
 // Main benefits
 .main-benefits
   padding: 0 12px
+
 .main-benefits-banner
-  +col-lg(8,no)
+  +col-lg(8, no)
   //min-height: 390px
   color: #ffffff
   position: relative
@@ -78,13 +77,13 @@
   text-decoration: none
   &:nth-child(2)
     +media-sm(down)
-      +col(24,no)
+      +col(24, no)
     +media-md()
-      +col(15,no)
+      +col(15, no)
       flex-grow: 1
   &:nth-child(3)
     +media-md(down)
-      +col(24,no)
+      +col(24, no)
   &_green
     background-color: #00ad5d
   &_light-gray
@@ -98,9 +97,9 @@
     display: block
     width: 100%
     height: auto
-    //position: absolute
-    //bottom: 0
-    //right: 0
+  //position: absolute
+  //bottom: 0
+  //right: 0
   &__caption
     +media-lg(up)
       padding: 40px
@@ -128,13 +127,13 @@
 // Sale green block
 .main-benefits-banner-green
   +media-sm(down)
-    +col(24,no)
+    +col(24, no)
     order: 1
   +media-lg(up)
-    +col(8,no)
+    +col(8, no)
     padding: 40px
   +media-md()
-    +col(9,no)
+    +col(9, no)
   +media-md(down)
     padding: 30px
   background-color: #00ad5d
@@ -206,7 +205,7 @@
         +offset(right, 2)
     &:last-child
       +hidden-md(down)
-      +offset(right,2)
+      +offset(right, 2)
       display: flex
       flex-direction: column-reverse
   &__image
@@ -281,27 +280,83 @@
 
 .main-offers
   +grid()
-  +align(between,start)
+  +align(between, start)
   padding-top: 30px
 
 .main-aside
-  +col(5,no)
+  +col(5, no)
   padding-right: 47px
+
 .main-content
-  +col(19,no)
+  +col(19, no)
 // Video and Quality
 .main-catalog
-  min-height: 60px // убрать
+  min-height: 60px
+// убрать
 
 .main-callback
   display: flex
+  margin-bottom: 85px
+//background: url("/img/callb-min.jpg") no-repeat  #edf5fc
+.main-callback__image
+  +col(14, no)
+  background: url("/img/callb-min.jpg") no-repeat #edf5fc
+  background-size: cover
+
+.main-callback__form
+  +col(10, no)
+
+.main-trust
+  display: flex
+  margin-bottom: 100px
+
+.main-trust__wrap
+  display: flex
   align-items: flex-start
-  background: url("/img/callb-min.jpg") no-repeat  #edf5fc
+
+.main-trust__items
+  +col(16, no)
+  list-style: none
+  padding: 0
+  margin-bottom: 0
+  margin-top: 0
+
+.main-trust__title
+  display: inline-block
+  vertical-align: middle
+  margin-top: 42px
+  margin-bottom: 50px
+  //padding-left: 95px
+  font-size: 40px
+  font-weight: 700
+  & > *
+    vertical-align: middle
+  i
+    margin-right: 35px
+
+.main-trust__text
+  margin: 0
+  font-size: 27px
+  font-weight: 400
+
+.main-trust__img
+  +col(8, no)
+  align-self: center
+  img
+    width: 100%
+    height: auto
+
+.main-trust h3
+  margin: 0 auto
+  padding: 0
+  padding-bottom: 30px
+  font-size: 47px
+  font-weight: 700
 
 .video-and-quality
   padding: 0 12px
   +media-md(down)
-    //+align(start, start)
+  //+align(start, start)
   & > *
     max-height: 606px
   & > .youtube-video
@@ -309,14 +364,14 @@
     //+media-md(down)
       //border-bottom: 20px solid #f7c339
     +media-md()
-      +col(14,no)
+      +col(14, no)
     +media-lg(up)
-      +col(16,no)
+      +col(16, no)
   & > .main-quality
     +media-md()
-      +col(10,no)
+      +col(10, no)
     +media-lg(up)
-      +col(8,no)
+      +col(8, no)
   .youtube-video__title
     +media-lg(up)
       max-width: 300px
@@ -444,10 +499,10 @@
         +col(24)
       +media-sm()
         +offset(right, 1)
-        +col(22,no)
+        +col(22, no)
       +media-md()
-        +offset(right,2)
-        +col(20,no)
+        +offset(right, 2)
+        +col(20, no)
       +media-lg(up)
         +col(12)
     &:last-child
@@ -487,6 +542,7 @@
   &__image
     display: inline-block
     height: 100%
+
 .main-find-size-white-block
   position: relative
   +media-md(up)
@@ -537,6 +593,7 @@
 .main-recipes
   margin-top: 30px
   min-width: 100%
+
 .recipe-articles
   +media-md(down)
     +grid-in()
@@ -580,12 +637,10 @@
     +media-xs()
       +col(24)
 
-
-
 .recipe-article-preview
   position: relative
   color: #ffffff
-  text-shadow: 1px 1px rgba(0,0,0,.3)
+  text-shadow: 1px 1px rgba(0, 0, 0, .3)
   &__image
     & > img
       min-width: 100%

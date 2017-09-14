@@ -1480,7 +1480,7 @@ textarea {
 .textarea_text:active,
 .textarea_text:focus {
   padding: 9px 24px;
-  border: 2px solid #36b057;
+  border: 2px solid #3a68a9;
 }
 
 .input.error,
@@ -3165,8 +3165,10 @@ button {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 450px;
-  margin: 80px 97px 100px auto;
+  width: 100%;
+  padding-left: 30px;
+  margin-top: 80px;
+  margin-bottom: 100px;
   color: #292929;
 }
 
@@ -3177,6 +3179,7 @@ button {
 }
 
 .form-main-callb_text {
+  max-width: 340px;
   margin-bottom: 80px;
   font-family: Open Sans,sans-serif;
   font-size: 24px;
@@ -3191,18 +3194,40 @@ button {
   display: none;
 }
 
+.form-main-callb_line input {
+  width: 100%;
+  font-size: 18px;
+  color: #484848;
+  padding: 13px 60px 13px 15px;
+  border: 1px solid #e2f1ff;
+  -webkit-box-shadow: 0 5px 26px 1px rgba(0,0,0,.24);
+  box-shadow: 0 5px 26px 1px rgba(0,0,0,.24);
+}
+
+.form-main-callb_line input:active,
+.form-main-callb_line input:focus {
+  border: 1px solid #3a68a9;
+  color: #000;
+}
+
+.form-main-callb_line input.error {
+  border: 1px solid red;
+}
+
 .form-main-callb__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 0;
+  width: 60px;
+  height: 48px;
   background-color: #0069ac;
 }
 
-.form-main-callb button.icon-fade {
-  height: 18px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 10px;
-  cursor: pointer;
+.form-main-callb__btn:focus,
+.form-main-callb__btn:hover {
+  background-color: #2d4f7e;
 }
 
 /*! nouislider - 9.2.0 - 2017-01-11 10:35:35 */
@@ -8647,11 +8672,128 @@ footer .line {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 85px;
+}
+
+.main-callback__image {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 58.33333%;
+  -webkit-flex-basis: 58.33333%;
+  -ms-flex-preferred-size: 58.33333%;
+  flex-basis: 58.33333%;
+  background: url(/img/callb-min.jpg) no-repeat #edf5fc;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.main-callback__form,
+.main-callback__image {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main-callback__form {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 41.66667%;
+  -webkit-flex-basis: 41.66667%;
+  -ms-flex-preferred-size: 41.66667%;
+  flex-basis: 41.66667%;
+}
+
+.main-trust {
+  margin-bottom: 100px;
+}
+
+.main-trust,
+.main-trust__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-trust__wrap {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  background: url(/img/callb-min.jpg) no-repeat #edf5fc;
+}
+
+.main-trust__items {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: 0;
+  max-width: 66.66667%;
+  -webkit-flex-basis: 66.66667%;
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  list-style: none;
+  padding: 0;
+}
+
+.main-trust__title {
+  display: inline-block;
+  margin-top: 42px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.main-trust__title,
+.main-trust__title>* {
+  vertical-align: middle;
+}
+
+.main-trust__title i {
+  margin-right: 35px;
+}
+
+.main-trust__text {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.main-trust__img {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 33.33333%;
+  -webkit-flex-basis: 33.33333%;
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.main-trust__img img {
+  width: 100%;
+  height: auto;
+}
+
+.main-trust h3 {
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 30px;
+  font-size: 47px;
+  font-weight: 700;
 }
 
 .video-and-quality {

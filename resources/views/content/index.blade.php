@@ -160,8 +160,10 @@
     </div>
     <div class="colored-bg colored-bg_edf5fc ">
       <div class="container main-callback">
-        <img class="main-callback__image" src="/img/callb-min.jpg" alt=""/>
-        <div class="main-callback__form" >
+        <div class="main-callback__image">
+          {{--<img  src="/img/callb-min.jpg" alt=""/>--}}
+        </div>
+        <div class="main-callback__form">
           <form class="form-main-callb js-form-ajax " id="main-callback" action="{{ route('ajax.callback') }}"
                 method="POST">
             {{ csrf_field() }}
@@ -174,14 +176,13 @@
               <input class="js-required-fields input input_text" type="text" name="name" placeholder="Имя" value="x">
             </div>
             <div class="form-main-callb_line">
-              <input class="phone-input js-required-fields js-phone input input_text" type="text" name="phone"
+              <input class="js-required-fields js-phone input " type="text" name="phone"
                      placeholder="Введите ваш номер...+7 (xxx) xxx xx xx ">
               {{--<script type="text/javascript">--}}
               {{--$('.js-phone').mask("+7 000 000 00 00", {placeholder: "+7 ___ ___ __ __"});--}}
               {{--</script>--}}
-              <button class="form-main-callb__btn icon-fade " type="submit">
+              <button class="form-main-callb__btn " type="submit">
                 <i class="sprite sprite-phone-icon-white-min normal"></i>
-                <i class="sprite sprite-phone-icon-white-min active"></i>
               </button>
             </div>
             <div class="form-main-callb_line form-main-callb_line--hidden">
@@ -195,41 +196,62 @@
         </div>
       </div>
     </div>
-
-    <!-- Main find size-->
-    <div class="colored-bg colored-bg_f3f3f3 colored-bg_mt">
-      <div class="container">
-        <!-- Main benefits-->
-        <div class="main-find-size container-in">
-          <div class="main-find-size__col">
-            <div class="main-find-size__title"><i class="sprite_main sprite_main-main-size-ruller"></i>
-              <div><span>Подбор размера по вашим сантиметрам</span><span>Поможем подобрать Вам одежду. Посоветуем лучший вариант. Размер будет точно Вам впору!</span>
-              </div>
-            </div>
-            <div class="main-find-size-white-block">
-              <div class="main-find-size-white-block__image-wrapper">
-                <img class="" src="/img/main-size-girl-opened-mouth-min.jpg" alt=""
-                     role="presentation"/>
-              </div>
-
-              <div class="main-find-size-white-block__caption">
-                <div class="main-find-size-white-block__title">Всё равно не подошла одежда?
-                </div>
-                <div class="main-find-size-white-block__text">Не растраивайтесь! Смело возвращайте товар
-                  назад. Примем без проблем
-                </div>
-                <a class="btn btn_green-border-900 js-action-link" href="#"
-                   data-url="{{route('ajax.modal')}}" data-modal="callback">Подобрать одежду</a>
-              </div>
-            </div>
-          </div>
-          <div class="main-find-size__col"><img class="main-find-size__image"
-                                                src="/img/main-size-girl-without-head-min.jpg" alt=""
-                                                role="presentation"/>
-          </div>
+    <section class="main-trust container">
+      <h3>Почему нам можно доверять?</h3>
+      <div class="main-trust__wrap">
+        <ul class="main-trust__items">
+          <li class="main-trust__item">
+            <h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Качество</span></h4>
+            <p class="main-trust__text">Немецкое товары проверенные временем .</p>
+          </li>
+          <li class="main-trust__item">
+            <h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Гарантия</span></h4>
+            <p class="main-trust__text">Гарантия на нашу продукцию от одного года.</p>
+          </li>
+          <li class="main-trust__item">
+            <h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Материалы</span></h4>
+            <p class="main-trust__text">Наша продукция выполняется из надежных качественных немецких материалов.</p>
+          </li>
+        </ul>
+        <div class="main-trust__img">
+          <img src="/img/germany-min.jpg" alt="Германия"/>
         </div>
       </div>
-    </div>
+    </section>
+    {{--<!-- Main find size-->--}}
+    {{--<div class="colored-bg colored-bg_f3f3f3 colored-bg_mt">--}}
+    {{--<div class="container">--}}
+    {{--<!-- Main benefits-->--}}
+    {{--<div class="main-find-size container-in">--}}
+    {{--<div class="main-find-size__col">--}}
+    {{--<div class="main-find-size__title"><i class="sprite_main sprite_main-main-size-ruller"></i>--}}
+    {{--<div><span>Подбор размера по вашим сантиметрам</span><span>Поможем подобрать Вам одежду. Посоветуем лучший вариант. Размер будет точно Вам впору!</span>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="main-find-size-white-block">--}}
+    {{--<div class="main-find-size-white-block__image-wrapper">--}}
+    {{--<img class="" src="/img/main-size-girl-opened-mouth-min.jpg" alt=""--}}
+    {{--role="presentation"/>--}}
+    {{--</div>--}}
+
+    {{--<div class="main-find-size-white-block__caption">--}}
+    {{--<div class="main-find-size-white-block__title">Всё равно не подошла одежда?--}}
+    {{--</div>--}}
+    {{--<div class="main-find-size-white-block__text">Не растраивайтесь! Смело возвращайте товар--}}
+    {{--назад. Примем без проблем--}}
+    {{--</div>--}}
+    {{--<a class="btn btn_green-border-900 js-action-link" href="#"--}}
+    {{--data-url="{{route('ajax.modal')}}" data-modal="callback">Подобрать одежду</a>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="main-find-size__col"><img class="main-find-size__image"--}}
+    {{--src="/img/main-size-girl-without-head-min.jpg" alt=""--}}
+    {{--role="presentation"/>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
 
     @widget('news')
 
