@@ -9217,12 +9217,13 @@ footer .line {
   position: absolute;
   top: 35px;
   left: 6.6%;
-  width: 209px;
+  width: 248px;
 }
 
 .advice-article-preview__title {
   font-size: 24px;
   font-weight: 400;
+  color: #454545;
   margin-bottom: 26px;
 }
 
@@ -9231,6 +9232,7 @@ footer .line {
   font-family: Open Sans,sans-serif;
   font-size: 12px;
   font-weight: 400;
+  color: #454545;
   margin-bottom: 26px;
 }
 
