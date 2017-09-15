@@ -253,8 +253,8 @@
     {{--</div>--}}
     {{--</div>--}}
 
-    @widget('news')
+    {{--@widget('news')--}}
 
-    @widget('recipesWidget')
+    @widget('adviceWidget')
   </main>
 @endsection

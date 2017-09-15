@@ -9121,6 +9121,128 @@ footer .line {
   font-size: 16px;
 }
 
+.main-advice {
+  margin-bottom: 125px;
+}
+
+.main-advice__title {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #5a6daa;
+}
+
+.main-advice__title>span {
+  color: #2c2c2c;
+}
+
+.main-advice__listing-link {
+  display: block;
+  margin: 0 auto;
+  padding: 22px 75px;
+  background-color: #3a69a8;
+  color: #fff;
+  font-family: Open Sans,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.main-advice__listing-link:active,
+.main-advice__listing-link:focus,
+.main-advice__listing-link:hover {
+  background-color: #2a4a74;
+  opacity: .7;
+}
+
+.main-advice__articles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.advice-articles__article {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 50%;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.advice-article-preview {
+  position: relative;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0,0,0,.3);
+}
+
+.advice-article-preview__link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.advice-article-preview__link:active,
+.advice-article-preview__link:focus,
+.advice-article-preview__link:hover {
+  opacity: .7;
+}
+
+.advice-article-preview__image {
+  width: 100%;
+  height: 320px;
+  display: block;
+}
+
+.advice-article-preview__caption {
+  position: absolute;
+  top: 35px;
+  left: 6.6%;
+  width: 209px;
+}
+
+.advice-article-preview__title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+
+.advice-article-preview__preview-text {
+  margin-top: 20px;
+  font-family: Open Sans,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+
+.advice-article-preview__lnk {
+  margin-top: 20px;
+  font-family: Open Sans,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #5a6daa;
+}
+
 .product-cart {
   min-width: 100%;
 }
