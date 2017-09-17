@@ -1,40 +1,53 @@
 footer
-  background-color: #292929
-  padding: 60px 0 50px
+  //background-color: #292929
+  //padding: 60px 0 50px
   position: relative
-  +media-md(down)
-    padding-top: 40px
-  .line
-    +hidden-sm(down)
-    border-top: 1px solid #474747
-    position: absolute
-    bottom: 164px
-    width: 100%
-    left: 0
-.footer
-  width: 100%
-  &__address
-    a
-      font-size: inherit
-      color: inherit
-      text-decoration: none
-  &__info
-    padding-top: 50px
-    font-size: 14px
-    color: #afafaf
-    text-align: center
+  //+media-md(down)
+  //  padding-top: 40px
+  //.line
+  //  +hidden-sm(down)
+  //  border-top: 1px solid #474747
+  //  position: absolute
+  //  bottom: 164px
+  //  width: 100%
+  //  left: 0
+// Colored background
+.colored-bg
+  &__3a69a8
+    background-color: #3a69a8
+  &__2a4a74
+    background-color: #2a4a74
+
+//.footer
+//  width: 100%
+  //&__address
+  //  a
+  //    font-size: inherit
+  //    color: inherit
+  //    text-decoration: none
+.footer__info
+  flex-direction: column
+  align-items: center
+  padding-bottom: 27px
+  padding-top: 27px
+  font-size: 12px
+  color: #8e99bd
+  text-align: center
+
 .navigation-footer
   +grid-in()
   +align(between)
+  margin-top: 75px
   margin-bottom: 40px
   ul
     padding: 0
+    list-style: none
     a
       color: #ffffff
       display: block
       text-decoration: none
-      font-size: 14px
-      line-height: 16px
+      font-size: 16px
+      //line-height: 16px
       padding: 7px 0
       transition: color .3s ease
       &:hover, &:focus
@@ -43,19 +56,24 @@ footer
     +media-md(down)
       +col(24)
     +media-lg(up)
-      +col(4)
-    &:last-child
+      +col(5)
+    &--message
+      +media-lg(up)
+        +col(7)
+      +media-md(down)
+        border-bottom: 1px solid #fff
+    &--contacts
       +media-sm(down)
         text-align: center
-      +media-md()
+      +media-md(up)
         display: flex
         +align(between)
-      +media-lg()
-        +col(5)
+      +media-lg(up)
+        flex-direction: column
 
     +media-md(down)
       &_dropdown
-        border-bottom: 1px solid #474747
+        border-bottom: 1px solid #fff
         & > ul
           overflow: hidden
           max-height: 0
@@ -69,16 +87,16 @@ footer
           +align(between, center)
           cursor: pointer
   &__title
-    font-size: 18px
-    font-weight: 900
+    font-size: 24px
+    font-weight: 400
     color: #ffffff
-    text-transform: uppercase
+    //text-transform: uppercase
     +media-md(down)
       margin: 0
       padding: 20px 0
     +media-lg(up)
       margin-top: 0
-      margin-bottom: 30px
+      margin-bottom: 50px
     &_mt
       margin-top: 50px
     i
@@ -114,6 +132,13 @@ footer
   &__social
     a:not(:first-child)
       margin-left: 35px
+
+.navigation-footer__message
+  margin: 0
+  font-size: 14px
+  line-height: 24px
+  font-weight: 400
+  color: #ffffff
 
 // Footer map
 .map
