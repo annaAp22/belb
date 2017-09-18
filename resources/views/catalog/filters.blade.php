@@ -35,16 +35,18 @@
     </div>
   </div>
     @endif
-
     @if(isset($filters) && $filtersCount = $filters->count())
         @if($sizes = $filters->where('name', 'Размеры')->first())
             <!-- Size filter-->
             <div class="sidebar-filter__subtitle">{{ $sizes->name }}:</div>
-            <div class="size-filter sidebar-filter__item square-filter js-square-check-filter">
+              <div class="size-filter sidebar-filter__item square-filter js-square-check-filter">
                 @foreach($sizes->values as $size)
-                    <div class="size-filter__size js-square @if(isset($attributes[$sizes->id])and(in_array('"'.$size.'"', $attributes[$sizes->id]))) active @endif"><span>{{ $size }}</span>
-                        <input type="hidden" name="attribute[{{ $sizes->id }}][]" value='"{{ $size }}"' @if(!isset($attributes[$sizes->id])or(!in_array('"'.$size.'"', $attributes[$sizes->id]))) disabled="disabled" @endif/>
-                    </div>
+                  <div
+                      class="size-filter__size js-square @if(isset($attributes[$sizes->id])and(in_array('"'.$size.'"', $attributes[$sizes->id]))) active @endif">
+                    <span>{{ $size }}</span>
+                    <input type="hidden" name="attribute[{{ $sizes->id }}][]" value='"{{ $size }}"'
+                           @if(!isset($attributes[$sizes->id])or(!in_array('"'.$size.'"', $attributes[$sizes->id]))) disabled="disabled" @endif/>
+                  </div>
                 @endforeach
             </div>
         @endif

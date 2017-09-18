@@ -33,15 +33,15 @@
                 @endphp
 
                 @if(isset($filters['productsCount']) and $filters['productsCount'] > 0)
-                    @include('catalog.filters', $filters)
+                   @include('catalog.filters', $filters)
                 @endif
 
                 {{-- Catalog navigation --}}
-                @if(isset($category) && isset($parent_zero_id))
-                    @widget('ListingCatalog', ['current' => $category, 'parent_id' => $parent_zero_id])
-                @else
-                    @widget('ListingCatalog')
-                @endif
+                {{--@if(isset($category) && isset($parent_zero_id))--}}
+                    {{--@widget('ListingCatalog', ['current' => $category, 'parent_id' => $parent_zero_id])--}}
+                {{--@else--}}
+                    {{--@widget('ListingCatalog')--}}
+                {{--@endif--}}
                 @if(isset($category))
                     @widget('TagsWidget', ['category_id' => $category->id, 'category' => $category])
                 @elseif(isset($tag))
@@ -65,7 +65,7 @@
                         @endif
                         <div class="goods-count">
                             <span>Товаров в категории</span>
-                            <i class="sprite_main sprite_main-icon__goods_count">{{ $products->totalCount }}</i>
+                            <i class="sprite sprite-outline-min">{{ $products->totalCount }}</i>
                         </div>
                     </div>
 
@@ -100,13 +100,13 @@
                         </div>
                     </div>
 
-                    <!-- Change goods view-->
-                    <div class="goods-view"><span>Отображать товары:</span>
-                        <div class="icon-fade active js-toggle-active-target" data-target=".js-view" data-switch="s1"><i class="sprite_main sprite_main-listing__switch_tile normal"></i><i class="sprite_main sprite_main-listing__switch_tile_active active"></i>
-                        </div>
-                        <div class="icon-fade js-toggle-active-target" data-target=".js-view" data-switch="s1"><i class="sprite_main sprite_main-listing__switch_tile-wide normal"></i><i class="sprite_main sprite_main-listing__switch_tile-wide_active active"></i>
-                        </div>
-                    </div>
+                    {{--<!-- Change goods view-->--}}
+                    {{--<div class="goods-view"><span>Отображать товары:</span>--}}
+                        {{--<div class="icon-fade active js-toggle-active-target" data-target=".js-view" data-switch="s1"><i class="sprite_main sprite_main-listing__switch_tile normal"></i><i class="sprite_main sprite_main-listing__switch_tile_active active"></i>--}}
+                        {{--</div>--}}
+                        {{--<div class="icon-fade js-toggle-active-target" data-target=".js-view" data-switch="s1"><i class="sprite_main sprite_main-listing__switch_tile-wide normal"></i><i class="sprite_main sprite_main-listing__switch_tile-wide_active active"></i>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
                     <!-- Look md down-->
                     <a class="btn btn_look" href="#">Подобрать<strong> Look</strong></a>

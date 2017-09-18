@@ -4,7 +4,7 @@
             @foreach ($breadcrumbs as $breadcrumb)
                 @if($breadcrumb->first)
                     <a class="breadcrumbs__item breadcrumbs__item_first" href="{{ $breadcrumb->url }}">
-                        <i class="sprite_main sprite_main-breadcrumbs__home"></i>
+                        <i class="sprite sprite-home-icon-min"></i>
                         <span>{{ $breadcrumb->title }}</span>
                     </a>
                 @elseif (!$breadcrumb->last)

@@ -132,7 +132,7 @@ header
     +offset-md(left,10, only)
     color: #000 !important
     text-decoration: none
-    padding: 10px 0
+    padding: 25px 0
     text-align: center
     +media-xl(up)
       padding: 25px 0
@@ -166,10 +166,11 @@ header
     +col-lg(9)
     +col-xl(6)
   &__phones
-    //+col-xl(8)
-    //+col-md(12)
-    //+col-sm(16)
-    +col(4)
+    +col-xl(4)
+    +col-lg(4)
+    +col-md(6)
+    +col-sm(8)
+
     //& > div
     //  margin: 5px 0 10px
     +media-sm(down)
@@ -177,7 +178,7 @@ header
     +media-xs()
       +align(around)
       border-bottom: 1px solid #e3e3e3
-    order: 0
+    //order: 0
     +media-xl(up)
       order: 0
     display: flex
@@ -441,7 +442,7 @@ header
     background-color: #ffffff
     box-shadow: 0px 10px 24px 0px rgba(0, 0, 2, 0.09)
     position: absolute
-    padding: 0 40px
+    padding: 0 30px
     list-style: none
     max-height: 0
     overflow: hidden
@@ -464,12 +465,12 @@ header
 
 
 .breadcrumbs
-  background-color: #f3f3f3
+  background-color: #f4f4f4
   .container
     +align(start, center)
   &__item
     text-decoration: none
-    color: #272727
+    color: #353535
     +media-sm(down)
       padding: 5px 10px
     +media-md(up)
@@ -491,7 +492,7 @@ header
           top: 12px
     &_current
       +hidden-sm(down)
-      color: #b0b0b0
+      color: #4c68a5
     &_first
       padding-left: 0
       & > i
