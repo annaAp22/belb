@@ -36,12 +36,12 @@
                    @include('catalog.filters', $filters)
                 @endif
 
-                {{-- Catalog navigation --}}
-                {{--@if(isset($category) && isset($parent_zero_id))--}}
-                    {{--@widget('ListingCatalog', ['current' => $category, 'parent_id' => $parent_zero_id])--}}
-                {{--@else--}}
-                    {{--@widget('ListingCatalog')--}}
-                {{--@endif--}}
+                 {{--Catalog navigation --}}
+                @if(isset($category) && isset($parent_zero_id))
+                    @widget('ListingCatalog', ['current' => $category,'type' => 'belb', 'parent_id' => $parent_zero_id])
+                @else
+                    @widget('ListingCatalog', ['type' => 'belb'])
+                @endif
                 @if(isset($category))
                     @widget('TagsWidget', ['category_id' => $category->id, 'category' => $category])
                 @elseif(isset($tag))
@@ -80,7 +80,7 @@
                             <!-- Show filters button md down-->
                     <button class="btn btn_filter js-toggle-sidebar" data-target=".js-filter-visible">Фильтры подбора товаров</button>
                     <!-- Sorting and view-->
-                    <div class="goods-sorting"><i class="sprite_main sprite_main-listing__filter"></i><span>Сортировать товары:</span>
+                    <div class="goods-sorting"><i class="sprite sprite-listing__filter"></i><span>Сортировать товары:</span>
                         @php
                         $sortNames = array(
                         'sort' => 'По умолчанию',
@@ -91,7 +91,7 @@
                         'new' => 'По новинкам',
                         )
                         @endphp
-                        <div class="sorting-select js-toggle-active js-select"><span class="js-selected">{{$sortNames[$filters['sort']]}}</span><i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                        <div class="sorting-select js-toggle-active js-select"><span class="js-selected">{{$sortNames[$filters['sort']]}}</span><i class="sprite sprite-arrow-down-blue2-min"></i>
                             <div class="sorting-select__dropdown">
                                 @foreach($sortNames as $key => $value)
                                     <div class="sorting-select__option js-option js-sort" data-sort="{{$key}}">{{$value}}</div>

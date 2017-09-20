@@ -13,7 +13,7 @@ class AdviceWidget extends AbstractWidget
      * @var array
      */
     protected $config = [];
-    public $cacheTime = 0;  //60;
+    public $cacheTime = 60;
     /**
      * Treat this method as a controller action.
      * Return view() or other content to display.

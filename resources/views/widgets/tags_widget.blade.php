@@ -16,7 +16,7 @@
             <div class="switch-more-tags js-show-more">
                 <span>Показать больше</span>
                 <span>Показать меньше</span>
-                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                <i class="sprite sprite-arrow-down-blue2-min"></i>
             </div>
         @endif
     </div>

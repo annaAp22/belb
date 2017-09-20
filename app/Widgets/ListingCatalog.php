@@ -14,6 +14,7 @@ class ListingCatalog extends AbstractWidget
      */
     protected $config = [
         'current' => null,
+        'type' => '',
         'parent_id' => 2
     ];
 
