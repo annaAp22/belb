@@ -55,10 +55,10 @@ class Product extends Model
             'thumb'      => '96x144',
             'cart'       => '81x122',
             'modal'      => '120x180',
-            'listing'    => '360x540',
-            'kit'        => '330x495',
-            'detail'     => '408x613',
-            'big'        => '1240x1860'
+            'listing'    => '278x243',
+            'kit'        => '278x243',
+            'detail'     => '387x330',
+            'big'        => '387x330'
         ],
     ];
     private $_availableSizes = null;

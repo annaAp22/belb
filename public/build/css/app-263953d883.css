@@ -1145,178 +1145,184 @@ template {
   background-position: -175px -102px;
 }
 
-.sprite-favorite-heart-min {
+.sprite-favorite-heart-active {
   width: 27px;
   height: 25px;
   background-position: -239px -102px;
 }
 
+.sprite-favorite-heart-min {
+  width: 27px;
+  height: 25px;
+  background-position: -286px -102px;
+}
+
 .sprite-favorite-icon-min {
   width: 17px;
   height: 14px;
-  background-position: -286px -102px;
+  background-position: -239px -147px;
 }
 
 .sprite-home-icon-min {
   width: 18px;
   height: 16px;
-  background-position: -286px -136px;
+  background-position: -276px -147px;
 }
 
 .sprite-icon-eye-min {
   width: 22px;
   height: 11px;
-  background-position: -89px -172px;
+  background-position: -10px -183px;
 }
 
 .sprite-information-symbol-min {
   width: 9px;
   height: 31px;
-  background-position: -131px -172px;
+  background-position: -52px -183px;
 }
 
 .sprite-instagram-icon-min {
   width: 36px;
   height: 35px;
-  background-position: -160px -172px;
+  background-position: -81px -183px;
 }
 
 .sprite-laundry-min {
   width: 28px;
   height: 30px;
-  background-position: -216px -172px;
+  background-position: -137px -183px;
 }
 
 .sprite-listing__filter {
   width: 19px;
   height: 18px;
-  background-position: -264px -172px;
+  background-position: -185px -183px;
 }
 
 .sprite-locate-places-min {
   width: 18px;
   height: 26px;
-  background-position: -10px -210px;
+  background-position: -224px -183px;
 }
 
 .sprite-money-tool-min {
   width: 27px;
   height: 31px;
-  background-position: -48px -210px;
+  background-position: -262px -183px;
 }
 
 .sprite-outline-min {
   width: 51px;
   height: 22px;
-  background-position: -264px -210px;
+  background-position: -10px -234px;
 }
 
 .sprite-phone-icon-min {
   width: 13px;
   height: 13px;
-  background-position: -95px -210px;
+  background-position: -137px -234px;
 }
 
 .sprite-phone-icon-white-min {
   width: 25px;
   height: 25px;
-  background-position: -95px -252px;
+  background-position: -170px -234px;
 }
 
 .sprite-play-button-min {
   width: 66px;
   height: 66px;
-  background-position: -335px -10px;
+  background-position: -215px -234px;
 }
 
 .sprite-search-icon-min {
   width: 17px;
   height: 17px;
-  background-position: -335px -96px;
+  background-position: -301px -234px;
 }
 
 .sprite-star-blue-min {
   width: 16px;
   height: 16px;
-  background-position: -372px -96px;
+  background-position: -81px -271px;
 }
 
 .sprite-star-min {
   width: 26px;
   height: 26px;
-  background-position: -372px -132px;
+  background-position: -335px -10px;
 }
 
 .sprite-star-white-min {
   width: 16px;
   height: 16px;
-  background-position: -335px -178px;
+  background-position: -335px -56px;
 }
 
 .sprite-thermometer-min {
   width: 20px;
   height: 34px;
-  background-position: -371px -178px;
+  background-position: -335px -92px;
 }
 
 .sprite-thumbs-up-hand-symbol-min {
   width: 29px;
   height: 29px;
-  background-position: -140px -232px;
+  background-position: -333px -146px;
 }
 
 .sprite-tick-icon-blue-min {
   width: 21px;
   height: 19px;
-  background-position: -189px -232px;
+  background-position: -309px -195px;
 }
 
 .sprite-trigon-l-min {
   width: 10px;
   height: 13px;
-  background-position: -145px -132px;
+  background-position: -145px -146px;
 }
 
 .sprite-trigon-r-blue-min {
   width: 10px;
   height: 12px;
-  background-position: -10px -178px;
+  background-position: -350px -195px;
 }
 
 .sprite-trigon-r-min {
   width: 10px;
   height: 13px;
-  background-position: -230px -232px;
+  background-position: -350px -227px;
 }
 
 .sprite-trigon-white-min {
   width: 52px;
   height: 61px;
-  background-position: -335px -232px;
+  background-position: -301px -271px;
 }
 
 .sprite-twitter-icon-min {
   width: 34px;
   height: 34px;
-  background-position: -10px -313px;
+  background-position: -381px -10px;
 }
 
 .sprite-video-player-min {
   width: 29px;
   height: 23px;
-  background-position: -64px -313px;
+  background-position: -375px -64px;
 }
 
 .sprite-vk-icon-min {
   width: 33px;
   height: 33px;
-  background-position: -113px -313px;
+  background-position: -382px -107px;
 }
 
 .sprite-youtube-logo-min {
   width: 75px;
   height: 61px;
-  background-position: -166px -313px;
+  background-position: -10px -352px;
 }
 
 #loader.hidden {
@@ -1386,6 +1392,7 @@ template {
   margin-left: 10px;
 }
 
+.sprite-burg-min,
 .sprite-cross-red-min,
 .sprite-locate-places-min,
 .sprite-phone-icon-min,
@@ -6793,29 +6800,16 @@ header:after {
 }
 
 .wishlist {
-  width: 47px;
-  height: 47px;
-  -webkit-box-shadow: 0 0 9px 0 rgba(0,0,2,.09);
-  box-shadow: 0 0 9px 0 rgba(0,0,2,.09);
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  width: 27px;
+  height: 25px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 16px;
+  right: 40px;
   cursor: pointer;
   background-color: #fff;
   -webkit-transition: background-color .3s ease;
   -o-transition: background-color .3s ease;
   transition: background-color .3s ease;
-}
-
-.wishlist .icon-fade {
-  padding: 15px 10px 7px 11px;
-}
-
-.wishlist .icon-fade i:last-child {
-  top: 15px;
-  left: 11px;
 }
 
 .wishlist:focus,

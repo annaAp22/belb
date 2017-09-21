@@ -15,10 +15,10 @@
     <div class="product__wishlist wishlist js-hover-notice js-toggle-active js-action-link{{ in_array($product->id, $defer) ? ' active' : '' }}"
          data-url="{{ route('ajax.product.defer', ['id' => $product->id]) }}">
         <div class="icon-fade">
-            <i class="sprite_main sprite_main-product__wishlist normal"></i>
-            <i class="sprite_main sprite_main-product__wishlist_active active"></i>
+            <i class="sprite sprite-favorite-heart-min normal"></i>
+            <i class="sprite sprite-favorite-heart-active active"></i>
         </div>
-        <i class="sprite_main sprite_main-product__wishlist_done done"></i>
+        <i class="sprite sprite-tick-icon-blue-min done"></i>
 
         <!-- Popup-->
         <div class="popup-notice popup-notice_wishlist">
