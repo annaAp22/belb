@@ -111,23 +111,25 @@ button
       cursor: auto
       background-color: #a8a8a8
   &_more
-    font-size: 16px
-    border: 1px solid #ebebeb
+    font-size: 24px
+    font-weight: 700
+    color: #4c68a5
+    border: 1px solid #4c68a5
     padding: 15px 20px
     transition: background-color .3s ease
     & > *
       display: inline-block
       vertical-align: middle
-    .text
-      color: #6d6d6d
-      transition: color .3s ease
+    //.text
+    //  color: #6d6d6d
+    //  transition: color .3s ease
     .count
-      color: #00ad5d
+      //color: #00ad5d
       margin: 0 20px 0 10px
     &:hover
       background-color: #f4f4f4
-      .text
-        color: #00ad5d
+      //.text
+      //  color: #00ad5d
   &_show-all
     color: #6d6d6d
     transition: color .3s ease
@@ -296,5 +298,20 @@ button
     &:hover, &:active, &.active
       background-color: #fcd82f
 
+.btn_buy
+    color: #ffffff
+    background-color: #4c68a5
+    font-size: 16px
+    font-weight: 700
+    //padding: 15px
+    position: relative
+    &:hover:not(.disabled)
+      &:not(:disabled)
+        background-color: #2d4f7e
+    & > span + i, & > i + span
+      margin-left: 10px
+    &:disabled, &.disabled
+      cursor: auto
+      background-color: #a8a8a8
 .btn-callback
   max-width: 200px

@@ -384,8 +384,8 @@
         &:hover, &:focus
           .product__hidden
             box-shadow: none
-          .product__description
-            border-left: none
+          //.product__description
+          //  border-left: none
   & > .product
     +col(12)
     +col-md(8)
@@ -397,92 +397,101 @@
   margin-bottom: 24px
   background-color: #fff
   position: relative
+  border: 1px solid #ebebeb
   transition: box-shadow .3s ease
   +media-md(down)
     display: flex
     flex-direction: column
   &__image
     position: relative
-    border: 1px solid #ebebeb
-    //+media-xs()
-    //  height: 201px
-    //+media-sm(up)
-    //  height: 342px
     display: block
     & > img
       display: block
       max-width: 100%
-      //+image-center()
+    //+media-xs()
+    //  height: 201px
+    //+media-sm(up)
+    //  height: 342px
+          //+image-center()
   &__name
-    font-size: 14px
-    line-height: 16px
-    color: #272727
+    font-size: 16px
+    //line-height: 16px
+    color: #000000
     span
       color: #a9a9a9
     +media-sm(up)
       padding: 0 10%
     +media-lg(up)
-      height: 32px
+      min-height: 32px
     +media-sm(down)
       height: auto
     margin-bottom: 16px
     display: block
     text-decoration: none
   &__price
+    text-align: left
     position: relative
+    padding-left: 22px
     +media-md(down)
+      padding-left: 7%
       margin-top: auto
     +media-md()
       margin-bottom: 40px
+    +media-sm(down)
+      margin-bottom: 30px
     +media-lg(up)
-      padding-bottom: 20px
+      padding-bottom: 30px
+    //+media-sm(up)
+    //  padding-left: 7%
     z-index: 1
     background-color: #ffffff
     .current
       color: #000000
-      font-size: 20px
+      font-size: 18px
       font-weight: 700
     .old-price
-      +media-sm(down)
-        position: static
-        display: block
-      padding-right: 24px
+      //+media-sm(down)
+      //  position: static
+      //  display: block
       font-size: 13px
       position: absolute
       font-style: normal
       line-height: 27px
-      margin-right: 10px
-      top: 24px
-      text-align: center
-      +media-lg(up)
-        top: -11px
-        left: 50%
-        margin-left: -133px
+      text-align: left
+      //top: 24px
+      //padding-right: 24px
+      margin-left: 10px
+      top: -5px
+      //+media-lg(up)
+      //  top: -11px
+      //  left: 50%
+      //  margin-left: -133px
       span
         position: relative
         &:after
           content: ""
           display: block
           position: absolute
-          top: 8px
+          top: 5px
           left: -2px
           width: 100%
           height: 1px
           background-color: #f24841
         
   &__description
-    position: relative
-    padding-top: 25px
+    //position: relative
+    padding-top: 15px
+    padding-bottom: 0
 
     +media-md(down)
       height: auto
-      padding-bottom: 0
+      //padding-bottom: 0
       flex-grow: 1
       display: flex
       flex-direction: column
 
-    +media-lg(up)
-      padding-bottom: 46px
+    //+media-lg(up)
+    //  padding-bottom: 30px
 
   &__hidden
     +hidden-md(down)
@@ -503,13 +512,20 @@
   &__size-hidden
     margin-bottom: 20px
   &__buy
+    position: absolute
+    z-index: 2
+    left: 50%
+    bottom: -20px
     font-weight: 700
-    width: 70%
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    transform: translateX(-25px)
     & > *
       & > *
         vertical-align: middle
-      & > i
-        margin-right: 10px
+      //& > i
+      //  margin-right: 10px
     .done
       display: none
     &.active
@@ -525,10 +541,10 @@
       box-shadow: 0px 0px 24px 0px rgba(0, 0, 2, 0.09)
     +media-sm(down)
       z-index: 3
-    .product__description
-      +media-md(up)
-        border-left: 1px solid #EBEBEB
-        border-right: 1px solid #EBEBEB
+    //.product__description
+    //  +media-md(up)
+    //    border-left: 1px solid #EBEBEB
+    //    border-right: 1px solid #EBEBEB
     .product__hidden
       opacity: 1
       height: auto
@@ -539,29 +555,32 @@
 // Ribbons
 .ribbons
   position: absolute
-  top: 40px
-  left: 10px
-  +media-xs()
-    top: 15px
-    left: -5px
+  top: 0
+  left: 0
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  //+media-xs()
+  //  top: 15px
+  //  left: -5px
   &__ribbon
     display: block
-    width: 51px
-    height: 51px
-    border-radius: 50%
-    line-height: 53px
+    width: 100px
+    //height: 51px
+    //border-radius: 50%
+    //line-height: 53px
     font-size: 14px
-    font-weight: 900
+    font-weight: 700
     text-transform: uppercase
     color: #ffffff
     text-align: center
-    margin-bottom: 10px
+    margin-bottom: 5px
     +media-xs()
       transform: scale(0.7)
     &_hit
       background-color: #ff7b41
     &_new
-      background-color: #36b057
+      background-color: #3a69a8
     &_sale
       color: #000000
       background-color: #fcd82f
@@ -578,7 +597,7 @@
   cursor: pointer
   background-color: #ffffff
   transition: background-color .3s ease
-  .icon-fade
+  //.icon-fade
     //padding: 15px 10px 7px 11px
     //i:last-child
     //  top: 15px
@@ -611,19 +630,22 @@
 
 // Page navigation
 .page-navigation
+  margin-top: 95px
+  margin-bottom: 95px
   z-index: 1
-  padding: 10px 0 100px
+  //padding: 10px 0 100px
   display: flex
   width: 100%
   flex-wrap: wrap
-  justify-content: flex-end
-  .btn_more
-    +media-md(up)
-      text-align: right
-    +col(24)
-    +col-md(9)
-    +col-lg(8)
-    +col-xl(6)
+  justify-content: center
+  //.btn_more
+  //  +media-md(up)
+  //    text-align: right
+  //  +col(24)
+  //  +col-md(9)
+  //  +col-lg(8)
+  //  +col-xl(6)
+
   .btn_show-all
     +col(24)
     +media-sm(down)

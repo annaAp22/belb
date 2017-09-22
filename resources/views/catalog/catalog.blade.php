@@ -124,14 +124,14 @@
                     @if($products->currentPage() < $products->totalPages)
                         <div class="page-navigation">
                             <button class="btn btn_more js-pagination" data-all="false">
-                                <span class="text">Показать больше</span>
+                                <span class="text">Еще товаров</span>
                                 <span class="count js-goods-count">(<span>{{ $products->totalCount - ($products->currentPage() * $products->perPage()) }}</span>)</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                                {{--<i class="sprite_main sprite_main-icon__arrow_green_down"></i>--}}
                             </button>
-                            <button class="btn btn_show-all js-pagination" data-all="true">
-                                <span>Показать все товары</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
-                            </button>
+                            {{--<button class="btn btn_show-all js-pagination" data-all="true">--}}
+                                {{--<span>Показать все товары</span>--}}
+                                {{--<i class="sprite_main sprite_main-icon__arrow_green_down"></i>--}}
+                            {{--</button>--}}
                         </div>
                     @endif
 

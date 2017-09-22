@@ -34,32 +34,42 @@
         {{ csrf_field() }}
         <a class="product__name" href="{{ route('product', $product->sysname) }}">{!! $product->getWrapTagInName() !!}</a>
         <div class="product__price">
+           <span class="current">{{ number_format($product->price, 0, '.', ' ') }} ₽</span>
             @if($product->originalPrice)
-                <i class="sprite_main sprite_main-product__old-price old-price"><span>{{ number_format($product->originalPrice, 0, '.', ' ') }} ₽</span></i>
+                <i class="sprite sprite-product__old-price old-price"><span>{{ number_format($product->originalPrice, 0, '.', ' ') }} ₽</span></i>
             @endif
-            <span class="current">{{ number_format($product->price, 0, '.', ' ') }} ₽</span>
         </div>
-        <div class="product__hidden">
-
-            @include('catalog.products.rating')
-            @if(count($product->sizes))
-                @include('catalog.products.sizes', ['class' => ' product__size'])
-            @else
-                <div class="product__size-hidden">
-                    <input type="hidden" name="size" value="0">
-                </div>
-            @endif
-
-                <!-- Button buy-->
-                <button class="btn btn_green product__buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}">
-                        <span class="put"><i class="sprite_main sprite_main-product__basket"></i>
-                            <span>В корзину</span>
+        <input type="hidden" name="size" value="0">
+        <button class="btn btn_buy product__buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}">
+                        <span class="put"><i class="sprite sprite-cart-icon-white-min"></i>
+                            {{--<span>В корзину</span>--}}
                         </span>
-                        <a class="done" href="{{ route('cart') }}">
-                            <i class="sprite_main sprite_main-product__basket_done"></i>
-                            <span>Добавлено</span>
-                        </a>
-                </button>
-            </div>
+            <a class="done" href="{{ route('cart') }}">
+                <i class="sprite sprite-product__basket_done"></i>
+                {{--<span>Добавлено</span>--}}
+            </a>
+        </button>
+        {{--<div class="product__hidden">--}}
+
+            {{--@include('catalog.products.rating')--}}
+            {{--@if(count($product->sizes))--}}
+                {{--@include('catalog.products.sizes', ['class' => ' product__size'])--}}
+            {{--@else--}}
+                {{--<div class="product__size-hidden">--}}
+
+                {{--</div>--}}
+            {{--@endif--}}
+
+                {{--<!-- Button buy-->--}}
+                {{--<button class="btn btn_green product__buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}">--}}
+                        {{--<span class="put"><i class="sprite_main sprite_main-product__basket"></i>--}}
+                            {{--<span>В корзину</span>--}}
+                        {{--</span>--}}
+                        {{--<a class="done" href="{{ route('cart') }}">--}}
+                            {{--<i class="sprite_main sprite_main-product__basket_done"></i>--}}
+                            {{--<span>Добавлено</span>--}}
+                        {{--</a>--}}
+                {{--</button>--}}
+            {{--</div>--}}
         </form>
     </div>
