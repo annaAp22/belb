@@ -122,67 +122,126 @@
       border-color: #909090
 
 // Subscription
+//.Прямоугольник_1 {
+//  border-width: 3px;
+//  border-color: rgb(61, 102, 171);
+//  border-style: solid;
+//  position: absolute;
+//  left: 769px;
+//  top: 2670px;
+//  width: 814px;
+//  height: 494px;
+//  z-index: 17;
+//}
+
+.colored-bg__f3f2f2
+    background-color: #f3f2f2
 .subscription
   display: flex
-  border-top: 50px solid #FFFFFF
-  background-color: #e8e8e8
-  padding-bottom: 60px
+  justify-content: center
+  align-items: flex-start
+  width: 100%
+  margin-top: 50px
+  margin-bottom: 50px
+  //border-top: 50px solid #FFFFFF
+  //background-color: #e8e8e8
+  //padding-bottom: 60px
   +media-lg(up)
-    padding-bottom: 30px
+    justify-content: space-between
+    //padding-bottom: 30px
+    //background: url("/img/relax.png") no-repeat transparent
+    //background-size: 953px 520px
+  +media-xl(only)
+    margin-right: 60px
   &__image
     +media-md(down)
       display: none
-    +col(8)
-    +offset(right,1)
+    +col(8,no)
+    position: relative
+    min-height: 520px
+    //+offset(right,1)
     & > img
-      position: relative
-      margin-top: -45px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+
+      //margin-top: -45px
   &__form
-    +col(22)
-    +offset(right,1)
-    +col-lg(13)
+    border: 3px solid #3d66ab
+    +col(22,no)
+    +col-lg(14,no)
+    +media-md(down)
+      padding-left: 3%
+      padding-right: 3%
+    +media-lg(up)
+      padding-left: 100px
+      padding-right: 1%
+
   &__header
     +media-md(up)
       display: flex
-    margin-top: 80px
-    margin-bottom: 30px
+      align-items: center
+    margin-top: 35px
+    margin-bottom: 60px
     +media-sm(down)
       text-align: center
-  &__percent-icon
-    padding: 20px
-    background-color: #fe7f39
-    color: #ffffff
-    font-size: 48px
-    +media-lg(up)
-      font-size: 76px
-    font-weight: 900
-    line-height: .8
+  &__icon
+    //display: block
+    flex-shrink: 0
     +media-md(up)
-      margin-right: (48/804) * 100%
-    +media-sm(down)
-      display: inline-block
-      margin-bottom: 20px
+      margin-right: 20px
+    +media-lg(up)
+      margin-right: 70px
+
+  //&__percent-icon
+  //  padding: 20px
+  //  background-color: #fe7f39
+  //  color: #ffffff
+  //  font-size: 48px
+  //  +media-lg(up)
+  //    font-size: 76px
+  //  font-weight: 900
+  //  line-height: .8
+  //  +media-md(up)
+  //    margin-right: (48/804) * 100%
+  //  +media-sm(down)
+  //    display: inline-block
+  //    margin-bottom: 20px
   &__title
     +media-sm(down)
       font-size: 25px
     +media-md()
       font-size: 30px
     +media-lg(up)
-      font-size: 43px
-    font-weight: 900
-    color: #292929
-    text-transform: uppercase
+      font-size: 36px
+    font-weight: 700
+    color: #303030
+    //text-transform: uppercase
+
   &__text
     +hidden-sm(down)
-    font-size: 16px
-    color: #646464
-    margin-bottom: 40px
+    font-size: 14px
+    color: #303030
+    margin-bottom: 70px
+    +media-lg(up)
+      padding-left: 192px
   &__input-group
     display: flex
-    & > button
-      flex-grow: 1
+    width: 100%
+    margin-bottom: 60px
+    +media-xl(only)
+      margin-bottom: 146px
+    +media-lg(up)
+      padding-left: 192px
+    +media-lg()
+      flex-wrap: wrap
     +media-sm(down)
       flex-wrap: wrap
+    & > button
+      font-weight: 700
+      flex-grow: 1
+
   &__input
     position: relative
     +media-sm(down)
@@ -190,13 +249,17 @@
       padding: 14px
       text-align: center
       margin-bottom: 20px
+    +media-lg(only)
+      width: 100%
+      padding: 14px
+      margin-bottom: 20px
     +media-md(up)
       flex-grow: 2
       padding: 0 20px
     border: 1px solid transparent
     transition: border-color .3s ease
     &:focus
-      border-color: #00ad5d
+      border-color: #4c68a5
 
 // Listing header
 .header-listing

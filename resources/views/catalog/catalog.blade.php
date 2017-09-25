@@ -137,7 +137,8 @@
 
                 </div>
             </section>
-            <section class="content-full-width">
+
+        <section class="content-full-width">
                 <!-- Page text-->
                 <article class="page-text">
                     @if(isset($category))
@@ -158,8 +159,13 @@
                     @widget('ArticlesWidget', ['tag_id' => $tag->id])
                 @endif
 
-                @widget('SubscribeWidget')
+                {{--@widget('SubscribeWidget')--}}
             </section>
         </div>
     </main>
+    <div class="colored-bg__f3f2f2">
+        <div class="container">
+            @widget('SubscribeWidget')
+        </div>
+    </div>
 @endsection
