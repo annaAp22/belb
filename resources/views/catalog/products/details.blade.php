@@ -87,11 +87,8 @@
 
             <div class="product-detailed__details">
                 <div class="container-in">
-                    <!-- H1 title-->
-                    <h1 class="product-detailed__title product-detailed__title_lg-up">
-                        {{ $product->name }}
-                    </h1>
-                    <form class="product-detailed__column js-form-ajax" action="{{ route('ajax.cart.add', ['id' => $product->id, 'cnt' => 1]) }}" method="post">
+
+                    <form class="product-detailed__column product-detailed__column--left js-form-ajax" action="{{ route('ajax.cart.add', ['id' => $product->id, 'cnt' => 1]) }}" method="post">
                         {{ csrf_field() }}
 
                         <!-- Article-->
@@ -110,27 +107,27 @@
                         </div>
 
                         @include('catalog.products.rating')
-                        @if(count($product->sizes))
-                            <!-- Size-->
-                            <div class="product-detailed__subtitle product-detailed__subtitle_size">Выберите свой размер:</div>
-                            @include('catalog.products.sizes', ['class' => ' product-detailed__size'])
-                        @else
-                                <span>&nbsp;</span>
-                                <input type="hidden" name="size" value="0">
-                        @endif
+                        {{--@if(count($product->sizes))--}}
+                            {{--<!-- Size-->--}}
+                            {{--<div class="product-detailed__subtitle product-detailed__subtitle_size">Выберите свой размер:</div>--}}
+                            {{--@include('catalog.products.sizes', ['class' => ' product-detailed__size'])--}}
+                        {{--@else--}}
+                                {{--<span>&nbsp;</span>--}}
+                                {{--<input type="hidden" name="size" value="0">--}}
+                        {{--@endif--}}
 
                             {{-- How to choose size modal --}}
-                            @if($product->getSex() == 'Мужской')
-                                <a class="btn btn_more product-detailed__btn product-detailed__btn product-detailed__btn_size js-action-link" data-url="{{route('ajax.modal')}}" data-modal="sizes_men">
-                                    <i class="sprite_main sprite_main-icon__popup_info"></i>
-                                    <span>Как подобрать размер?</span>
-                                </a>
-                            @else
-                                <a class="btn btn_more product-detailed__btn product-detailed__btn product-detailed__btn_size js-action-link" data-url="{{route('ajax.modal')}}" data-modal="sizes_women">
-                                    <i class="sprite_main sprite_main-icon__popup_info"></i>
-                                    <span>Как подобрать размер?</span>
-                                </a>
-                            @endif
+                            {{--@if($product->getSex() == 'Мужской')--}}
+                                {{--<a class="btn btn_more product-detailed__btn product-detailed__btn product-detailed__btn_size js-action-link" data-url="{{route('ajax.modal')}}" data-modal="sizes_men">--}}
+                                    {{--<i class="sprite_main sprite_main-icon__popup_info"></i>--}}
+                                    {{--<span>Как подобрать размер?</span>--}}
+                                {{--</a>--}}
+                            {{--@else--}}
+                                {{--<a class="btn btn_more product-detailed__btn product-detailed__btn product-detailed__btn_size js-action-link" data-url="{{route('ajax.modal')}}" data-modal="sizes_women">--}}
+                                    {{--<i class="sprite_main sprite_main-icon__popup_info"></i>--}}
+                                    {{--<span>Как подобрать размер?</span>--}}
+                                {{--</a>--}}
+                            {{--@endif--}}
 
                         <!-- Buy-->
                         <button class="btn btn_green product__buy product-detailed__btn product-detailed__btn product-detailed__btn_buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}"  onclick="document.getElementById('is_fast').value = 0;">
@@ -148,35 +145,36 @@
                         <button id="quick-buy-btn" name="is_fast" value="1" class="btn btn_orange-border product-detailed__btn product-detailed__btn product-detailed__btn_quick js-add-to-cart" onclick="document.getElementById('is_fast').value = 1;">Купить в 1 клик</button>
                         <input id="is_fast" type="hidden" name="is_fast" value="0">
 
-                        <!-- Share-->
-                        <div class="share product-detailed__share">
-                            <span>Поделиться:</span>
-                            <a class="share__link" href="http://www.facebook.com/sharer.php?u={{ route('product', $product->sysname) }}" target="_blank">
-                                <i class="sprite_main sprite_main-product_social-facebook"></i>
-                            </a>
-                            <div class="share__separator">|</div>
-                            <!-- Additional params: &title=, &description=, &image=-->
-                            <a class="share__link" href="http://vk.com/share.php?url={{ route('product', $product->sysname) }}&title={{ $product->name }}&description={{ $product->description }}&image={{ $product->uploads->img->url() }}" target="_blank">
-                                <i class="sprite_main sprite_main-product_social-vk"></i>
-                            </a>
-                            <div class="share__separator">|</div>
-                            <!-- Additional params: &text=, &via=<Twitter_account_link>-->
-                            <a class="share__link" href="http://twitter.com/share?url={{ route('product', $product->sysname )}}&text={{ $product->name}}" target="_blank">
-                                <i class="sprite_main sprite_main-product_social-twitter"></i>
-                            </a>
-                            <div class="share__separator">|</div>
-                            <!-- Additional params: &title=, &description=, &imageUrl=-->
-                            <a class="share__link" href="https://connect.ok.ru/offer?url={{ route('product', $product->sysname )}}&title={{ $product->name}}&description={{ $product->description }}&imageUrl={{ $product->uploads->img->url() }}" target="_blank">
-                                <i class="sprite_main sprite_main-product_social-odnoklasniki"></i>
-                            </a>
-                        </div>
+                        {{--<!-- Share-->--}}
+                        {{--<div class="share product-detailed__share">--}}
+                            {{--<span>Поделиться:</span>--}}
+                            {{--<a class="share__link" href="http://www.facebook.com/sharer.php?u={{ route('product', $product->sysname) }}" target="_blank">--}}
+                                {{--<i class="sprite_main sprite_main-product_social-facebook"></i>--}}
+                            {{--</a>--}}
+                            {{--<div class="share__separator">|</div>--}}
+                            {{--<!-- Additional params: &title=, &description=, &image=-->--}}
+                            {{--<a class="share__link" href="http://vk.com/share.php?url={{ route('product', $product->sysname) }}&title={{ $product->name }}&description={{ $product->description }}&image={{ $product->uploads->img->url() }}" target="_blank">--}}
+                                {{--<i class="sprite_main sprite_main-product_social-vk"></i>--}}
+                            {{--</a>--}}
+                            {{--<div class="share__separator">|</div>--}}
+                            {{--<!-- Additional params: &text=, &via=<Twitter_account_link>-->--}}
+                            {{--<a class="share__link" href="http://twitter.com/share?url={{ route('product', $product->sysname )}}&text={{ $product->name}}" target="_blank">--}}
+                                {{--<i class="sprite_main sprite_main-product_social-twitter"></i>--}}
+                            {{--</a>--}}
+                            {{--<div class="share__separator">|</div>--}}
+                            {{--<!-- Additional params: &title=, &description=, &imageUrl=-->--}}
+                            {{--<a class="share__link" href="https://connect.ok.ru/offer?url={{ route('product', $product->sysname )}}&title={{ $product->name}}&description={{ $product->description }}&imageUrl={{ $product->uploads->img->url() }}" target="_blank">--}}
+                                {{--<i class="sprite_main sprite_main-product_social-odnoklasniki"></i>--}}
+                            {{--</a>--}}
+                        {{--</div>--}}
                     </form>
 
 
-                    <div class="product-detailed__column">
+                    <div class="product-detailed__column product-detailed__column--rigth">
                         <!-- Description-->
                         <div class="product-detailed__subtitle product-detailed__subtitle_des">Характеристики:</div>
                         <div class="description-scroll product-detailed__description">
+                            {{--{{dd($product)}}--}}
                             <div class="description-scroll__body">
                                 <!-- Color-->
                                 @php
@@ -199,28 +197,32 @@
                                     @endif
                                 </div>
                                 <!-- Brand-->
-                                @isset($product->brand)
-                                    <div class="description-scroll__param-title description-scroll__param-title_strong description-scroll__mt">
-                                        <span>Торговая марка:</span>
-                                        <span class="description-scroll__param-value">{{ $product->brand->name }}</span>
+                                {{--@isset($product->brand)--}}
+                                    {{--<div class="description-scroll__param-title description-scroll__param-title_strong description-scroll__mt">--}}
+                                        {{--<span>Торговая марка:</span>--}}
+                                        {{--<span class="description-scroll__param-value">{{ $product->brand->name }}</span>--}}
+                                    {{--</div>--}}
+                                {{--@endisset--}}
+                                @foreach($product->attributes as $item )
+                                    <div class="description-scroll__param-title description-scroll__mt"><span class="description-scroll__param-value">{{$item->pivot->value}}</span>
                                     </div>
-                                @endisset
-                                <!-- Country of origin-->
-                                @if($country_of_origin)
-                                <div class="description-scroll__param-title description-scroll__mt"><strong>Страна производства:</strong><span class="description-scroll__param-value">{{$country_of_origin->pivot->value}}</span>
-                                </div>
-                                @endif
-                            <!-- Sex-->
-                                @if(isset($product->sex))
-                                    <div class="description-scroll__param-title description-scroll__mt"><strong>Пол:</strong><span class="description-scroll__param-value">{{$product->sex}}</span>
-                                    </div>
-                                @endif
-                            <!-- Material-->
-                                @if(isset($product->material))
-                                    <div class="description-scroll__param-title description-scroll__mt"><strong>Состав ткани:</strong><span class="description-scroll__param-value">{{$product->material}}</span>
-                                    </div>
-                                    <a href="https://fit2u.ru/page/iz_chego_shem">Подробнее о тканях</a>
-                                @endif
+                                @endforeach
+                                {{--<!-- Country of origin-->--}}
+                                {{--@if($country_of_origin)--}}
+                                {{--<div class="description-scroll__param-title description-scroll__mt"><strong>Страна производства:</strong><span class="description-scroll__param-value">{{$country_of_origin->pivot->value}}</span>--}}
+                                {{--</div>--}}
+                                {{--@endif--}}
+                            {{--<!-- Sex-->--}}
+                                {{--@if(isset($product->washing))--}}
+                                    {{--<div class="description-scroll__param-title description-scroll__mt"><strong>washing:</strong><span class="description-scroll__param-value">{{$product->washing}}</span>--}}
+                                    {{--</div>--}}
+                                {{--@endif--}}
+                            {{--<!-- Material-->--}}
+                                {{--@if(isset($product->material))--}}
+                                    {{--<div class="description-scroll__param-title description-scroll__mt"><strong>Состав ткани:</strong><span class="description-scroll__param-value">{{$product->material}}</span>--}}
+                                    {{--</div>--}}
+                                    {{--<a href="https://fit2u.ru/page/iz_chego_shem">Подробнее о тканях</a>--}}
+                                {{--@endif--}}
                                 <!-- Other description-->
                                 {{--<div class="description-scroll__param-value description-scroll__mt">--}}
                                     {{--{!! $product->text !!}--}}

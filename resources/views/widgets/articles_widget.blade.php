@@ -1,7 +1,7 @@
 <div class="related-articles">
     <div class="related-header related-articles__header">
         <div class="related-header__title">Полезно<span>\ знать</span>
-        </div><a class="related-header__listing-link" href="{{ route('articles') }}">Читать все статьи<i class="sprite_main sprite_main-icon__arrow_black_to_right"></i></a>
+        </div><a class="related-header__listing-link" href="{{ route('articles') }}">Читать все статьи<i class="sprite sprite-arrow-r-blue-min"></i></a>
     </div>
     <div class="articles articles_related related-articles__articles">
         @foreach($articles as $article)

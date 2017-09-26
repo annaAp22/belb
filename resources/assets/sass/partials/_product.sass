@@ -7,29 +7,34 @@
       margin-top: 30px
       +col(24)
     +col-sm(24)
-    +col-lg(12)
+    +col-lg(9)
   &__details
     //background-color: yellowgreen
     +col(24)
-    +col-lg(12)
+    +col-lg(15)
     & > div
       height: 100%
   &__title
     +col(24)
-    font-weight: 500
+    font-weight: 700
     margin-top: 0
     margin-bottom: 0
-    font-size: 24px
-    &_lg-up
-      +hidden-md(down)
-    &_md-down
-      +hidden-lg(up)
+    font-size: 32px
+    color: #464646
+    +media-md(down)
+      font-size: 24px
+      font-weight: 500
+
+
   &__column
     //background-color: cornflowerblue
     display: flex
     +media-lg(up)
       flex-direction: column
-    +col-lg(12)
+    &--left
+      +col-lg(13)
+    &--rigth
+      +col-lg(11)
     +media-md(down)
       width: 100%
       flex-wrap: wrap
@@ -293,9 +298,9 @@
     position: relative
     display: block
     +media-sm(down)
-      height: 442px
+      height: 330px
     +media-md(up)
-      height: 613px
+      height: 330px
       width: calc(100% - 97px)
     border: 1px solid #dddddd
   &__image

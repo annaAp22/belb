@@ -54,11 +54,11 @@ class Product extends Model
             'preview'    => '45x67',
             'thumb'      => '96x144',
             'cart'       => '81x122',
-            'modal'      => '120x180',
-            'listing'    => '278x243',
-            'kit'        => '278x243',
-            'detail'     => '387x330',
-            'big'        => '387x330'
+            'modal'      => '90x94',
+            'listing'    => '264x231',
+            'kit'        => '264x231',
+            'detail'     => '384x328',
+            'big'        => '384x328'
         ],
     ];
     private $_availableSizes = null;
