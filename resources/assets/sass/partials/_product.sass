@@ -53,8 +53,11 @@
         order: 1
   &__subtitle
     font-size: 14px
-    color: #a9a9a9
+    color: #878787
+    font-weight: 700
     margin-bottom: 15px
+    & b
+      color: #434343
     &_size
       margin-top: 20px
       +media-md(down)
@@ -65,12 +68,22 @@
         +col(24)
         margin-top: 50px
   &__art
+    display: flex
+    flex-wrap: wrap
+    //justify-content: space-between
+    align-items: center
+    width: 100%
+    &>span>*
+      vertical-align: bottom
     +media-md(down)
       +col(24)
     &_lg-up
       +hidden-md(down)
     &_md-down
       +hidden-lg(up)
+  &__art-stock
+    margin-left: 35px
+
 
   &__price
     +media-xs()
@@ -79,16 +92,23 @@
       +col(12)
       margin-top: 30px
     +media-lg(up)
+      display: flex
+      flex-direction: column
+      align-items: flex-start
       margin-top: 20px
     & > *
       vertical-align: middle
     &.product__price
       .current
-        font-size: 30px
+        font-size: 24px
+        color: #212121
+        & b
+          font-size: 30px
+          font-weight: 700
       .old-price
         position: static
         margin-left: 0
-        font-size: 16px
+        font-size: 18px
         text-align: center
         top: auto
         left: auto
@@ -110,7 +130,7 @@
     width: 100%
     +media-xs()
       +col(24)
-    +media-md()
+    +media-md(up)
       +col(12)
     &_size
       color: #272727
@@ -122,10 +142,20 @@
       & > span
         margin-left: 10px
     &_buy
+      .done
+        display: none
       +media-md(down)
         order: 5
         margin-top: 30px
       margin-top: 35px
+
+      &.active
+        .done
+          display: inline-block
+          text-decoration: none
+          color: #ffffff
+        .put
+          display: none
     &_quick
       +media-md(down)
         order: 6
@@ -182,16 +212,17 @@
     width: 100%
     flex-direction: column
   display: flex
+  //align-items: flex-start
   &__navigation
     +media-sm(down)
       display: flex
       flex-wrap: wrap
       +align(between)
       order: 1
-      margin-top: -53px
+      margin-top: -18px
       z-index: 1
     +media-md(up)
-      width: 97px
+      width: 92px
       & > button
         width: 100%
     +media-sm(down)
@@ -207,22 +238,24 @@
           margin-left: 12px
           & > i
             transform: rotate(90deg)
+
   &__wrap
     overflow: hidden
     +media-sm(down)
       width: 100%
     +media-md(up)
-      height: 509px
+      height: 292px
   &__track
     display: flex
     +media-md(up)
       flex-direction: column
+      flex-grow: 0
     &:not(.js-dragged)
       transition: transform .3s ease
   &__thumb
     position: relative
     width: 100%
-    height: 101.8px
+    height: 96px
     border-bottom: 1px solid #dddddd
     border-left: 1px solid #dddddd
     overflow: hidden
@@ -246,7 +279,7 @@
       box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.09)
       z-index: 1
       &:before
-        background-color: #36b057
+        background-color: #3c6aa9
         width: 6px
     &:before
       content: ""
@@ -267,7 +300,7 @@
       &__play
         position: absolute
         padding: 10px
-        background-color: #292929
+        //background-color: #5a6daa
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
@@ -281,7 +314,7 @@
           border-width: 14.5px 0 14.5px 30px
           +media-lg(up)
             border-width: 10px 0 10px 20px
-          border-color: transparent transparent transparent #ffffff
+          border-color: transparent transparent transparent #5a6daa
           transform: rotate(360deg)
           transition: border-color .3s ease
       &:hover
@@ -298,10 +331,11 @@
     position: relative
     display: block
     +media-sm(down)
-      height: 330px
+      height: 332px
+      width: 100%
     +media-md(up)
-      height: 330px
-      width: calc(100% - 97px)
+      height: 332px
+      width: calc(100% - 92px)
     border: 1px solid #dddddd
   &__image
     +image-center()

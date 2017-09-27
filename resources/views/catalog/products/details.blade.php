@@ -15,14 +15,17 @@
 
             <!-- Article md down-->
             <div class="product-detailed__subtitle product-detailed__art product-detailed__art_md-down">
-                Артикул: {{ $product->sku }}
+                <span>Артикул: <b>{{ $product->sku }}</b></span>
+                @if($product->stock)
+                    <span class="product-detailed__art-stock"><i class="sprite sprite-tick-icon-blue-min"></i><span>В наличии</span></span>
+                @endif
             </div>
 
             <!-- Image gallery-->
             <div class="product-gallery product-detailed__gallery" id="js-product-gallery">
                 <div class="product-gallery__navigation" id="js-product-gallery-nav">
                     <button class="btn btn_carousel-control">
-                        <i class="sprite_main sprite_main-icon_arrow_gray_up"></i>
+                        <i class="sprite sprite-arrow-up-min"></i>
                     </button>
                     <div class="product-gallery__wrap">
                         <div class="product-gallery__track">
@@ -43,7 +46,7 @@
                         </div>
                     </div>
                     <button class="btn btn_carousel-control down">
-                        <i class="sprite_main sprite_main-icon_arrow_gray_up"></i>
+                        <i class="sprite sprite-arrow-up-min"></i>
                     </button>
                 </div>
                 <div class="product-gallery__image-wrap">
@@ -70,10 +73,10 @@
                     <span class="wishlist js-hover-notice js-toggle-active js-action-link{{ in_array($product->id, $defer) ? ' active' : '' }}"
                           data-url="{{ route('ajax.product.defer', ['id' => $product->id]) }}">
                         <span class="icon-fade">
-                            <i class="sprite_main sprite_main-product__wishlist normal"></i>
-                            <i class="sprite_main sprite_main-product__wishlist_active active"></i>
+                            <i class="sprite sprite-favorite-heart-min normal"></i>
+                            <i class="sprite sprite-favorite-heart-active active"></i>
                         </span>
-                        <i class="sprite_main sprite_main-product__wishlist_done done"></i>
+                        <i class="sprite sprite-tick-icon-blue-min done"></i>
                         <!-- Popup-->
                         <span class="popup-notice popup-notice_wishlist">
                             <span class="popup-notice__triangle">▼</span>
@@ -93,17 +96,20 @@
 
                         <!-- Article-->
                         <div class="product-detailed__subtitle product-detailed__art product-detailed__art_lg-up">
-                            Артикул: {{ $product->sku }}
+                            <span>Артикул: <b>{{ $product->sku }}</b></span>
+                            @if($product->stock)
+                                <span class="product-detailed__art-stock"><i class="sprite sprite-tick-icon-blue-min"></i><span>В наличии</span></span>
+                            @endif
                         </div>
 
                         <!-- Price-->
                         <div class="product-detailed__price product__price">
                             @if($product->originalPrice)
-                                <i class="sprite_main sprite_main-product__old-price_detailed old-price">
-                                    <span>{{ number_format($product->originalPrice, 0, '.', ' ') }} ₽</span>
+                                <i class="old-price">
+                                <span>{{ number_format($product->originalPrice, 0, '.', ' ') }} руб</span>
                                 </i>
                             @endif
-                            <span class="current">{{ number_format($product->price, 0, '.', ' ') }} ₽</span>
+                            <span class="current"><b>{{ number_format($product->price, 0, '.', ' ') }}</b> руб</span>
                         </div>
 
                         @include('catalog.products.rating')
@@ -130,14 +136,14 @@
                             {{--@endif--}}
 
                         <!-- Buy-->
-                        <button class="btn btn_green product__buy product-detailed__btn product-detailed__btn product-detailed__btn_buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}"  onclick="document.getElementById('is_fast').value = 0;">
+                        <button class="btn btn_green product-detailed__btn product-detailed__btn product-detailed__btn_buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}"  onclick="document.getElementById('is_fast').value = 0;">
                             <span class="put">
-                                <i class="sprite_main sprite_main-product__basket"></i>
+                                {{--<i class="sprite_main sprite_main-product__basket"></i>--}}
                                 <span>В корзину</span>
                             </span>
                             <a class="done" href="{{ route('cart') }}">
-                                <i class="sprite_main sprite_main-product__basket_done"></i>
-                                <span>Добавлено</span>
+                                {{--<i class="sprite_main sprite_main-product__basket_done"></i>--}}
+                                <span>В корзине</span>
                             </a>
                         </button>
 
