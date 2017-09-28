@@ -113,14 +113,6 @@
                         </div>
 
                         @include('catalog.products.rating')
-                        <div class="_counter">
-                            <div class="quantity">
-                                <div class="quantity__handle quantity__handle_minus icon-fade js-quantity" data-num="-1" data-submit><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
-                                </div><input class="quantity__input js-quantity-input" data-submit name="quantity" value="{{ $cnt }}" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
-                                <div class="quantity__handle quantity__handle_plus icon-fade js-quantity" data-num="1" data-submit><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
-                                </div>
-                            </div>
-                        </div>
                         {{--@if(count($product->sizes))--}}
                             {{--<!-- Size-->--}}
                             {{--<div class="product-detailed__subtitle product-detailed__subtitle_size">Выберите свой размер:</div>--}}
@@ -142,22 +134,22 @@
                                     {{--<span>Как подобрать размер?</span>--}}
                                 {{--</a>--}}
                             {{--@endif--}}
-                            <input type="hidden" name="size" value="0">
+
                         <!-- Buy-->
-                        <!-- Quick buy-->
-                        <button id="quick-buy-btn" name="is_fast" value="1" class="btn btn_blue-border product-detailed__btn product-detailed__btn_quick js-add-to-cart" onclick="document.getElementById('is_fast').value = 1;">Быстрая покупка</button>
-                        <input id="is_fast" type="hidden" name="is_fast" value="0">
-                            <!-- Cart-->
-                        <button class="btn btn_buy product__buy product-detailed__btn product-detailed__btn_buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}"  onclick="document.getElementById('is_fast').value = 0;">
-                        <span class="put">
-                            {{--<i class="sprite_main sprite_main-product__basket"></i>--}}
-                            <span>В корзину</span>
-                        </span>
+                        <button class="btn btn_buy product-detailed__btn product-detailed__btn_buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}"  onclick="document.getElementById('is_fast').value = 0;">
+                            <span class="put">
+                                {{--<i class="sprite_main sprite_main-product__basket"></i>--}}
+                                <span>В корзину</span>
+                            </span>
                             <a class="done" href="{{ route('cart') }}">
                                 {{--<i class="sprite_main sprite_main-product__basket_done"></i>--}}
                                 <span>В корзине</span>
                             </a>
                         </button>
+
+                        <!-- Quick buy-->
+                        <button id="quick-buy-btn" name="is_fast" value="1" class="btn btn_blue-border product-detailed__btn product-detailed__btn_quick js-add-to-cart" onclick="document.getElementById('is_fast').value = 1;">Быстрая покупка</button>
+                        <input id="is_fast" type="hidden" name="is_fast" value="0">
 
                         {{--<!-- Share-->--}}
                         {{--<div class="share product-detailed__share">--}}

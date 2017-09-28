@@ -30,8 +30,8 @@
     //background-color: cornflowerblue
     display: flex
     flex-wrap: wrap
-    +media-lg(up)
-      align-content: flex-start
+    //+media-lg(up)
+    //  flex-wrap: wrap
     &--left
       +col-lg(13)
     &--rigth
@@ -47,8 +47,6 @@
         margin-top: 0
     & > .product-rating
       +media-xs()
-        +col(24)
-      +media-lg(up)
         +col(24)
       +media-md(down)
         +col(12)
@@ -98,7 +96,6 @@
       display: flex
       flex-direction: column
       align-items: flex-start
-      width: 100%
       margin-top: 20px
     & > *
       vertical-align: middle
@@ -150,15 +147,15 @@
       line-height: 20px
       padding: 12px 2px
       +media-md(down)
-        order: 6
+        order: 5
         margin-top: 30px
       margin-top: 35px
 
     &_quick
       +media-md(down)
-        order: 5
+        order: 6
         margin-top: 30px
-      margin-top: 35px
+      margin-top: 20px
       font-size: 12px
       text-transform: uppercase
 

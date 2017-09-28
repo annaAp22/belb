@@ -40,7 +40,7 @@
             @endif
         </div>
         <input type="hidden" name="size" value="0">
-        <button class="btn btn_buy product__buy js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}">
+        <button class="btn btn_buy product__buy product__buy--list js-add-to-cart{{ session()->has('products.cart.'. $product->id) ? ' active' : '' }}">
                         <span class="put"><i class="sprite sprite-cart-icon-white-min"></i>
                             {{--<span>В корзину</span>--}}
                         </span>

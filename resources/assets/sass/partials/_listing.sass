@@ -563,20 +563,7 @@
   &__size-hidden
     margin-bottom: 20px
   &__buy
-    position: absolute
-    z-index: 2
-    left: 50%
-    bottom: -20px
     font-weight: 700
-    width: 50px
-    height: 50px
-    border-radius: 50%
-    transform: translateX(-25px)
-    & > *
-      & > *
-        vertical-align: middle
-      //& > i
-      //  margin-right: 10px
     .done
       display: none
     &.active
@@ -586,6 +573,19 @@
         color: #ffffff
       .put
         display: none
+    &--list
+      position: absolute
+      z-index: 2
+      left: 50%
+      bottom: -20px
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      transform: translateX(-25px)
+      & > *
+        & > *
+          vertical-align: middle
+
   &:hover, &:focus
     +media-md(up)
       z-index: 2

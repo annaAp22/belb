@@ -1,0 +1,70 @@
+&__btn
+  width: 100%
+  +media-xs()
+    +col(24)
+  +media-md()
+    +col(12)
+  &_size
+    color: #272727
+    +media-md(down)
+      order: 4
+      line-height: 34px
+    font-size: 14px
+    padding: 10px
+    & > span
+      margin-left: 10px
+  &_buy
+    +media-md(down)
+      order: 5
+      margin-top: 30px
+    margin-top: 35px
+  &_quick
+    +media-md(down)
+      order: 6
+      margin-top: 30px
+    margin-top: 20px
+    font-size: 18px
+
+
+//
+&__btn
+  width: 100%
+  +media-xs()
+    +col(24)
+  +media-md(up)
+    +col(12)
+  &_size
+    color: #272727
+    +media-md(down)
+      order: 4
+      line-height: 34px
+    font-size: 14px
+    padding: 10px
+    & > span
+      margin-left: 10px
+  &_buy
+    order: 1
+    font-size: 14px
+    line-height: 20px
+    padding: 12px 2px
+    .done
+      display: none
+    //+media-md(down)
+    //  order: 1
+      //margin-top: 30px
+
+
+    &.active
+      .done
+        display: inline-block
+        text-decoration: none
+        color: #ffffff
+      .put
+        display: none
+  &_quick
+    //+media-md(down)
+    //  order: 6
+      //margin-top: 30px
+    //margin-top: 20px
+    font-size: 12px
+    text-transform: uppercase
