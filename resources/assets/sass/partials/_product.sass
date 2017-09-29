@@ -46,6 +46,7 @@
       +media-lg(up)
         margin-top: 0
     & > .product-rating
+      margin-bottom: 30px
       +media-xs()
         +col(24)
       +media-lg(up)
@@ -53,7 +54,7 @@
       +media-md(down)
         +col(12)
         margin-top: 30px
-        order: 1
+        //order: 1
   &__subtitle
     font-size: 14px
     color: #878787
@@ -65,7 +66,7 @@
       margin-top: 20px
       +media-md(down)
         +col(24)
-        order: 2
+        //order: 2
     &_des
       +media-md(down)
         +col(24)
@@ -129,7 +130,7 @@
       +col(24)
     +media-md(down)
       +col(12)
-      order: 3
+      //order: 3
   &__btn
     width: 100%
     +media-xs()
@@ -139,7 +140,7 @@
     &_size
       color: #272727
       +media-md(down)
-        order: 4
+        //order: 4
         line-height: 34px
       font-size: 14px
       padding: 10px
@@ -150,13 +151,13 @@
       line-height: 20px
       padding: 12px 2px
       +media-md(down)
-        order: 6
+        //order: 6
         margin-top: 30px
       margin-top: 35px
 
     &_quick
       +media-md(down)
-        order: 5
+        //order: 5
         margin-top: 30px
       margin-top: 35px
       font-size: 12px
@@ -452,7 +453,7 @@
 .product-delivery
   color: #000000
   border-left: 1px solid #dddddd
-  border-bottom: 1px solid #dddddd
+  //border-bottom: 1px solid #dddddd
   padding-left: 24px
   padding-right: 24px
   margin-left: -24px
@@ -462,42 +463,51 @@
   cursor: pointer
   transition: background-color .3s ease
   position: relative
+
   &__wrap
     width: 100%
     display: flex
-    +align(between, center)
-    & > i
-      &:first-child
-        margin-right: 20px
-      &:last-child
-        margin-left: auto
-        transform: rotate(180deg)
-        transition: transform .3s ease
+    flex-direction: column
+    margin-top: 30px
+    align-items: flex-start
+
   &:hover
     background-color: #f8f8f8
   &.active
-    .product-delivery__wrap > i
+    .product-delivery__title > i
       transform: rotate(0deg)
     .product-delivery__hidden
       padding-top: 10px
       padding-bottom: 20px
       max-height: 400px
-      +media-md(down)
-        border-top: 1px solid #dddddd
-      +media-lg(up)
-        border-bottom: 1px solid #dddddd
-  &__title
-    font-size: 16px
-    font-weight: 700
-    margin-right: 10px
+      box-shadow: 0px 5px 25.92px 1.08px rgba(0, 0, 0, 0.24)
+      z-index: 1
+      //+media-md(down)
+      //  border-top: 1px solid #dddddd
+      //+media-lg(up)
   &__note
-    font-size: 13px
+    font-size: 12px
+    width: 100%
+  &__title
+    display: flex
+    width: 210px
+    font-size: 18px
+    font-weight: 400
+    margin-bottom: 10px
+    +align(between, center)
+    & > i
+      //&:first-child
+      //  margin-right: 20px
+      &:last-child
+        //margin-left: auto
+        transform: rotate(180deg)
+        transition: transform .3s ease
   &__hidden
     cursor: auto
     +media-lg(up)
       left: -1px
-      top: 82px
-      border-left: 1px solid #dddddd
+      //top: 82px
+      //border-left: 1px solid #dddddd
       position: absolute
       top: 100%
       margin-top: 1px
@@ -939,7 +949,6 @@
     margin-top: 30px
     & > span
       color: #36b057
-  &_modal
     padding: 30px 40px 70px
     & > .form-success__text
       max-width: 420px
@@ -955,3 +964,12 @@
       font-size: 18px
       margin-bottom: 10px
     color: #272727
+
+.product-detailed__counter
+  +col(24)
+  margin-bottom:  30px
+  +media-md(down)
+    text-align: center
+  //& .quantity
+  //  +media-md(down)
+  //    justify-cont

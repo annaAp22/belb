@@ -113,11 +113,13 @@
                         </div>
 
                         @include('catalog.products.rating')
-                        <div class="_counter">
+                        <div class="product-detailed__counter">
+                            {{--убрать--}}
+                            @php $cnt = 1; @endphp
                             <div class="quantity">
-                                <div class="quantity__handle quantity__handle_minus icon-fade js-quantity" data-num="-1" data-submit><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
-                                </div><input class="quantity__input js-quantity-input" data-submit name="quantity" value="{{ $cnt }}" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
-                                <div class="quantity__handle quantity__handle_plus icon-fade js-quantity" data-num="1" data-submit><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
+                                <div class="quantity__handle quantity__handle_minus js-quantity" data-num="-1" > <
+                                </div><input class="quantity__input js-quantity-input"  name="quantity" value="{{ $cnt }}" type="text" />
+                                <div class="quantity__handle quantity__handle_plus js-quantity" data-num="1" > >
                                 </div>
                             </div>
                         </div>
@@ -244,36 +246,50 @@
                             </div>
                         </div>
                         <!-- Warranty-->
-                        <div class="product-warranty product-detailed__warranty">
-                            <div class="product-warranty__item">
-                                <i class="sprite_main sprite_main-product_warranty-thumb-up"></i>
-                                <div class="product-warranty__text">
-                                    <div class="product-warranty__title">Гарантия качества на 1000 тренировок
-                                    </div>
-                                    <div class="product-warranty__note">Дорогая итальянская ткань, прочные немецкие нитки
-                                    </div>
+                        {{--<div class="product-warranty product-detailed__warranty">--}}
+                            {{--<div class="product-warranty__item">--}}
+                                {{--<i class="sprite_main sprite_main-product_warranty-thumb-up"></i>--}}
+                                {{--<div class="product-warranty__text">--}}
+                                    {{--<div class="product-warranty__title">Гарантия качества на 1000 тренировок--}}
+                                    {{--</div>--}}
+                                    {{--<div class="product-warranty__note">Дорогая итальянская ткань, прочные немецкие нитки--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="product-warranty__item">--}}
+                                {{--<i class="sprite_main sprite_main-product_ruller"></i>--}}
+                                {{--<div class="product-warranty__text">--}}
+                                    {{--<div class="product-warranty__title">Подбор размера по Вашим сантиметрам--}}
+                                    {{--</div>--}}
+                                    {{--<div class="product-warranty__note">Размер будет точно Вам в пору!--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--payment--}}
+                        <div class="product-delivery product-detailed__delivery js-toggle-active">
+                            <div class="product-delivery__wrap">
+                                <div class="product-delivery__title"><i class="sprite sprite-money-tool-min"></i><i>Способы оплаты</i><i class="sprite sprite-arrow-up-blue-min"></i>
+                                </div>
+                                <div class="product-delivery__note">Потребление отталкивает социометрический выставочный стенд.
                                 </div>
                             </div>
-                            <div class="product-warranty__item">
-                                <i class="sprite_main sprite_main-product_ruller"></i>
-                                <div class="product-warranty__text">
-                                    <div class="product-warranty__title">Подбор размера по Вашим сантиметрам
-                                    </div>
-                                    <div class="product-warranty__note">Размер будет точно Вам в пору!
-                                    </div>
-                                </div>
+                            <div class="product-delivery__hidden">
+                                Потребление отталкивает социометрический выставочный стенд.
                             </div>
                         </div>
                         <!-- Delivery-->
                         <div class="product-delivery product-detailed__delivery js-toggle-active">
-                            <div class="product-delivery__wrap"><i class="sprite_main sprite_main-product_delivery-truck"></i>
-                                <div class="product-delivery__title">Доставка:
+                            <div class="product-delivery__wrap">
+                                <div class="product-delivery__title"><i class="sprite sprite-delivery-icon-min"></i><i>Доставка</i>
+                                    <i class="sprite sprite-arrow-up-blue-min"></i>
                                 </div>
                                 <div class="product-delivery__note">{{ $user_city == 'Москва' ? 'Уже завтра!' : 'Почтой' }}
-                                </div><i class="sprite_main sprite_main-icon_arrow_gray_up"></i>
+                                </div>
                             </div>
+
                             <div class="product-delivery__hidden">
-                                <div class="product-delivery__city js-product-delivery__city"><span>Ваш город:</span><span class="">{{ $user_city }}<i class="sprite_main sprite_main-icon__arrow_green_up"></i></span>
+                                <div class="product-delivery__city js-product-delivery__city"><span>Ваш город:</span><span class="">{{ $user_city }}<i class="sprite sprite-arrow-up-blue-min"></i></span>
                                 </div>
                                 @if( $user_city == 'Москва' )
                                     <div class="product-delivery__cost"><span>Стоимость:</span><span>Курьером: от 300 руб.<br/>При заказе от 6 000 руб<br/>Бесплатно</span></div>
@@ -282,18 +298,19 @@
                                 @endif
                                 <div class="product-delivery__link"><a href="{{ route('delivery') }}">Подробнее о доставке по России</a>
                                 </div>
-                                <div class="product-delivery__store"><i class="sprite_main sprite_main-header__city_point"></i><a href="{{ route('contacts') }}">Магазин в Москве</a>
+                                <div class="product-delivery__store"><i class="sprite sprite-locate-places-min"></i><a href="{{ route('contacts') }}">Магазин в Москве</a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
 
 
-            @include('catalog.products.tabs.kits')
 
             @include('catalog.products.tabs.reviews')
+            @include('catalog.products.tabs.kits')
 
         </section>
 

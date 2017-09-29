@@ -156,28 +156,30 @@
   position: relative
   &__input
     +media-md(down)
-      width: 40px
+      width: 80px
     +media-lg(up)
-      width: 85px
+      width: 140px
     padding: 5px
-    border: 1px solid #c2c2c2
+    margin: 0 17px
+    border: none
     text-align: center
-    font-size: 14px
-    line-height: 18px
+    font-size: 20px
+    line-height: 29px
+    background-color: #e4ecf7
   &__handle
     cursor: pointer
-    &.icon-fade
-      & > i
-        &.active
-          top: -3px
-          left: -5px
-    &_minus
-      margin-right: 15px
-      margin-top: 3px
-    &_plus
-      margin-left: 15px
-      margin-top: -2px
-      transform: rotate(180deg)
+    font-size: 36px
+    font-weight: 700
+    color: #3a68a9
+    &:hover, &:focus, &.active
+      color: #000
+    //&_minus
+    //  margin-right: 15px
+    //  margin-top: 3px
+    //&_plus
+    //  margin-left: 15px
+    //  margin-top: -2px
+    //  transform: rotate(180deg)
 
 // Cart footer
 .product-cart-footer
