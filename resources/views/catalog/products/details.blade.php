@@ -309,6 +309,7 @@
 
 
 
+            @include('catalog.products.tabs.exposition')
             @include('catalog.products.tabs.reviews')
             @include('catalog.products.tabs.kits')
 
