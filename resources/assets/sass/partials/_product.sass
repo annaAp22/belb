@@ -464,6 +464,10 @@
   transition: background-color .3s ease
   position: relative
 
+  &--deliv
+    +media-lg(up)
+      padding-bottom: 30px
+
   &__wrap
     width: 100%
     display: flex
@@ -879,6 +883,9 @@
     +offset-md(left, 2)
     +col-xl(7)
     +offset-lg(left, 2)
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
   & > .btn_show-all
     +media-sm(down)
       margin-top: 30px
@@ -900,6 +907,7 @@
     border: 1px solid #d1d1d1
     & > textarea
       height: 147px
+      margin-bottom: 30px
     & > .rating-inputs
       margin-top: 20px
       display: flex

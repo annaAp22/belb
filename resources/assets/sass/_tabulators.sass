@@ -115,7 +115,7 @@
           content: none
       &.active
         color: #fff
-        background-color: #00ad5d
+        background-color: #4c68a5
         span
           border-bottom: 0
         strong
@@ -146,3 +146,31 @@
     display: none
     &.active
       display: block
+.tabulator-details--expo
+  +media-lg(up)
+    padding-top: 0
+    .tab-wrapper
+      position: relative
+      margin-bottom: 0
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 1px
+        background-color: #e3e3e3
+      &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100vw
+        height: 1px
+        background-color: #e3e3e3
+    .tab
+      padding: 20px 40px 0 40px
+      &:not(:last-of-type)
+        border-right: 1px solid #e6e6e6
+        &:before
+          content: none

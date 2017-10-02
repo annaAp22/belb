@@ -1,17 +1,17 @@
 @foreach($comments as $comment)
     <div class="product-review review">
         <div class="product-review__info">
-            <i class="sprite_main sprite_main-product_review-person-green"></i>
+            <i class="sprite sprite-person-min"></i>
             <div>
                 <div class="product-review__name">{{ $comment->name }}</div>
                 <div class="product-review__date">{{ $comment->created_at->format('Y.m.d') }}</div>
                 <div class="product-rating">
                     @for($i = 0; $i < $comment->rating; $i++)
-                        <div class="icon-fade product-rating__star active"><i class="sprite_main sprite_main-product__star normal"></i><i class="sprite_main sprite_main-product__star_active active"></i>
+                        <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
                         </div>
                     @endfor
                     @for(;$i < 5; $i++)
-                        <div class="icon-fade product-rating__star"><i class="sprite_main sprite_main-product__star normal"></i><i class="sprite_main sprite_main-product__star_active active"></i>
+                        <div class="icon-fade product-rating__star"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
                         </div>
                     @endfor
                 </div>

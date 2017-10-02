@@ -279,7 +279,7 @@
                             </div>
                         </div>
                         <!-- Delivery-->
-                        <div class="product-delivery product-detailed__delivery js-toggle-active">
+                        <div class="product-delivery product-delivery--deliv product-detailed__delivery js-toggle-active">
                             <div class="product-delivery__wrap">
                                 <div class="product-delivery__title"><i class="sprite sprite-delivery-icon-min"></i><i>Доставка</i>
                                     <i class="sprite sprite-arrow-up-blue-min"></i>
@@ -311,7 +311,7 @@
 
             @include('catalog.products.tabs.exposition')
             @include('catalog.products.tabs.reviews')
-            @include('catalog.products.tabs.kits')
+            {{--@include('catalog.products.tabs.kits')--}}
 
         </section>
 
@@ -330,7 +330,7 @@
                 </p><a class="youtube-video" href="#"><span class="youtube-video__play"></span><img class="youtube-video__image" src="/img/product-video2-min.jpg" alt="" role="presentation"/><span class="youtube-video__title youtube-video__title_top-left-white">Всё, что нужно занать о нашей спортивной одежде</span></a>
             </div>--}}
 
-            @widget('InstagramWidget')
+            {{--@widget('InstagramWidget')--}}
 
             @widget('ViewProductsWidget', ['product_id' => $product->id])
             
