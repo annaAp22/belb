@@ -92,6 +92,7 @@
                 <div class="container-in">
 
                     <form class="product-detailed__column product-detailed__column--left js-form-ajax" action="{{ route('ajax.cart.add', ['id' => $product->id, 'cnt' => 1]) }}" method="post">
+
                         {{ csrf_field() }}
 
                         <!-- Article-->
@@ -115,7 +116,10 @@
                         @include('catalog.products.rating')
                         <div class="product-detailed__counter">
                             {{--убрать--}}
-                            @php $cnt = 1; @endphp
+                            @php
+                                $size =0;
+                                 $cnt = session()->get('products.cart.'.$product->id.'.'.$size.'.cnt')?: 1;
+                            @endphp
                             <div class="quantity">
                                 <div class="quantity__handle quantity__handle_minus js-quantity" data-num="-1" > <
                                 </div><input class="quantity__input js-quantity-input"  name="quantity" value="{{ $cnt }}" type="text" />

@@ -18,7 +18,7 @@
                     <h1 class="product-cart-header__h1">Моя корзина</h1>
                     <!-- Products count-->
                     <div class="product-cart-header__count">
-                        <i class="sprite_main sprite_main-icon__goods_count js-cart-quantity">{{ $products->count() }}</i>
+                        <i class="sprite sprite-outline-min js-cart-quantity">{{ $products->count() }}</i>
                     </div>
                 </div>
                 <!-- Back to shopping link-->
@@ -62,9 +62,9 @@
                         </div>
                         <div class="product-cart-table__col product-cart-table__col_quantity">
                             <div class="quantity">
-                                <div class="quantity__handle quantity__handle_minus icon-fade js-quantity" data-num="-1"><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
+                                <div class="quantity__handle quantity__handle_minus js-quantity" data-num="-1" > <
                                 </div><input class="quantity__input js-quantity-input" name="products[{{ $product->id }}][{{ $product->size }}]" value="{{ $product->count }}" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
-                                <div class="quantity__handle quantity__handle_plus icon-fade js-quantity" data-num="1"><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
+                                <div class="quantity__handle quantity__handle_plus js-quantity" data-num="1" > >
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             <div class="product-cart-table__price-sum js-amount" data-amount="{{ $product->amount }}">{{ number_format($product->amount, 0, '.', ' ') }} ₽
                             </div>
                         </div>
-                        <div class="product-cart-table__col product-cart-table__col_remove"><a class="product-cart-table__remove icon-fade js-action-link" data-url="{{ route('ajax.cart.remove', ['id' => $product->id, 'size' => $product->size]) }}"><i class="sprite_main sprite_main-icon-x-gray normal"></i><i class="sprite_main sprite_main-icon-x-red_active active"></i></a>
+                        <div class="product-cart-table__col product-cart-table__col_remove"><a class="product-cart-table__remove icon-fade js-action-link" data-url="{{ route('ajax.cart.remove', ['id' => $product->id, 'size' => $product->size]) }}"><i class="sprite sprite-cross-blue-min normal"></i><i class="sprite sprite-cross-red-min active"></i></a>
                         </div>
                     </div>
                     @empty
@@ -94,7 +94,7 @@
             <div class="product-cart-footer container-in">
                 @if($products->count())
                     <!-- Checkout-->
-                    <button class="btn btn_green product-cart-footer__checkout js-cart-submit" data-is_fast="0">Оформить заказ
+                    <button class="btn btn_blue-border product-cart-footer__checkout js-cart-submit" data-is_fast="0">Купить сейчас
                     </button>
                     <!-- Quick buy-->
                     {{--<button class="btn btn_yellow product-cart-footer__quick-buy js-cart-submit" data-is_fast="1">Купить в 1 клик</button>--}}
