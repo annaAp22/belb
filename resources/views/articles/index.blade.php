@@ -47,7 +47,7 @@
                             <button class="btn btn_show-all js-action-link"
                                     data-url="{{route('ajax.articles')}}"
                                     data-page="1">
-                                <span>Показать все рецепты</span>
+                                <span>Показать все статьи</span>
                                 <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
                             </button>
                         </div>

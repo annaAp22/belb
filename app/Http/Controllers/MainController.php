@@ -205,6 +205,7 @@ class MainController extends Controller
      */
     public function pickup() {
         $page = Page::where('sysname', 'pickup')->with('vars')->firstOrFail();
+
         $this->setMetaTags();
         return view('content.content', ['page' => $page]);
     }
@@ -226,7 +227,7 @@ class MainController extends Controller
         $page = Page::where('sysname', 'articles')->first();
         if(!$page) {
             $page = new Page();
-            $page->name = 'Рецепты';
+            $page->name = 'Статьи';
             $page->content = '';
         }
         $articles = Article::where('status', 1)->orderBy('date', 'desc')->paginate(12);

@@ -1,6 +1,6 @@
 <div class="nav-pages js-pages">
     {{-- Delivery --}}
-    <a class="nav-pages__item nav-pages__item--deliv " href="{{ route('delivery') }}"><span>Доставка и оплата</span></a>
+    <a class="nav-pages__item nav-pages__item " href="{{ route('delivery') }}"><span>Доставка и оплата</span></a>
     {{-- Articles --}}
     {{--<a class="nav-pages__item" href="{{ route('articles') }}"><span>Статьи</span></a>--}}
     {{-- Reviews --}}
@@ -22,8 +22,8 @@
 
     <a class="nav-pages__item" href="{{ route('news') }}"><span>Акции</span></a>
     <a class="nav-pages__item" href="{{ route('reviews') }}"><span>Отзывы</span></a>
-    <a class="nav-pages__item" href="{{ route('photos') }}"><span>Наши клиенты</span></a>
-    <a class="nav-pages__item" href="{{ route('photos') }}"><span>Услуги</span></a>
+    <a class="nav-pages__item" href="{{ route('news') }}"><span>Наши клиенты</span></a>
+    <a class="nav-pages__item" href="{{ route('page', ['sysname' => 'iz_chego_shem']) }}"><span>Услуги</span></a>
     {{-- Contacts --}}
     <a class="nav-pages__item" href="{{ route('contacts') }}"><span>Контакты</span></a>
 

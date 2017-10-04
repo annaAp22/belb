@@ -422,15 +422,16 @@ header
     position: relative
     cursor: pointer
     transition: background-color .3s ease
-    &--deliv
-      color: #3A69A8
     & > *
       vertical-align: middle
     i
       transition: transform .3s ease
     &:hover, &:focus
       background-color: #f3f3f3
+    &.current
+      color: #3a69a8
     &.active
+      color: #3a69a8
       .nav-pages__dropdown
         max-height: 500px
         padding-top: 40px
@@ -459,7 +460,7 @@ header
       transition: font-weight .3s ease, color .3s ease
       &:hover, &:focus
         font-weight: 700
-        color: #00ad5d
+        color: #3a69a8
     & > li > button, & > .mobile-sidebar__title
       +hidden-lg(up)
 

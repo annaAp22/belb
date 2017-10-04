@@ -32,27 +32,27 @@
                             <img class="page-text__image" src="{{ $page->uploads->img->preview->url() }}" alt="{{ $page->name }}">
 
                             <!-- Share-->
-                            <div class="share article-detailed__share">
-                                <span>Поделиться:</span>
-                                <a class="share__link" href="http://www.facebook.com/sharer.php?u={{ route('news', $page->sysname) }}" target="_blank">
-                                    <i class="sprite_main sprite_main-product_social-facebook"></i>
-                                </a>
-                                <div class="share__separator">|</div>
-                                <!-- Additional params: &title=, &description=, &image=-->
-                                <a class="share__link" href="http://vk.com/share.php?url={{ route('news', $page->sysname) }}&title={{ $page->name }}&description={{ $page->description }}&image={{ $page->uploads->img->url() }}" target="_blank">
-                                    <i class="sprite_main sprite_main-product_social-vk"></i>
-                                </a>
-                                <div class="share__separator">|</div>
-                                <!-- Additional params: &text=, &via=<Twitter_account_link>-->
-                                <a class="share__link" href="http://twitter.com/share?url={{ route('news', $page->sysname )}}&text={{ $page->name}}" target="_blank">
-                                    <i class="sprite_main sprite_main-product_social-twitter"></i>
-                                </a>
-                                <div class="share__separator">|</div>
-                                <!-- Additional params: &title=, &description=, &imageUrl=-->
-                                <a class="share__link" href="https://connect.ok.ru/offer?url={{ route('news', $page->sysname )}}&title={{ $page->name}}&description={{ $page->description }}&imageUrl={{ $page->uploads->img->url() }}" target="_blank">
-                                    <i class="sprite_main sprite_main-product_social-odnoklasniki"></i>
-                                </a>
-                            </div>
+                            {{--<div class="share article-detailed__share">--}}
+                                {{--<span>Поделиться:</span>--}}
+                                {{--<a class="share__link" href="http://www.facebook.com/sharer.php?u={{ route('news', $page->sysname) }}" target="_blank">--}}
+                                    {{--<i class="sprite_main sprite_main-product_social-facebook"></i>--}}
+                                {{--</a>--}}
+                                {{--<div class="share__separator">|</div>--}}
+                                {{--<!-- Additional params: &title=, &description=, &image=-->--}}
+                                {{--<a class="share__link" href="http://vk.com/share.php?url={{ route('news', $page->sysname) }}&title={{ $page->name }}&description={{ $page->description }}&image={{ $page->uploads->img->url() }}" target="_blank">--}}
+                                    {{--<i class="sprite_main sprite_main-product_social-vk"></i>--}}
+                                {{--</a>--}}
+                                {{--<div class="share__separator">|</div>--}}
+                                {{--<!-- Additional params: &text=, &via=<Twitter_account_link>-->--}}
+                                {{--<a class="share__link" href="http://twitter.com/share?url={{ route('news', $page->sysname )}}&text={{ $page->name}}" target="_blank">--}}
+                                    {{--<i class="sprite_main sprite_main-product_social-twitter"></i>--}}
+                                {{--</a>--}}
+                                {{--<div class="share__separator">|</div>--}}
+                                {{--<!-- Additional params: &title=, &description=, &imageUrl=-->--}}
+                                {{--<a class="share__link" href="https://connect.ok.ru/offer?url={{ route('news', $page->sysname )}}&title={{ $page->name}}&description={{ $page->description }}&imageUrl={{ $page->uploads->img->url() }}" target="_blank">--}}
+                                    {{--<i class="sprite_main sprite_main-product_social-odnoklasniki"></i>--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
                         </div>
                         <div class="article-detailed__text">
                             {!! $page->text !!}
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="related-articles related-articles_content">
-                        <h3>Ещё рецепты:</h3>
+                        <h3>Читайте также:</h3>
                         <div class="articles articles__recipes js-container-article">
                             @include('articles.list')
                         </div>
