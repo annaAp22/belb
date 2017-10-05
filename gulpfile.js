@@ -55,29 +55,29 @@ elixir(function(mix) {
     // Customer area
     //mix.sass('app.sass');
     mix.task('postcss');
-    // mix.scripts([
-    //     'vendor/jquery-3.2.1.min.js',
-    //     'vendor/jquery.carousel.js',
-    //     'vendor/jquery.mask.min.js',
-    //     'vendor/nouislider.min.js',
-    //     'vendor/hammer.min.js',
-    //     'vendor/jquery.fancybox.min.js',
-    //     'vendor/jquery.horizontalScroll.js',
-    //     'vendor/jquery.ajax.autocomplete.min.js'
-    // ], 'public/js/vendor.js');
-    //
-    // mix.scripts([
-    //     'libs/loader.js'
-    // ], 'public/js/lib.js');
-    //
-    // mix.scripts([
-    //      'filters.js',
-    //     'map.js',
-    //     'app.js'
-    // ], 'public/js/app.js');
-    // // mix.version(
-    // //     'css/app.css'
-    // // );
+    mix.scripts([
+        'vendor/jquery-3.2.1.min.js',
+        'vendor/jquery.carousel.js',
+        'vendor/jquery.mask.min.js',
+        'vendor/nouislider.min.js',
+        'vendor/hammer.min.js',
+        'vendor/jquery.fancybox.min.js',
+        'vendor/jquery.horizontalScroll.js',
+        'vendor/jquery.ajax.autocomplete.min.js'
+    ], 'public/js/vendor.js');
+
+    mix.scripts([
+        'libs/loader.js'
+    ], 'public/js/lib.js');
+
+    mix.scripts([
+         'filters.js',
+        'map.js',
+        'app.js'
+    ], 'public/js/app.js');
+    // mix.version(
+    //     'css/app.css'
+    // );
     mix.version([
         'assets/admin/css/admin.css',
         'assets/admin/js/admin.js',

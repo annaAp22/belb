@@ -6,13 +6,13 @@
             {{--<div class="header__time">с {{ $global_settings['schedule']->value['start_workday'] }} до {{ $global_settings['schedule']->value['end_workday'] }} без выходных</div>--}}
 
             <!-- Hamburger -->
-            {{--<div class="header__hamburger">--}}
-                {{--<div class="hamburger js-toggle-sidebar" data-target=".js-nav-visible">--}}
-                    {{--<span></span>--}}
-                    {{--<span></span>--}}
-                    {{--<span></span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="header__hamburger">
+                <div class="hamburger js-toggle-sidebar" data-target=".js-nav-visible">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 
             <!-- Site logo -->
             <a class="header__logo" href="/">

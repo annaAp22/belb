@@ -6,13 +6,13 @@
             
 
             <!-- Hamburger -->
-            
-                
-                    
-                    
-                    
-                
-            
+            <div class="header__hamburger">
+                <div class="hamburger js-toggle-sidebar" data-target=".js-nav-visible">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 
             <!-- Site logo -->
             <a class="header__logo" href="/">
