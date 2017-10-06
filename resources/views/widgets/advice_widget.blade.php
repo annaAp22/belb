@@ -7,8 +7,10 @@
         <div class="advice-articles__article advice-article-preview ">
           <a class="advice-article-preview__link"
              href="{{ route('tag.article', ['tag_sysname' => $tag->sysname, 'sysname' => $article->sysname]) }}">
-            <img class="advice-article-preview__image" src="{{ $article->uploads->img->url() }}"/>
+            <div class="advice-article-preview__image">
+              <img src="{{ $article->uploads->img->url() }}"/>
             {{--<img class="advice-article-preview__image" src="{{ $article->uploads->img->middle->url() }}"/>--}}
+            </div>
             <div class="advice-article-preview__caption">
               <div class="advice-article-preview__title">{{ $article->name }}
               </div>

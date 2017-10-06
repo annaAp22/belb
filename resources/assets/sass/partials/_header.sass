@@ -360,7 +360,7 @@ header
 .nav-catalog
   display: flex
   margin-bottom: -3px
-  &__btn
+  .nav-catalog__btn
     width: 240px
     margin-right: 20px
     padding: 12px 20px
@@ -438,6 +438,9 @@ header
         padding-bottom: 40px
       i
         transform: rotate(180deg)
+  &__icon-burg
+    +media-md(down)
+      display: none
   &__dropdown
     width: 260px
     background-color: #ffffff

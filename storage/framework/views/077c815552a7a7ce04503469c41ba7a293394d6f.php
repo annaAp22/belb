@@ -7,8 +7,10 @@
         <div class="advice-articles__article advice-article-preview ">
           <a class="advice-article-preview__link"
              href="<?php echo e(route('tag.article', ['tag_sysname' => $tag->sysname, 'sysname' => $article->sysname])); ?>">
-            <img class="advice-article-preview__image" src="<?php echo e($article->uploads->img->url()); ?>"/>
+            <div class="advice-article-preview__image">
+              <img src="<?php echo e($article->uploads->img->url()); ?>"/>
             
+            </div>
             <div class="advice-article-preview__caption">
               <div class="advice-article-preview__title"><?php echo e($article->name); ?>
 

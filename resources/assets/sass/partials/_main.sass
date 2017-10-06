@@ -69,21 +69,25 @@
   padding: 0 12px
 
 .main-benefits-banner
-  +col-lg(8, no)
+  +col-md(8, no)
   //min-height: 390px
   color: #ffffff
   position: relative
   display: block
   text-decoration: none
-  &:nth-child(2)
-    +media-sm(down)
-      +col(24, no)
-    +media-md()
-      +col(15, no)
-      flex-grow: 1
-  &:nth-child(3)
-    +media-md(down)
-      +col(24, no)
+  //+media-md(only)
+  //  flex-wrap: nowrap
+  +media-sm(down)
+    +col(24, no)
+  //&:nth-child(2)
+  //  +media-sm(down)
+  //    +col(24, no)
+  //  +media-md()
+  //    +col(15, no)
+  //    flex-grow: 1
+  //&:nth-child(3)
+  //  +media-md(down)
+  //    +col(24, no)
   &_green
     background-color: #00ad5d
   &_light-gray
@@ -302,9 +306,12 @@
   +col(14, no)
   background: url("/img/callb-min.jpg") no-repeat #edf5fc
   background-size: cover
+  +hidden-sm(down)
 
 .main-callback__form
   +col(10, no)
+  +media-sm(down)
+    +col(24, no)
 
 .main-trust
   display: flex
@@ -320,7 +327,8 @@
   padding: 0
   margin-bottom: 0
   margin-top: 0
-
+  +media-xs()
+    +col(24, no)
 .main-trust__title
   display: inline-block
   vertical-align: middle
@@ -345,6 +353,7 @@
   img
     width: 100%
     height: auto
+  +hidden-xs()
 
 .main-trust h3
   margin: 0 auto
@@ -714,6 +723,9 @@
 
 .advice-articles__article
   +col(12, no)
+  +media-md(down)
+    +col(24, no)
+
 
 .advice-article-preview
   position: relative
@@ -729,7 +741,11 @@
     width: 100%
     height: 320px
     display: block
-
+    background-color: #e5e5e5
+    img
+      //width: 100%
+      //height: auto
+      +hidden-sm(down)
 
   &__caption
     position: absolute

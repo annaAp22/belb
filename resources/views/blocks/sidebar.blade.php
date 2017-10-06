@@ -8,9 +8,9 @@
   <div class="mobile-sidebar__title">Ваш город</div>
     <div class="sidebar-geo js-toggle-active">
         <div class="sidebar-geo__city">
-            <i class="sprite_main sprite_main-header__city_point"></i>
+            <i class="sprite sprite-locate-places-min"></i>
             <span>{{ $user_city }}</span>
-            <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+            <i class="sprite sprite-arrow-dwn-min"></i>
         </div>
 
         <div class="mobile-sidebar__level-2 sidebar-geo__level-2 js-geo-mobile">

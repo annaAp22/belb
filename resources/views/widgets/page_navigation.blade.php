@@ -28,7 +28,7 @@
     <a class="nav-pages__item" href="{{ route('contacts') }}"><span>Контакты</span></a>
 
     {{-- Info pages --}}
-    <div class="nav-pages__item js-toggle-active" data-reset=".js-catalog">
+    <div class="nav-pages__item js-toggle-active" data-reset=".js-catalog-belb">
         <span>Ещё</span><i class="sprite sprite-arrow-down-blue-min"></i>
 
         <ul class="nav-pages__dropdown">

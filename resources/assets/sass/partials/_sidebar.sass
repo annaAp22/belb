@@ -313,6 +313,7 @@
   &__checkbox
     width: 18px
     height: 19px
+    flex-shrink: 0
     border: 1px solid #5A6DAA
     text-align: center
     cursor: pointer
@@ -416,6 +417,9 @@ body
   transition: visibility 0s ease .3s
   .btn_more
     color: #515151
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
     margin-bottom: 40px
     & > span
       margin-left: 10px
@@ -424,7 +428,7 @@ body
   &.active
     visibility: visible
     transition: visibility 0s ease
-  &__title
+  .mobile-sidebar__title
     text-transform: uppercase
     font-size: 24px
     font-weight: 900
@@ -487,17 +491,19 @@ body
     flex-direction: column
     margin-right: 0
     margin-bottom: 50px
-    .nav-pages__item
-      position: static
-      display: flex
-      +align(between, center)
-      margin: 0 -20px
-      font-size: 16px
-      & > i
-        transform: rotate(-90deg)
-      &.active
-        .nav-pages__dropdown
-          transform: translateX(0) translateZ(0)
+
+  .nav-pages__item
+    position: static
+    display: flex
+    +align(between, center)
+    margin: 0 -20px
+    font-size: 16px
+    & > i
+      transform: rotate(-90deg)
+      flex-shrink: 0
+    &.active
+      .nav-pages__dropdown
+        transform: translateX(0) translateZ(0)
     .nav-pages__dropdown
       cursor: auto
       box-shadow: none
