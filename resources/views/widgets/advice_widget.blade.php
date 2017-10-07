@@ -8,7 +8,11 @@
           <a class="advice-article-preview__link"
              href="{{ route('tag.article', ['tag_sysname' => $tag->sysname, 'sysname' => $article->sysname]) }}">
             <div class="advice-article-preview__image">
-              <img src="{{ $article->uploads->img->url() }}"/>
+              <picture>
+                <source media="(max-width: 839px)" srcset="{{ $article->uploads->img->small->url() }}">
+                <img src="{{ $article->uploads->img->url() }}"/>
+              </picture>
+              {{--<img src="{{ $article->uploads->img->url() }}"/>--}}
             {{--<img class="advice-article-preview__image" src="{{ $article->uploads->img->middle->url() }}"/>--}}
             </div>
             <div class="advice-article-preview__caption">

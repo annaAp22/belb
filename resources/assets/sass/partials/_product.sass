@@ -912,20 +912,54 @@
     & > textarea
       height: 147px
       margin-bottom: 30px
-    & > .rating-inputs
-      margin-top: 20px
-      display: flex
-      +align(between)
-      .label
-        display: block
-        text-align: center
-        margin-top: 10px
-        width: 22px
+    //& > .rating-inputs
+    //  margin-top: 20px
+    //  display: flex
+    //  +align(between)
+    //  .label
+    //    display: block
+    //    text-align: center
+    //    margin-top: 10px
+    //    width: 22px
   &__label
     font-size: 13px
     color: #b5b5b5
     &_mt
       margin-top: 20px
+.rating-inputs
+  margin-top: 20px
+  display: flex
+  +align(between)
+  input[type="radio"]
+    display: none
+
+//.radio-star
+//  display: block
+
+#input-rating-1
+  &:checked ~ label[for="input-rating-2"],
+  &:checked ~ label[for="input-rating-3"],
+  &:checked ~ label[for="input-rating-4"],
+  &:checked ~ label[for="input-rating-5"]
+    @extend .sprite-star-min
+#input-rating-2
+  &:checked ~ label[for="input-rating-3"],
+  &:checked ~ label[for="input-rating-4"],
+  &:checked ~ label[for="input-rating-5"]
+    @extend .sprite-star-min
+#input-rating-3
+  &:checked ~ label[for="input-rating-4"],
+  &:checked ~ label[for="input-rating-5"]
+    @extend .sprite-star-min
+#input-rating-4
+  &:checked ~ label[for="input-rating-5"]
+    @extend .sprite-star-min
+
+//.label
+    //  display: block
+    //  text-align: center
+    //  margin-top: 10px
+    //  width: 22px
 .reviews
   width: 100%
 // Reviews empty
