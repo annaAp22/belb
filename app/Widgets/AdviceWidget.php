@@ -12,7 +12,9 @@ class AdviceWidget extends AbstractWidget
      *
      * @var array
      */
-    protected $config = [];
+    protected $config = [
+       'tag_id' => 0
+    ];
     public $cacheTime = 60;
     /**
      * Treat this method as a controller action.

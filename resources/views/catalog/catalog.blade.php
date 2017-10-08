@@ -158,7 +158,8 @@
                 @elseif(isset($tag))
                     @widget('ArticlesWidget', ['tag_id' => $tag->id])
                 @endif
-
+            {{--?типа преимущества в статьях ?--}}
+                @widget('adviceWidget', ['tag_id' => 1])
                 {{--@widget('SubscribeWidget')--}}
             </section>
         </div>
