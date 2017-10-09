@@ -14,7 +14,8 @@ class ArticlesWidget extends AbstractWidget
      */
     protected $config = [
         'category_id' => 0,
-        'tag_id' => 0
+        'tag_id' => 0,
+        'full' => 0
     ];
 
     /**
@@ -42,8 +43,12 @@ class ArticlesWidget extends AbstractWidget
         if(!$articles->count()) {
             return '';
         }
-
-        return view("widgets.articles_widget", [
+        if($this->config['full']) {
+          return view("widgets.articles_article", [
+            'config' => $this->config, 'articles' => $articles[0]
+          ]);
+        }
+          return view("widgets.articles_widget", [
             'config' => $this->config, 'articles' => $articles
         ]);
     }

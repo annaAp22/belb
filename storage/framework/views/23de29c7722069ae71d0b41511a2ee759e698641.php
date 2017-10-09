@@ -156,11 +156,12 @@
                 </div>
 
                 <?php if(isset($category)): ?>
-                    <?php echo app('arrilot.widget')->run('ArticlesWidget', ['category_id' => $category->id]); ?>
+                    <?php echo app('arrilot.widget')->run('ArticlesWidget', ['category_id' => $category->id,'full' => 1]); ?>
                 <?php elseif(isset($tag)): ?>
-                    <?php echo app('arrilot.widget')->run('ArticlesWidget', ['tag_id' => $tag->id]); ?>
+                    <?php echo app('arrilot.widget')->run('ArticlesWidget', ['tag_id' => $tag->id ,'full' => 1]); ?>
                 <?php endif; ?>
-
+            
+                <?php echo app('arrilot.widget')->run('adviceWidget', ['tag_id' => 1]); ?>
                 
             </section>
         </div>

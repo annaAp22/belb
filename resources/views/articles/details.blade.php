@@ -61,8 +61,8 @@
 
                     <div class="related-articles related-articles_content">
                         <h3>Читайте также:</h3>
-                        <div class="articles articles__recipes js-container-article">
-                            @include('articles.list')
+                        <div class="articles articles--belb js-container-article">
+                            @include('articles.list-belb')
                         </div>
                     </div>
 

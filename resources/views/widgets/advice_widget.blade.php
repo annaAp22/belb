@@ -50,7 +50,7 @@
           </div>
         @endforeach
       </div>
-      <a class="main-advice__listing-link" href="{{ route('tags', $tag->sysname) }}">Еще статьи</a>
+      <a class="main-advice__link" href="{{ route('tags', $tag->sysname) }}">Еще статьи</a>
     </section>
   @endif
 @endif
