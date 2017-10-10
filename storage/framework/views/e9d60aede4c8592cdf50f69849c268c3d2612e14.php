@@ -136,5 +136,5 @@
         </div>
     </div>
 
-    <?php echo app('arrilot.widget')->run('CatalogWidget'); ?>
+    
 </header>

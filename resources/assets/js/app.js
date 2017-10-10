@@ -306,10 +306,10 @@ $(function(){
         vertical : true,
         margin: 0,
         responsive: {
-            1492: {items: 5, options: {margin: 0, vertical: true}},
-            1203: {items: 5, options: {margin: 0, vertical: true}},
-            840: {items: 5, options: {margin: 0, vertical: true}},
-            576: {items: 5, options: {margin: 0, vertical: false}},
+            1492: {items: 3, options: {margin: 0, vertical: true}},
+            1203: {items: 3, options: {margin: 0, vertical: true}},
+            840: {items: 3, options: {margin: 0, vertical: true}},
+            576: {items: 3, options: {margin: 0, vertical: false}},
             320: {items: 3, options: {margin: 0, vertical: false}}
         }
     });

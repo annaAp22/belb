@@ -25,15 +25,15 @@
                         <div class="reviews-empty__text">Будьте первым, кто поделится своим мнением о товаре. Ваш отзыв внесет ценный вклад в развитие сервиса
                         </div>
                         <div class="product-rating">
-                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-big-min active"></i>
                             </div>
-                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-big-min active"></i>
                             </div>
-                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-big-min active"></i>
                             </div>
-                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                            <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-big-min active"></i>
                             </div>
-                            <div class="icon-fade product-rating__star"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                            <div class="icon-fade product-rating__star"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-big-min active"></i>
                             </div>
                         </div>
                     </div>
@@ -75,22 +75,49 @@
         </div><input class="input input_text js-required-fields" type="text" name="name" placeholder="Ваше имя"/>
         <div class="product-review-form__label product-review-form__label_mt">Оцените товар по 5-ти бальной шкале
         </div>
+        
+            
+                
+                
+                
+                
+            
+            
+                
+                
+                
+                
+            
+            
+                
+                
+                
+                
+            
+            
+                
+                
+                
+                
+            
+            
+                
+                
+                
+                
+            
+        
         <div class="rating-inputs">
-            <label class="radio radio_square">
-                <input type="radio" name="rating" value="1"/><span class="fake-input"><span></span></span><span class="label">1</span>
-            </label>
-            <label class="radio radio_square">
-                <input type="radio" name="rating" value="2"/><span class="fake-input"><span></span></span><span class="label">2</span>
-            </label>
-            <label class="radio radio_square">
-                <input type="radio" name="rating" value="3"/><span class="fake-input"><span></span></span><span class="label">3</span>
-            </label>
-            <label class="radio radio_square">
-                <input type="radio" name="rating" value="4"/><span class="fake-input"><span></span></span><span class="label">4</span>
-            </label>
-            <label class="radio radio_square">
-                <input type="radio" name="rating" value="5" checked/><span class="fake-input"><span></span></span><span class="label">5</span>
-            </label>
+            <input type="radio" name="rating" id="input-rating-1" value="1" >
+            <input type="radio" name="rating" id="input-rating-2" value="2">
+            <input type="radio" name="rating" id="input-rating-3" value="3">
+            <input type="radio" name="rating" id="input-rating-4" value="4">
+            <input type="radio" name="rating" id="input-rating-5" value="5" checked >
+            <label class="radio-star sprite sprite-star-blue-big-min" for="input-rating-1"></label>
+            <label class="radio-star sprite sprite-star-blue-big-min" for="input-rating-2"></label>
+            <label class="radio-star sprite sprite-star-blue-big-min" for="input-rating-3"></label>
+            <label class="radio-star sprite sprite-star-blue-big-min" for="input-rating-4"></label>
+            <label class="radio-star sprite sprite-star-blue-big-min" for="input-rating-5"></label>
         </div>
         <div class="product-review-form__label product-review-form__label_mt">Текст Вашего отзыва</div>
         <textarea class="textarea textarea_text" name="text" placeholder="Несколько слов о товаре"></textarea>

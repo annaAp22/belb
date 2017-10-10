@@ -2,18 +2,8 @@
     <div class="colored-bg__3a69a8">
         <div class="container">
             <div class="navigation-footer">
+                <?php echo app('arrilot.widget')->run('CatalogWidget', ['type' => 'footerMenu']); ?>
                 
-                
-                <div class="navigation-footer__column navigation-footer__column_dropdown">
-                    <div class="navigation-footer__title js-toggle-active">Каталог товаров<i
-                                class="sprite sprite-arrow-down-min"></i>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">???</a>
-                        </li>
-                    </ul>
-                </div>
                 <?php echo app('arrilot.widget')->run('FooterList', ['page_title' => 'Инфоpмация']); ?>
                 <div class="navigation-footer__column navigation-footer__column--message">
                     <p class="navigation-footer__message">

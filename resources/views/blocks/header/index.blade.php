@@ -135,5 +135,5 @@
         </div>
     </div>
 
-    @widget('CatalogWidget')
+    {{--@widget('CatalogWidget')--}}
 </header>

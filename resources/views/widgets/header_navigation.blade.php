@@ -6,8 +6,12 @@
       <ul class="nav-pages__dropdown">
         <li><button class="btn btn_more"><i class="sprite_main sprite_main-icon__arrow_to_top"></i><span>Вернуться назад</span></button></li>
         <li class="mobile-sidebar__title">Каталог</li>
-        <li><a href="{{route('catalog', 'elektroprostyni')}}">Электропростыни</a></li>
-
+        @foreach($categories as $category)
+          <li>
+            <a href="{{route('catalog', $category->sysname)}}">{{$category->name}}</a>
+          </li>
+        @endforeach
+        {{--<li><a href="{{route('catalog', 'elektroprostyni')}}">Электропростыни</a></li>--}}
       </ul>
     </div>
     {{--@if($categories->contains('name', 'Для женщин'))--}}

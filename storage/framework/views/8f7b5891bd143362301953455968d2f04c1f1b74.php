@@ -38,11 +38,13 @@
       
       <!-- Women category -->
         <?php 
-          $women = $categories->where('name', 'Для женщин')->first();
-          $men = $categories->where('name', 'Для мужчин')->first();
+         //$category1 = $categories->where('name', 'Для женщин')->first();
+          $category1 = $categories->where('id', '1')->first();
+          $category2 = $categories->where('id', '50')->first();
+          $category3 = $categories->where('id', '54')->first();
          ?>
         <a class="main-benefits-banner main-benefits-banner_green"
-           href="<?php echo e(route('actions', ['sysname' => 'woman'])); ?>">
+           href="<?php echo e(route('catalog', ['sysname' => $category1->sysname])); ?>">
           
           <img class="main-benefits-banner__image" src="/img/img-benef1-min.jpg" alt="" role="presentation"/>
           <span class="main-benefits-banner__title">Для  уюта</span>
@@ -51,7 +53,7 @@
 
         </a>
         <a class="main-benefits-banner main-benefits-banner_light-gray"
-           href="<?php echo e(route('catalog', ['sysname' => $women->sysname])); ?>">
+           href="<?php echo e(route('catalog', ['sysname' => $category2->sysname])); ?>">
           
           <img class="main-benefits-banner__image" src="/img/img-benef2-min.jpg" alt="" role="presentation"/>
           <span class="main-benefits-banner__title">Для здоровья</span>
@@ -61,7 +63,7 @@
         </a>
         <!-- Men category -->
         <a class="main-benefits-banner main-benefits-banner_dark-gray"
-           href="<?php echo e(route('catalog', ['sysname' => $men->sysname])); ?>">
+           href="<?php echo e(route('catalog', ['sysname' => $category3->sysname])); ?>">
           
           <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
           

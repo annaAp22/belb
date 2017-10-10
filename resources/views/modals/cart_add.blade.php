@@ -18,9 +18,9 @@
             </div>
             <div class="cart-modal_top_counter">
                 <div class="quantity">
-                    <div class="quantity__handle quantity__handle_minus icon-fade js-quantity" data-num="-1" data-submit><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
+                    <div class="quantity__handle quantity__handle_minus js-quantity" data-num="-1" > <
                     </div><input class="quantity__input js-quantity-input" data-submit name="quantity" value="{{ $cnt }}" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
-                    <div class="quantity__handle quantity__handle_plus icon-fade js-quantity" data-num="1" data-submit><i class="sprite_main sprite_main-icon-arrow-gray-left normal"></i><i class="sprite_main sprite_main-icon-arrow-green-left_active active"></i>
+                    <div class="quantity__handle quantity__handle_plus js-quantity" data-num="1" > >
                     </div>
                 </div>
             </div>
