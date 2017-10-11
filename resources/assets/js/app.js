@@ -1084,10 +1084,10 @@ function productsSliderInit() {
             productsSlider.push(slider);
             $(slider).carousel({
                 responsive: {
-                    1492 : {items: 6},
-                    1203 : {items: 5},
-                    840 : {items: 5},
-                    576 : {items: 3},
+                    1492 : {items: 4},
+                    1203 : {items: 3},
+                    840 : {items: 2},
+                    576 : {items: 2},
                     300 : {items: 2},
                     0 : {items: 1}
                 }

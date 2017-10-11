@@ -139,16 +139,16 @@
             </div>
             <div class="page-wrapper">
               <div class="page js-tab-page active" data-action="widget"
-                   data-options='{"config":{"type":"new"}}' data-url="{{route('ajax.widget')}}"
+                   data-options='{"config":{"type":"hit"}}' data-url="{{route('ajax.widget')}}"
                    data-name="ProductsSliderWidget" data-callback="productsSliderInit" data-complete="1">
-                @widget('ProductsSliderWidget', ['type' => 'new'])
+                @widget('ProductsSliderWidget', ['type' => 'hit'])
               </div>
               <div class="page js-tab-page active" data-action="widget"
-                   data-options='{"config":{"type":"act"}}' data-url="{{route('ajax.widget')}}"
+                   data-options='{"config":{"type":"new"}}' data-url="{{route('ajax.widget')}}"
                    data-name="ProductsSliderWidget" data-callback="productsSliderInit">
               </div>
               <div class="page js-tab-page active" data-action="widget"
-                   data-options='{"config":{"type":"hit"}}' data-url="{{route('ajax.widget')}}"
+                   data-options='{"config":{"type":"act"}}' data-url="{{route('ajax.widget')}}"
                    data-name="ProductsSliderWidget" data-callback="productsSliderInit">
               </div>
             </div>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="yandex-verification" content="c0c2b889beb7fe31" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">
     @include('blocks.favicons')
 	<link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>

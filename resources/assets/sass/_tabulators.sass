@@ -8,19 +8,21 @@
   .tab-wrapper
     display: table
     margin-bottom: 24px
+    margin-left: auto
+    margin-right: auto
     +media-xs(down)
       display: block
   .tab
     &:not(:last-of-type)
       padding-right: 40px
-      &:before
-        content: ""
-        width: 1px
-        height: 30px
-        right: 20px
-        top: 4px
-        background-color: silver
-        position: absolute
+      //&:before
+      //  content: ""
+      //  width: 1px
+      //  height: 30px
+      //  right: 20px
+      //  top: 4px
+      //  background-color: silver
+      //  position: absolute
     position: relative
     +media-sm(down)
       width: auto
@@ -35,11 +37,11 @@
       &:not(:last-of-type)
         border-bottom: 1px solid #e6e6e6
         padding-right: 0
-        &:before
-          content: none
+        //&:before
+        //  content: none
       &.active
         color: #fff
-        background-color: #00ad5d
+        background-color: #4c68a5
         span
           border-bottom: 0
       &:hover:not(.active)
