@@ -38,10 +38,10 @@
       
       <!-- Women category -->
         <?php 
-         //$category1 = $categories->where('name', 'Для женщин')->first();
-          $category1 = $categories->where('id', '1')->first();
-          $category2 = $categories->where('id', '50')->first();
-          $category3 = $categories->where('id', '54')->first();
+          //$category1 = $categories->where('name', 'Для женщин')->first();
+           $category1 = $categories->where('id', '1')->first();
+           $category2 = $categories->where('id', '50')->first();
+           $category3 = $categories->where('id', '54')->first();
          ?>
         <a class="main-benefits-banner main-benefits-banner_green"
            href="<?php echo e(route('catalog', ['sysname' => $category1->sysname])); ?>">
@@ -134,23 +134,39 @@
             </div>
             <div class="page-wrapper">
               <div class="page js-tab-page active" data-action="widget"
-                   data-options='{"config":{"type":"new"}}' data-url="<?php echo e(route('ajax.widget')); ?>"
+                   data-options='{"config":{"type":"hit"}}' data-url="<?php echo e(route('ajax.widget')); ?>"
                    data-name="ProductsSliderWidget" data-callback="productsSliderInit" data-complete="1">
-                <?php echo app('arrilot.widget')->run('ProductsSliderWidget', ['type' => 'new']); ?>
+                <?php echo app('arrilot.widget')->run('ProductsSliderWidget', ['type' => 'hit']); ?>
               </div>
               <div class="page js-tab-page active" data-action="widget"
-                   data-options='{"config":{"type":"act"}}' data-url="<?php echo e(route('ajax.widget')); ?>"
+                   data-options='{"config":{"type":"new"}}' data-url="<?php echo e(route('ajax.widget')); ?>"
                    data-name="ProductsSliderWidget" data-callback="productsSliderInit">
               </div>
               <div class="page js-tab-page active" data-action="widget"
-                   data-options='{"config":{"type":"hit"}}' data-url="<?php echo e(route('ajax.widget')); ?>"
+                   data-options='{"config":{"type":"act"}}' data-url="<?php echo e(route('ajax.widget')); ?>"
                    data-name="ProductsSliderWidget" data-callback="productsSliderInit">
               </div>
             </div>
           </div>
           <div class="main-catalog">
             <h3>Каталог товаров</h3>
-            <p>Более 5 000 товаров</p>
+            <p class="main-catalog__sub-title">Более 5 000 товаров</p>
+            <ul class="main-catalog__list">
+              <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                
+                <li class="main-catalog__item">
+                  <a class="main-catalog__lnk" href="<?php echo e(route('catalog', $category->sysname)); ?>">
+                    <img src="<?php echo e($category->uploads->img_main->original->url()); ?>"/>
+                    <div class="main-catalog__lnk-top">
+                      <p>Более <span><?php echo e($category->getProductsCountAttribute()); ?></span> товаров</p>
+                      <p>Цены от <span><?php echo e($category->getMinPriceAttribute()); ?></span></p>
+                    </div>
+                    <h4><?php echo e($category->name); ?></h4>
+                    <p class="main-catalog__text"><?php echo e($category->text_preview); ?></p>
+                  </a>
+                </li>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </ul>
           </div>
         </div>
       </section>

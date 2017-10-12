@@ -298,8 +298,28 @@
     +col(24)
   // Video and Quality
 .main-catalog
-  min-height: 60px
-// убрать
+  +col(19, no)
+  +media-sm(down)
+    +col(24)
+  text-align: center
+  h3
+    font-size: 24px
+    font-weight: 400
+    color: #111111
+  &__sub-title
+    font-family: "Open Sans", sans-serif
+    font-size: 18px
+    font-weight: 400
+    color: #939393
+  &__list
+    list-style: none
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+
+
+
 
 .main-callback
   display: flex

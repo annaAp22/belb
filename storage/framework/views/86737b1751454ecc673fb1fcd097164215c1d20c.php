@@ -37,7 +37,8 @@
         <div class="product__price">
            <span class="current"><?php echo e(number_format($product->price, 0, '.', ' ')); ?> ₽</span>
             <?php if($product->originalPrice): ?>
-                <i class="sprite sprite-product__old-price old-price"><span><?php echo e(number_format($product->originalPrice, 0, '.', ' ')); ?> ₽</span></i>
+                <span class="old-price"><?php echo e(number_format($product->originalPrice, 0, '.', ' ')); ?> ₽</span>
+                
             <?php endif; ?>
         </div>
         <input type="hidden" name="size" value="0">

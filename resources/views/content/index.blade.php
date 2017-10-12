@@ -43,10 +43,10 @@
       {{--</a>--}}
       <!-- Women category -->
         @php
-         //$category1 = $categories->where('name', 'Для женщин')->first();
-          $category1 = $categories->where('id', '1')->first();
-          $category2 = $categories->where('id', '50')->first();
-          $category3 = $categories->where('id', '54')->first();
+          //$category1 = $categories->where('name', 'Для женщин')->first();
+           $category1 = $categories->where('id', '1')->first();
+           $category2 = $categories->where('id', '50')->first();
+           $category3 = $categories->where('id', '54')->first();
         @endphp
         <a class="main-benefits-banner main-benefits-banner_green"
            href="{{ route('catalog', ['sysname' => $category1->sysname]) }}">
@@ -155,7 +155,23 @@
           </div>
           <div class="main-catalog">
             <h3>Каталог товаров</h3>
-            <p>Более 5 000 товаров</p>
+            <p class="main-catalog__sub-title">Более 5 000 товаров</p>
+            <ul class="main-catalog__list">
+              @foreach($categories as $category)
+                {{--{{dd($category-> products->count())}}--}}
+                <li class="main-catalog__item">
+                  <a class="main-catalog__lnk" href="{{route('catalog', $category->sysname)}}">
+                    <img src="{{ $category->uploads->img_main->original->url() }}"/>
+                    <div class="main-catalog__lnk-top">
+                      <p>Более <span>{{$category->getProductsCountAttribute()}}</span> товаров</p>
+                      <p>Цены от <span>{{$category->getMinPriceAttribute()}}</span></p>
+                    </div>
+                    <h4>{{$category->name}}</h4>
+                    <p class="main-catalog__text">{{$category->text_preview}}</p>
+                  </a>
+                </li>
+              @endforeach
+            </ul>
           </div>
         </div>
       </section>

@@ -36,7 +36,8 @@
         <div class="product__price">
            <span class="current">{{ number_format($product->price, 0, '.', ' ') }} ₽</span>
             @if($product->originalPrice)
-                <i class="sprite sprite-product__old-price old-price"><span>{{ number_format($product->originalPrice, 0, '.', ' ') }} ₽</span></i>
+                <span class="old-price">{{ number_format($product->originalPrice, 0, '.', ' ') }} ₽</span>
+                {{--<i class="sprite sprite-product__old-price old-price"><span>{{ number_format($product->originalPrice, 0, '.', ' ') }} ₽</span></i>--}}
             @endif
         </div>
         <input type="hidden" name="size" value="0">

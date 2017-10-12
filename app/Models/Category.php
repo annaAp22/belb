@@ -172,7 +172,7 @@ class Category extends Model
     }
 
     public function getProductsCountAttribute() {
-        if(!$this->hasChildren) return $this->products->count();
+        if(!$this->hasChildren) return $this->products->where('status', 1)->count();
 
         $count = 0;
         foreach($this->children as $cat)
@@ -184,7 +184,7 @@ class Category extends Model
     public function getMinPriceAttribute() {
 
         if(!$this->hasChildren)
-            return $this->products->min('price');
+            return $this->products->where('status', 1)->min('price');
 
         $min = PHP_INT_MAX;
         foreach($this->children as $cat) {
