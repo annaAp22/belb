@@ -163,8 +163,8 @@
                   <a class="main-catalog__lnk" href="{{route('catalog', $category->sysname)}}">
                     <img src="{{ $category->uploads->img_main->original->url() }}"/>
                     <div class="main-catalog__lnk-top">
-                      <p>Более <span>{{$category->getProductsCountAttribute()}}</span> товаров</p>
-                      <p>Цены от <span>{{$category->getMinPriceAttribute()}}</span></p>
+                      <div class="main-catalog__top main-catalog__top--1" >Более<br> <span>{{$category->getProductsCountAttribute()}}</span><br> товаров</div>
+                      <div class="main-catalog__top main-catalog__top--2" >Цены от<br> <span>{{$category->getMinPriceAttribute()}}</span></div>
                     </div>
                     <h4>{{$category->name}}</h4>
                     <p class="main-catalog__text">{{$category->text_preview}}</p>

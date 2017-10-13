@@ -158,8 +158,8 @@
                   <a class="main-catalog__lnk" href="<?php echo e(route('catalog', $category->sysname)); ?>">
                     <img src="<?php echo e($category->uploads->img_main->original->url()); ?>"/>
                     <div class="main-catalog__lnk-top">
-                      <p>Более <span><?php echo e($category->getProductsCountAttribute()); ?></span> товаров</p>
-                      <p>Цены от <span><?php echo e($category->getMinPriceAttribute()); ?></span></p>
+                      <div class="main-catalog__top main-catalog__top--1" >Более<br> <span><?php echo e($category->getProductsCountAttribute()); ?></span><br> товаров</div>
+                      <div class="main-catalog__top main-catalog__top--2" >Цены от<br> <span><?php echo e($category->getMinPriceAttribute()); ?></span></div>
                     </div>
                     <h4><?php echo e($category->name); ?></h4>
                     <p class="main-catalog__text"><?php echo e($category->text_preview); ?></p>
