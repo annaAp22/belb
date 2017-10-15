@@ -38,10 +38,10 @@
       
       <!-- Women category -->
         <?php 
-         //$category1 = $categories->where('name', 'Для женщин')->first();
-          $category1 = $categories->where('id', '1')->first();
-          $category2 = $categories->where('id', '50')->first();
-          $category3 = $categories->where('id', '54')->first();
+          //$category1 = $categories->where('name', 'Для женщин')->first();
+           $category1 = $categories->where('id', '1')->first();
+           $category2 = $categories->where('id', '50')->first();
+           $category3 = $categories->where('id', '54')->first();
          ?>
         <a class="main-benefits-banner main-benefits-banner_green"
            href="<?php echo e(route('catalog', ['sysname' => $category1->sysname])); ?>">
@@ -110,14 +110,36 @@
       <section class="main-offers">
         <div class="main-aside">
           <div class="main-aside__item main-aside__item--article ">
-            Статья
+            <h3 class="main-aside__header"><i class="sprite sprite-checkbox-pen-min"></i> База знаний
+            </h3>
+            <a class="main-aside__link main-aside__link--article "
+               href="<?php echo e(route('articles')); ?>">
+              <img class="main-aside__image" src="/img/article_img-min.jpg" alt="" role="presentation"/>
+              <h4 class="main-aside__title">Электроспротыни Belberg</h4>
+              <p class="main-aside__text">
+                Кайфовые простыни самые лучшее очень круто я в улете,вообще атас кайф круто кайф ням сам трам тарарам бам
+                пум...
+              </p>
+              <span>Читать статьи</span>
+            </a>
           </div>
-          <div class="main-aside__item main-aside__item--video">
-            Видео
+          <div class="main-aside__item main-aside__item--reviews ">
+            <h3 class="main-aside__header"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i> Отзывы наших клиентов
+            </h3>
+            <a class="main-aside__link main-aside__link--reviews "
+               href="<?php echo e(route('reviews')); ?>">
+              <img class="main-aside__image" src="/img/review_img-min.jpg" alt="" role="presentation"/>
+              <h4 class="main-aside__title">Отзывы наших клиентов.</h4>
+              <p class="main-aside__text">
+                Мы существуем достаточно длительное время и отзывы наших клиентов-это то,чем...
+              </p>
+              <span>Читать отзывы</span>
+            </a>
           </div>
-          <div class="main-aside__item main-aside__item--reviews">
-            Отзывы
-          </div>
+          
+            
+          
+
         </div>
         <div class="main-content">
           <div class="tabulator-offers js-tabulator">
@@ -150,7 +172,26 @@
           </div>
           <div class="main-catalog">
             <h3>Каталог товаров</h3>
-            <p>Более 5 000 товаров</p>
+            <p class="main-catalog__sub-title">Более 5 000 товаров</p>
+            <ul class="main-catalog__list">
+              <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                
+                <li class="main-catalog__item">
+                  <a class="main-catalog__lnk" href="<?php echo e(route('catalog', $category->sysname)); ?>">
+                    <img src="<?php echo e($category->uploads->img_main->original->url()); ?>"/>
+                    <div class="main-catalog__lnk-top">
+                      <div class="main-catalog__top main-catalog__top--1">Более<br>
+                        <span><?php echo e($category->getProductsCountAttribute()); ?></span><br> товаров
+                      </div>
+                      <div class="main-catalog__top main-catalog__top--2">Цены от<br>
+                        <span><?php echo e($category->getMinPriceAttribute()); ?></span></div>
+                    </div>
+                    <h4><?php echo e($category->name); ?></h4>
+                    <p class="main-catalog__text"><?php echo e($category->text_preview); ?></p>
+                  </a>
+                </li>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </ul>
           </div>
         </div>
       </section>

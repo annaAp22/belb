@@ -109,7 +109,7 @@
                     
 
                     <!-- Look md down-->
-                    <a class="btn btn_look" href="#">Подобрать<strong> Look</strong></a>
+                    
 
                     <!-- Goods listing-->
                     <div class="goods-listing js-view" id="js-goods">

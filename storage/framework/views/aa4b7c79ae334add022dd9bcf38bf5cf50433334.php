@@ -27,8 +27,8 @@
                         
                     </div>
 
-                    <div class="page-text article-detailed">
-                        <div class="article-detailed__image">
+                    <div class="page-text article-detail clearfix-after">
+                        <div class="article-detail__image">
                             <img class="page-text__image" src="<?php echo e($page->uploads->img->preview->url()); ?>" alt="<?php echo e($page->name); ?>">
 
                             <!-- Share-->
@@ -54,7 +54,7 @@
                                 
                             
                         </div>
-                        <div class="article-detailed__text">
+                        <div class="article-detail__text">
                             <?php echo $page->text; ?>
 
                         </div>

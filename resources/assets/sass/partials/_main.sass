@@ -291,7 +291,53 @@
 .main-aside
   +col(5, no)
   padding-right: 47px
+  +media-md()
+    padding-right: 12px
   +hidden-sm(down)
+  &__item
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    color: #242424
+  &__header
+    width: 100%
+    font-size: 18px
+    font-weight: 500
+
+  &__link
+    width: 100%
+    display: flex
+    flex-direction: column
+    text-decoration: none
+    box-shadow: 0px 3px 57.66px 4.34px rgba(0, 0, 0, 0.13)
+    &:hover, &:focus
+      border: 1px solid #c4c4c4
+    & > h4,p,span
+      padding-left: 30px
+      padding-right: 30px
+      +media-md()
+        padding-left: 10px
+        padding-right: 10px
+
+  &__image
+    max-width: 100%
+  &__title
+    font-size: 16px
+    font-weight: 500
+    color: #4d4d4d
+  &__text
+    font-family: "Open Sans", sans-serif
+    font-size: 12px
+    font-weight: 500
+    margin-bottom: 25px
+
+
+  span
+   margin-bottom: 35px
+   font-family: "Open Sans", sans-serif
+   font-size: 14px
+   font-weight: 700
+   color: #4c68a5
 
 .main-content
   +col(19, no)
@@ -343,7 +389,7 @@
     img
       max-width: 100%
     &:hover, &:focus
-      border: 1px solid #939393
+      border: 1px solid #c4c4c4
       +media-md(up)
         box-shadow: 0px 0px 24px 0px rgba(0, 0, 2, 0.09)
   h4
@@ -380,7 +426,7 @@
     font-size: 16px
 .main-catalog__top
   padding: 7px 15px
-  flex-shrink: 2
+  min-width: 0 //иначе не работает сжатие
   span
       font-size: 24px
       line-height: 34px
@@ -390,12 +436,11 @@
         line-height: 28px
   &--1
     background-color: #ff9c00
-    flex-shrink: 7
     +media-lg(up)
       padding: 7px 25px
   &--2
     background-color: #5a6daa
-    flex-shrink: 1
+
 .main-callback
   display: flex
   margin-bottom: 85px

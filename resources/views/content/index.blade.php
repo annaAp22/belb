@@ -115,14 +115,36 @@
       <section class="main-offers">
         <div class="main-aside">
           <div class="main-aside__item main-aside__item--article ">
-            Статья
+            <h3 class="main-aside__header"><i class="sprite sprite-checkbox-pen-min"></i> База знаний
+            </h3>
+            <a class="main-aside__link main-aside__link--article "
+               href="{{ route('articles') }}">
+              <img class="main-aside__image" src="/img/article_img-min.jpg" alt="" role="presentation"/>
+              <h4 class="main-aside__title">Электроспротыни Belberg</h4>
+              <p class="main-aside__text">
+                Кайфовые простыни самые лучшее очень круто я в улете,вообще атас кайф круто кайф ням сам трам тарарам бам
+                пум...
+              </p>
+              <span>Читать статьи</span>
+            </a>
           </div>
-          <div class="main-aside__item main-aside__item--video">
-            Видео
+          <div class="main-aside__item main-aside__item--reviews ">
+            <h3 class="main-aside__header"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i> Отзывы наших клиентов
+            </h3>
+            <a class="main-aside__link main-aside__link--reviews "
+               href="{{ route('reviews') }}">
+              <img class="main-aside__image" src="/img/review_img-min.jpg" alt="" role="presentation"/>
+              <h4 class="main-aside__title">Отзывы наших клиентов.</h4>
+              <p class="main-aside__text">
+                Мы существуем достаточно длительное время и отзывы наших клиентов-это то,чем...
+              </p>
+              <span>Читать отзывы</span>
+            </a>
           </div>
-          <div class="main-aside__item main-aside__item--reviews">
-            Отзывы
-          </div>
+          {{--<div class="main-aside__item main-aside__item--video">--}}
+            {{--Видео--}}
+          {{--</div>--}}
+
         </div>
         <div class="main-content">
           <div class="tabulator-offers js-tabulator">
@@ -163,8 +185,11 @@
                   <a class="main-catalog__lnk" href="{{route('catalog', $category->sysname)}}">
                     <img src="{{ $category->uploads->img_main->original->url() }}"/>
                     <div class="main-catalog__lnk-top">
-                      <div class="main-catalog__top main-catalog__top--1" >Более<br> <span>{{$category->getProductsCountAttribute()}}</span><br> товаров</div>
-                      <div class="main-catalog__top main-catalog__top--2" >Цены от<br> <span>{{$category->getMinPriceAttribute()}}</span></div>
+                      <div class="main-catalog__top main-catalog__top--1">Более<br>
+                        <span>{{$category->getProductsCountAttribute()}}</span><br> товаров
+                      </div>
+                      <div class="main-catalog__top main-catalog__top--2">Цены от<br>
+                        <span>{{$category->getMinPriceAttribute()}}</span></div>
                     </div>
                     <h4>{{$category->name}}</h4>
                     <p class="main-catalog__text">{{$category->text_preview}}</p>

@@ -27,8 +27,8 @@
                         {{--</a>--}}
                     </div>
 
-                    <div class="page-text article-detailed">
-                        <div class="article-detailed__image">
+                    <div class="page-text article-detail clearfix-after">
+                        <div class="article-detail__image">
                             <img class="page-text__image" src="{{ $page->uploads->img->preview->url() }}" alt="{{ $page->name }}">
 
                             <!-- Share-->
@@ -54,7 +54,7 @@
                                 {{--</a>--}}
                             {{--</div>--}}
                         </div>
-                        <div class="article-detailed__text">
+                        <div class="article-detail__text">
                             {!! $page->text !!}
                         </div>
                     </div>
