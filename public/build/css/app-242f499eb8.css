@@ -1843,7 +1843,7 @@ button {
 
 .btn_green {
   color: #fff;
-  background-color: #00ad5d;
+  background-color: #4c68a5;
   font-size: 16px;
   font-weight: 900;
   padding: 15px;
@@ -1851,7 +1851,7 @@ button {
 }
 
 .btn_green:hover:not(.disabled):not(:disabled) {
-  background-color: #006a39;
+  background-color: #1f2d4d;
 }
 
 .btn_green>i+span,
@@ -9921,6 +9921,9 @@ footer {
   font-size: 36px;
   font-weight: 700;
   color: #3a68a9;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .quantity__handle.active,
@@ -14296,6 +14299,11 @@ h3 {
 
   .tabulator-details--expo .tab:not(:last-of-type):before {
     content: none;
+  }
+
+  .quick-order_col_data .quantity__input {
+    width: 80px;
+    margin: 0 12px;
   }
 
   header:before {
