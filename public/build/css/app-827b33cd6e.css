@@ -10673,6 +10673,43 @@ footer {
   font-weight: 500;
 }
 
+.article__category-offers {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background: url(/img/backgr-artcl-min.png) no-repeat;
+}
+
+.article__category-txt {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 37.5%;
+  -webkit-flex-basis: 37.5%;
+  -ms-flex-preferred-size: 37.5%;
+  flex-basis: 37.5%;
+  margin-left: -webkit-calc(100%/24 * 3 + 24px/2)!important;
+  margin-left: calc(100% / 24 * 3 + 24px / 2)!important;
+}
+
+.article__category-img {
+  display: block;
+  margin-left: -60px;
+  width: 100%;
+  height: auto;
+}
+
 .contacts h1 {
   margin-bottom: 0;
 }
@@ -16852,6 +16889,23 @@ h3 {
     flex-basis: calc(100% / 24 * 24 - 24px);
   }
 
+  .article__category-txt {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 75%;
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    margin-left: -webkit-calc(100%/24 * 2 + 24px/2)!important;
+    margin-left: calc(100% / 24 * 2 + 24px / 2)!important;
+  }
+
   .delivery {
     max-width: 792px;
   }
@@ -17909,6 +17963,10 @@ h3 {
     -webkit-flex-basis: -webkit-calc(100%/24 * 12 - 24px);
     -ms-flex-preferred-size: calc(100% / 24 * 12 - 24px);
     flex-basis: calc(100% / 24 * 12 - 24px);
+  }
+
+  .article__category-offers {
+    display: none;
   }
 
   .contacts__phones {
@@ -19823,6 +19881,12 @@ h3 {
 @media screen and (max-width:1202px) and (min-width:576px) {
   .main-find-size__title>div>span:first-child {
     font-size: 30px;
+  }
+}
+
+@media screen and (min-width:840px) and (max-width:1203px) {
+  .article__category-img {
+    display: none;
   }
 }
 

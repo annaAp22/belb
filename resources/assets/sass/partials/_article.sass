@@ -188,3 +188,29 @@
     //line-height:
     font-weight: 500
 
+.article__category-offers
+  width: 100%
+  display: flex
+  align-items: flex-start
+  background: url("/img/backgr-artcl-min.png") no-repeat
+  //background-size: cover
+  +hidden-sm(down)
+.article__category-txt
+  +col(9,no)
+  +offset(right,3)
+  +media-md(down)
+    +col(18,no)
+    +offset(right,2)
+
+.article__category-img
+  //position: relative
+  //left: -60px
+  display: block
+  margin-left: -60px
+  width: 100%
+  height: auto
+  +hidden-md()
+  //img
+    width: 100%
+    height: auto
+

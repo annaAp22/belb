@@ -161,7 +161,7 @@
                         </span>
                             <a class="done" href="<?php echo e(route('cart')); ?>">
                                 
-                                <span>В корзине</span>
+                                <span>В корзину</span>
                             </a>
                         </button>
 
@@ -224,7 +224,7 @@
                                     
                                 
                                 <?php $__currentLoopData = $product->attributes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <div class="description-scroll__param-title description-scroll__mt"><span class="description-scroll__param-value"><?php echo e($item->pivot->value); ?></span>
+                                    <div class="description-scroll__param-title description-scroll__mt"><strong><?php echo e($item->name); ?>:</strong><span class="description-scroll__param-value"><?php echo e($item->pivot->value); ?></span>
                                     </div>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 

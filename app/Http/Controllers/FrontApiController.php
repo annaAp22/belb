@@ -611,7 +611,9 @@ class FrontApiController extends Controller
         $response = [];
 
         $is_fast = $request->input('is_fast', 0);
-        $cnt = $cnt ?: 1;
+        $quantity = $request->input('quantity', 1);
+        $cnt = $quantity ?: 1;
+//        $cnt = $cnt ?: 1;
 
         $size = $request->input('size', 0);
         if($is_fast)
@@ -628,24 +630,26 @@ class FrontApiController extends Controller
             // Put different sizes separately, products without size attribute has $size = 0
 
             // Increase product count if size already in cart
+            $product = Product::published()->find($id);
+            if(!$product) {
+              Log::warning('product not found -'.$id);
+            }
             if(session()->has('products.cart.'.$id.'.'.$size))
             {
                 session()->put('products.cart.'.$id.'.'.$size.'.cnt', session()->get('products.cart.'.$id.'.'.$size.'.cnt') + $cnt);
             }
             else
             {
-                $product = Product::published()->find($id);
-                if(!$product) {
-                    Log::warning('product not found -'.$id);
-                }
                 session()->put('products.cart.'.$id.'.'.$size, [
                     'cnt' => $cnt,
                     'price' => $product->price
                 ]);
 
                 // Модальное окно "Товар добавлен"
-                $response['modal'] = view('modals.cart_add', compact('product','cnt','size'))->render();
+//                $response['modal'] = view('modals.cart_add', compact('product','cnt','size'))->render();
             }
+          // Модальное окно "Товар добавлен"
+          $response['modal'] = view('modals.cart_add', compact('product','cnt','size'))->render();
 
             // Добавляем доп. параметры, которые разделяют товар на варианты.
             // Например, размер, цвета, рисунок, ёмкость накопителя и т. д.
@@ -677,118 +681,8 @@ class FrontApiController extends Controller
         }
         return $response;
     }
-  /**
-   * Положить товар в корзину
-   * @param $id
-   * @param int $cnt
-   * @return \Illuminate\Http\JsonResponse
-   */
-  public function toCart(Request $request, $id, $cnt = 1) {
-    $response = [];
 
-    $is_fast = $request->input('is_fast', 0);
-    $quantity = $request->input('quantity', 1);
-    $cnt = $quantity ?: 1;
-
-    $size = $request->input('size', 0);
-    if($is_fast)
-    {
-      // Open fast order form modal
-      $product = Product::find($id);
-      $response = [
-        'action' => 'openModal',
-        'modal' => view('modals.quick_order_product', compact('product', 'cnt', 'size'))->render(),
-      ];
-    }
-    else {
-      if (session()->has('products.cart.' . $id . '.' . $size)) {
-        session()->put('products.cart.' . $id . '.' . $size . '.cnt', $quantity);
-      } else {
-        $product = Product::published()->find($id);
-        if (!$product) {
-          Log::warning('product not found -' . $id);
-        }
-        session()->put('products.cart.' . $id . '.' . $size, [
-          'cnt' => $cnt,
-          'price' => $product->price
-        ]);
-      }
-      $count = 0;
-      foreach($cart as $product_id => $items)
-      {
-        foreach( $items as $product )
-        {
-          $response['amount'] += $product['price']*$product['cnt'];
-          $count++;
-        }
-      }
-
-
-      $response['id'] = $id;
-      $response['action'] = 'updateCart';
-      $response['count'] = $count;
-//      $response['unit_count'] = $cart[$id][$size]['cnt'];
-//      $response['count_name'] = Lang::choice('товар|товара|товаров', count($cart), [], 'ru');
-
-    }
-
-    return $response;
-  }
-//    {
-//      // Put different sizes separately, products without size attribute has $size = 0
-//
-//      // Increase product count if size already in cart
-//      if(session()->has('products.cart.'.$id.'.'.$size))
-//      {
-//        session()->put('products.cart.'.$id.'.'.$size.'.cnt', session()->get('products.cart.'.$id.'.'.$size.'.cnt') + $cnt);
-//      }
-//      else
-//      {
-//        $product = Product::published()->find($id);
-//        if(!$product) {
-//          Log::warning('product not found -'.$id);
-//        }
-//        session()->put('products.cart.'.$id.'.'.$size, [
-//          'cnt' => $cnt,
-//          'price' => $product->price
-//        ]);
-//
-//        // Модальное окно "Товар добавлен"
-//        $response['modal'] = view('modals.cart_add', compact('product','cnt','size'))->render();
-//      }
-//
-//      // Добавляем доп. параметры, которые разделяют товар на варианты.
-//      // Например, размер, цвета, рисунок, ёмкость накопителя и т. д.
-//      $extra_params = $request->all();
-//      if(!empty($extra_params))
-//        foreach($extra_params as $param => $value) {
-//          session()->put('products.cart.'.$id.'.'.$size.'.extra.'.$param, $value);
-//        }
-//
-//      $cart = session()->get('products.cart');
-//      $response['amount'] = 0;
-//
-//      $count = 0;
-//      foreach($cart as $product_id => $items)
-//      {
-//        foreach( $items as $product )
-//        {
-//          $response['amount'] += $product['price']*$product['cnt'];
-//          $count++;
-//        }
-//      }
-//
-//
-//      $response['id'] = $id;
-//      $response['action'] = 'updateCart';
-//      $response['count'] = $count;
-//      $response['unit_count'] = $cart[$id][$size]['cnt'];
-//      $response['count_name'] = Lang::choice('товар|товара|товаров', count($cart), [], 'ru');
-//    }
-//    return $response;
-//  }
-
-    /**
+     /**
      * Убрать товар из корзины
      * @param $id - id товара
      * @param $size - размер товара

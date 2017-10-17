@@ -1,1 +1,0 @@
-<div class="btn btn-callback btn_silver-border-900-green-hover js-action-link" data-url="<?php echo e(route('ajax.modal')); ?>" data-modal="callback">ФОРМА ОБРАТНОЙ СВЯЗИ</div>

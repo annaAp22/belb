@@ -25,7 +25,10 @@
             @endif
         </div>
         <div class="page js-tab-page">
-            Характеристики ............
+            @foreach($product->attributes as $item )
+                <div class="page__param-title "><strong>{{$item->name}}:</strong><span class="page__param-value">{{$item->pivot->value}}</span>
+                </div>
+            @endforeach
         </div>
         <div class="page js-tab-page">
             Самовывоз ..........

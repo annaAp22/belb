@@ -47,7 +47,7 @@ Route::group([ 'prefix' => 'product' ], function() {
 Route::group(['prefix' => 'cart'], function() {
     Route::post('/add/{id}/{cnt}', [
         'as'   => 'cart.add',
-        'uses' => 'FrontApiController@toCart'
+        'uses' => 'FrontApiController@addtoCart'
     ])->where(['id' => '[0-9]+', 'cnt' => '[0-9]+']);
 
     Route::get('/remove/{id}/{size}', [

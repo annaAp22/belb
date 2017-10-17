@@ -17,7 +17,7 @@
                         <h1>Просмотренные товары</h1>
                         <div class="goods-count">
                             <span>Товаров в категории</span>
-                            <i class="sprite_main sprite_main-icon__goods_count">{{ $products->count() }}</i>
+                            <i class="sprite sprite-outline-min">{{ $products->count() }}</i>
                         </div>
                     </div>
 

@@ -19,7 +19,7 @@
                         <h1>Результаты поиска</h1>
                         <div class="goods-count">
                             <span>Товаров найдено</span>
-                            <i class="sprite_main sprite_main-icon__goods_count">{{ isset($products)?$products->total():0 }}</i>
+                            <i class="sprite sprite-outline-min">{{ isset($products)?$products->total():0 }}</i>
                         </div>
                     </div>
 

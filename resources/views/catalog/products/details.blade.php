@@ -161,7 +161,7 @@
                         </span>
                             <a class="done" href="{{ route('cart') }}">
                                 {{--<i class="sprite_main sprite_main-product__basket_done"></i>--}}
-                                <span>В корзине</span>
+                                <span>В корзину</span>
                             </a>
                         </button>
 
@@ -224,7 +224,7 @@
                                     {{--</div>--}}
                                 {{--@endisset--}}
                                 @foreach($product->attributes as $item )
-                                    <div class="description-scroll__param-title description-scroll__mt"><span class="description-scroll__param-value">{{$item->pivot->value}}</span>
+                                    <div class="description-scroll__param-title description-scroll__mt"><strong>{{$item->name}}:</strong><span class="description-scroll__param-value">{{$item->pivot->value}}</span>
                                     </div>
                                 @endforeach
                                 {{--<!-- Country of origin-->--}}
