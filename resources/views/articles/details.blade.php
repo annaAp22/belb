@@ -66,7 +66,7 @@
               <div class="article__category-txt">
                 <h3>{{ $category->title }}</h3>
                 <p>{{ $category->text_preview }}</p>
-                <a>Выбрать</a>
+                <a class="btn btn_green" href="{{route('catalog', $category->sysname)}}">ВЫБРАТЬ</a>
               </div>
               {{--<div class="article__category-image">--}}
               <img class="article__category-img" src="{{ $category->uploads->img->url() }}" alt="{{ $category->name }}">

@@ -10,7 +10,7 @@
                 <i class="ace-icon fa fa-home home-icon"></i>
                 <a href="<?php echo e(route('admin.main')); ?>">Главная</a>
             </li>
-            <li class="active">Каталог</li>
+            <li class="active">Баннеры</li>
         </ul><!-- /.breadcrumb -->
 
 
@@ -20,10 +20,10 @@
 
         <div class="page-header">
             <h1>
-                Категории товаров
+                Баннеры
                 <small>
                     <i class="ace-icon fa fa-angle-double-right"></i>
-                    Список всех категорий
+                    Список всех баннеров
                 </small>
             </h1>
         </div><!-- /.page-header -->
@@ -33,28 +33,15 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="tabbable">
-                    <ul class="nav nav-tabs" id="myTab">
-                        <li class="active">
-                            <a data-toggle="tab" href="<?php echo e(route('admin.categories.index')); ?>" aria-expanded="true">
-                                Каталог
-                            </a>
-                        </li>
-                        <li>
-                            <a  href="<?php echo e(route('admin.categories.sort')); ?>">
-                                Сортировка
-                            </a>
-                        </li>
-                    </ul>
 
-                    <div class="tab-content">
 
                         <div class="table-header">
-                            Список всех категорий
+                            Список всех баннеров
 
                             <div class="ibox-tools">
-                                <a href="<?php echo e(route('admin.categories.create')); ?>" class="btn btn-success btn-xs">
+                                <a href="<?php echo e(route('admin.banners.create')); ?>" class="btn btn-success btn-xs">
                                     <i class="fa fa-plus"></i>
-                                    Добавить категорию
+                                    Добавить баннер
                                 </a>
                             </div>
 
@@ -66,10 +53,10 @@
 
                             <!-- FILTERS -->
                             <div class="row">
-                                <form method="GET" action="<?php echo e(route('admin.categories.index')); ?>">
+                                <form method="GET" action="<?php echo e(route('admin.banners.index')); ?>">
                                     <div class="row">
                                         <div class="col-xs-2">
-                                            <div class="dataTables_length">
+                                            <div>
                                                 <label>На страниц
                                                     <select name="f[perpage]" class="form-control input-sm">
                                                         <option value="10" <?php if(isset($filters['perpage']) &&  $filters['perpage']== 10): ?> selected="selected" <?php endif; ?>>10</option>
@@ -79,40 +66,19 @@
                                                     </select> </label>
                                             </div>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <div class="dataTables_filter">
-                                                <label>Название:
-                                                    <input type="text" name="f[name]" value="<?php echo e(isset($filters['name']) ? $filters['name'] : ''); ?>" class="form-control input-sm">
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-3">
-                                            <div class="dataTables_filter">
-                                                <label>Категория:
-                                                    <select name="f[id_category]" id="form-field-20">
-                                                        <option value="">--Не выбрана--</option>
-                                                        <?php $__currentLoopData = $categories_filter; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                            <option value="<?php echo e($category->id); ?>" <?php if(isset($filters['id_category']) && $filters['id_category']==$category->id): ?>selected="selected"<?php endif; ?>><?php echo e($category->name); ?></option>
-                                                            <?php if($category->children->count()): ?>)
-                                                            <?php echo $__env->make('admin.categories.dropdown', ['cats' => $category->children, 'index' => 1], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-                                                            <?php endif; ?>
+                                        <div class="col-xs-2">
+                                            <div>
+                                                <label>Тип
+                                                    <select name="f[type]" class="form-control input-sm">
+                                                        <option value="" <?php if(!isset($filters['type'])): ?> selected="selected" <?php endif; ?>>Все</option>
+                                                        <?php $__currentLoopData = \App\Models\Banner::$types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $type => $name): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                        <option value="<?php echo e($type); ?>" <?php if(isset($filters['type']) &&  $filters['type']==$type): ?> selected="selected" <?php endif; ?>><?php echo e($name); ?></option>
                                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                    </select>
-                                                </label>
+                                                    </select> </label>
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <div class="dataTables_filter">
-                                                <label>ЧПУ:
-                                                    <input type="text" name="f[sysname]" value="<?php echo e(isset($filters['sysname']) ? $filters['sysname'] : ''); ?>" class="form-control input-sm">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <div class="dataTables_length">
+                                            <div>
                                                 <label>Статус
                                                     <select name="f[status]" class="form-control input-sm">
                                                         <option value="" <?php if(!isset($filters['status'])): ?> selected="selected" <?php endif; ?>>Все</option>
@@ -122,8 +88,8 @@
                                                     </select> </label>
                                             </div>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <div class="dataTables_length">
+                                        <div class="col-xs-2">
+                                            <div>
                                                 <div class="checkbox">
                                                     <label class="block">
                                                         <input name="f[deleted]" value="1" type="checkbox" <?php if(isset($filters['deleted'])): ?> checked="checked" <?php endif; ?> class="ace input-lg">
@@ -133,8 +99,8 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <div class="dataTables_filter">
-                                                <a class="btn  btn-xs" href="<?php echo e(route('admin.categories.index')); ?>?refresh=1">
+                                            <div>
+                                                <a class="btn  btn-xs" href="<?php echo e(route('admin.banners.index')); ?>?refresh=1">
                                                     Сбросить
                                                     <i class="ace-icon glyphicon glyphicon-refresh  align-top bigger-125 icon-on-right"></i>
                                                 </a>
@@ -152,61 +118,34 @@
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Название</th>
-                                    <th>Иконка</th>
-                                    <th>Изображение</th>
-                                    <th>Ярлыки</th>
-                                    <th>Категория</th>
-                                    <th>Товаров</th>
-                                    <th>ЧПУ</th>
+                                    <th>Баннер</th>
+                                    <th>Тип</th>
+                                    <th>URL</th>
                                     <th>Статус</th>
                                     <th></th>
                                 </tr>
                                 </thead>
 
                                 <tbody class="ace-thumbnails clearfix">
-                                <?php $__empty_1 = true; $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                <?php $__empty_1 = true; $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                     <tr <?php if($item->trashed()): ?>style="background-color: #F6CECE"<?php endif; ?>>
                                         <td>
-                                            <a href="<?php echo e(route('admin.categories.edit', $item->id)); ?>"><?php echo e($item->name); ?></a>
-                                        </td>
-                                        <td class="col-sm-1 center">
-                                            <?php if($item->icon && $item->uploads): ?>
-                                                <img src="<?php echo e($item->uploads->icon->original->url()); ?>" />
-                                            <?php endif; ?>
-                                        </td>
-                                        <td class="col-sm-1 center">
-                                            <?php if($item->img && $item->uploads): ?>
+                                            <?php if($item->img): ?>
                                                 <a data-rel="colorbox" href="<?php echo e($item->uploads->img->url()); ?>">
-                                                    <img src="<?php echo e($item->uploads->img->preview->url()); ?>" height="90px" />
+                                                    <img src="<?php echo e($item->uploads->img->preview->url()); ?>" width="100" />
                                                 </a>
                                             <?php endif; ?>
                                         </td>
                                         <td>
-                                            <?php if($item->new): ?> <span class="label label-info">Новинка</span>  </br> <?php endif; ?>
-                                            <?php if($item->act): ?> <span class="label label-warning"><i class="ace-icon fa fa-exclamation-triangle bigger-120"></i>Акция</span>  </br> <?php endif; ?>
-                                            <?php if($item->hit): ?> <span class="label label-danger ">Хит</span> <?php endif; ?>
+                                            <?php echo e($item->type); ?>
+
                                         </td>
-                                        <td><?php if($item->parent): ?><?php echo e($item->parent->name); ?><?php endif; ?></td>
-                                        <td><?php if($item->products->count()): ?>
-                                                <span class="badge badge-warning bigger-120"><?php echo e($item->products->count()); ?></span>
-                                                <a class="btn btn-minier btn-info" href="<?php echo e(route('admin.products.index')); ?>?f[id_category]=<?php echo e($item->id); ?>" title="Товары в категории">
-                                                    <i class="ace-icon fa fa-pencil"></i>
-                                                </a>
-                                                <a class="btn btn-minier btn-pink" href="<?php echo e(route('admin.products.category.sort', $item->id)); ?>" title="Сортировка в категории">
-                                                    <i class="ace-icon glyphicon glyphicon-list-alt"></i>
-                                                </a>
-                                            <?php endif; ?>
-                                            <a class="btn btn-minier" href="<?php echo e(route('admin.categories.products', $item->id)); ?>" title="Привязка товаров">
-                                                <i class="ace-icon fa fa-link"></i>
-                                            </a>
-                                        </td>
-                                        <td><?php echo e($item->sysname); ?></td>
+                                        <td><?php echo e($item->url); ?></td>
                                         <td class="col-sm-1 center"><i class="ace-icon glyphicon <?php if($item->status): ?> glyphicon-ok green <?php else: ?> glyphicon-remove red <?php endif; ?>  bigger-120"></i></td>
                                         <td>
                                             <div class="hidden-sm hidden-xs btn-group">
                                                 <?php if($item->trashed()): ?>
-                                                <form method="POST" action='<?php echo e(route('admin.categories.restore', $item->id)); ?>' style="display:inline;">
+                                                <form method="POST" action='<?php echo e(route('admin.banners.restore', $item->id)); ?>' style="display:inline;">
                                                     <input type="hidden" name="_method" value="PUT">
                                                     <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
                                                     <button class="btn btn-xs btn-purple action-restore" type="button" style="border-width: 1px;">
@@ -214,10 +153,10 @@
                                                     </button>
                                                 </form>
                                                 <?php else: ?>
-                                                <a class="btn btn-xs btn-info" href="<?php echo e(route('admin.categories.edit', $item->id)); ?>">
+                                                <a class="btn btn-xs btn-info" href="<?php echo e(route('admin.banners.edit', $item->id)); ?>">
                                                     <i class="ace-icon fa fa-pencil bigger-120"></i>
                                                 </a>
-                                                <form method="POST" action='<?php echo e(route('admin.categories.destroy', $item->id)); ?>' style="display:inline;">
+                                                <form method="POST" action='<?php echo e(route('admin.banners.destroy', $item->id)); ?>' style="display:inline;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
                                                     <button class="btn btn-xs btn-danger action-delete" type="button" style="border-width: 1px;">
@@ -229,7 +168,7 @@
                                         </td>
                                     </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
-                                    <p>Нет категорий</p>
+                                    <p>Нет баннеров</p>
                                 <?php endif; ?>
                                 </tbody>
                             </table>
@@ -237,7 +176,7 @@
                             <div class="row" style="border-bottom:none;">
                                 <div class="col-xs-6">
                                     <div class="dataTables_paginate paging_simple_numbers" id="dynamic-table_paginate">
-                                        <?php echo $categories->render(); ?>
+                                        <?php echo $banners->render(); ?>
 
                                     </div>
                                 </div>
@@ -247,7 +186,6 @@
                         </div><!-- /.row -->
                     </div>
                 </div>
-                    </div>
                 </div>
             </div><!-- /.col -->
         </div><!-- /.row -->

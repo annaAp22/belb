@@ -6,14 +6,12 @@
         <div class="main-slider__wrap">
           <div class="main-slider__track">
             <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-              <?php if($banner->url == "/bel/sl"): ?>
-                <a class="main-slider__item" <?php if($banner->url): ?>href="<?php echo e($banner->url); ?>"<?php endif; ?>>
+               <a class="main-slider__item" <?php if($banner->url): ?>href="<?php echo e($banner->url); ?>"<?php endif; ?>>
                   <img class="main-slider__banner main-slider__banner_md-up"
                        src="<?php echo e($banner->uploads->img->lg->url()); ?>" alt="" role="presentation"/>
                   <img class="main-slider__banner main-slider__banner_sm"
                        src="<?php echo e($banner->uploads->img->sm->url()); ?>" alt="" role="presentation"/>
                 </a>
-              <?php endif; ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </div>
         </div>
@@ -44,7 +42,9 @@
            $category3 = $categories->where('id', '54')->first();
          ?>
         <a class="main-benefits-banner main-benefits-banner_green"
-           href="<?php echo e(route('catalog', ['sysname' => $category1->sysname])); ?>">
+           
+          href="<?php echo e(route('tags', 'dlya-uyuta')); ?>">
+          
           
           <img class="main-benefits-banner__image" src="/img/img-benef1-min.jpg" alt="" role="presentation"/>
           <span class="main-benefits-banner__title">Для  уюта</span>
@@ -53,7 +53,8 @@
 
         </a>
         <a class="main-benefits-banner main-benefits-banner_light-gray"
-           href="<?php echo e(route('catalog', ['sysname' => $category2->sysname])); ?>">
+           
+          href="<?php echo e(route('tags', 'dlya-zdorovya')); ?>">
           
           <img class="main-benefits-banner__image" src="/img/img-benef2-min.jpg" alt="" role="presentation"/>
           <span class="main-benefits-banner__title">Для здоровья</span>
@@ -63,7 +64,8 @@
         </a>
         <!-- Men category -->
         <a class="main-benefits-banner main-benefits-banner_dark-gray"
-           href="<?php echo e(route('catalog', ['sysname' => $category3->sysname])); ?>">
+           
+          href="<?php echo e(route('tags', 'dlya-krasoty')); ?>">
           
           <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
           

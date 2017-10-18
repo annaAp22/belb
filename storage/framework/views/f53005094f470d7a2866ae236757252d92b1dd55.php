@@ -10,7 +10,7 @@
                 <i class="ace-icon fa fa-home home-icon"></i>
                 <a href="<?php echo e(route('admin.main')); ?>">Главная</a>
             </li>
-            <li class="active">Статьи</li>
+            <li class="active">Теги</li>
         </ul><!-- /.breadcrumb -->
 
 
@@ -20,10 +20,10 @@
 
         <div class="page-header">
             <h1>
-                Статьи
+                Теги
                 <small>
                     <i class="ace-icon fa fa-angle-double-right"></i>
-                    Список всех статей
+                    Список всех тегов
                 </small>
             </h1>
         </div><!-- /.page-header -->
@@ -32,31 +32,27 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <div class="tabbable">
 
-
-                        <div class="table-header">
-                            Список всех статей
-
-                            <div class="ibox-tools">
-                                <a href="<?php echo e(route('admin.articles.create')); ?>" class="btn btn-success btn-xs">
-                                    <i class="fa fa-plus"></i>
-                                    Добавить статью
-                                </a>
-                            </div>
-
-                        </div>
-                        <div>
+                <div class="table-header">
+                    Список всех тегов
+                    <div class="ibox-tools">
+                        <a href="<?php echo e(route('admin.tags.create')); ?>" class="btn btn-success btn-xs">
+                            <i class="fa fa-plus"></i>
+                            Добавить тег
+                        </a>
+                    </div>
+                </div>
+                <div>
                     <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
                         <!-- PAGE CONTENT BEGINS -->
                         <div class="row">
 
                             <!-- FILTERS -->
                             <div class="row">
-                                <form method="GET" action="<?php echo e(route('admin.articles.index')); ?>">
+                                <form method="GET" action="<?php echo e(route('admin.tags.index')); ?>">
                                     <div class="row">
                                         <div class="col-xs-2">
-                                            <div>
+                                            <div class="dataTables_length">
                                                 <label>На страниц
                                                     <select name="f[perpage]" class="form-control input-sm">
                                                         <option value="10" <?php if(isset($filters['perpage']) &&  $filters['perpage']== 10): ?> selected="selected" <?php endif; ?>>10</option>
@@ -67,41 +63,14 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <div>
+                                            <div class="dataTables_filter">
                                                 <label>Название:
-                                                    <input type="text" name="f[name]" value="<?php echo e(isset($filters['name']) ? $filters['name'] : ''); ?>" class="form-control input-sm">
+                                                    <input type="text" name="f[var]" value="<?php echo e(isset($filters['var']) ? $filters['var'] : ''); ?>" class="form-control input-sm">
                                                 </label>
                                             </div>
                                         </div>
-
                                         <div class="col-xs-3">
-                                            <div>
-                                                <label>Категория:
-                                                    <select name="f[id_category]" id="form-field-20">
-                                                        <option value="">--Не выбрана--</option>
-                                                        <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                            <option value="<?php echo e($category->id); ?>" <?php if(isset($filters['id_category']) && $filters['id_category']==$category->id): ?>selected="selected"<?php endif; ?>><?php echo e($category->name); ?></option>
-                                                            <?php if($category->children->count()): ?>)
-                                                                <?php echo $__env->make('admin.articles.dropdown', ['cats' => $category->children()->orderBy('sort')->get(), 'index' => 1], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-                                                            <?php endif; ?>
-                                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-2">
-                                            <div>
-                                                <label>Тэг:
-                                                    <select name="f[tag]" class="form-control input-sm">
-                                                        <option value="">--Не выбрана--</option>
-                                                        <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <option value="<?php echo e($tag->id); ?>" <?php if(isset($filters['tag']) &&  $filters['tag']== $tag->id): ?> selected="selected" <?php endif; ?>><?php echo e($tag->name); ?></option>
-                                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                    </select> </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-2">
-                                            <div>
+                                            <div class="dataTables_filter">
                                                 <label>ЧПУ:
                                                     <input type="text" name="f[sysname]" value="<?php echo e(isset($filters['sysname']) ? $filters['sysname'] : ''); ?>" class="form-control input-sm">
                                                 </label>
@@ -109,22 +78,8 @@
                                         </div>
                                     </div>
                                     <div class="row">
-
-                                        <div class="col-xs-4">
-                                            <div>
-                                                <label>Дата:
-                                                    <div class="input-daterange input-group">
-                                                        <input type="text" class="input-sm form-control" name="f[date_from]" value="<?php echo e(isset($filters['date_from']) ? $filters['date_from'] : ''); ?>">
-                                                        <span class="input-group-addon">
-                                                    <i class="fa fa-exchange"></i>
-                                                </span>
-                                                        <input type="text" class="input-sm form-control"  name="f[date_to]" value="<?php echo e(isset($filters['date_to']) ? $filters['date_to'] : ''); ?>">
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
                                         <div class="col-xs-3">
-                                            <div>
+                                            <div class="dataTables_length">
                                                 <label>Статус
                                                     <select name="f[status]" class="form-control input-sm">
                                                         <option value="" <?php if(!isset($filters['status'])): ?> selected="selected" <?php endif; ?>>Все</option>
@@ -134,8 +89,8 @@
                                                     </select> </label>
                                             </div>
                                         </div>
-                                        <div class="col-xs-2">
-                                            <div>
+                                        <div class="col-xs-3">
+                                            <div class="dataTables_length">
                                                 <div class="checkbox">
                                                     <label class="block">
                                                         <input name="f[deleted]" value="1" type="checkbox" <?php if(isset($filters['deleted'])): ?> checked="checked" <?php endif; ?> class="ace input-lg">
@@ -145,8 +100,8 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <div>
-                                                <a class="btn  btn-xs" href="<?php echo e(route('admin.articles.index')); ?>?refresh=1">
+                                            <div class="dataTables_filter">
+                                                <a class="btn  btn-xs" href="<?php echo e(route('admin.tags.index')); ?>?refresh=1">
                                                     Сбросить
                                                     <i class="ace-icon glyphicon glyphicon-refresh  align-top bigger-125 icon-on-right"></i>
                                                 </a>
@@ -165,60 +120,52 @@
                                 <thead>
                                 <tr>
                                     <th>Название</th>
-                                    <th>Дата</th>
-                                    <th>Изображение</th>
                                     <th>ЧПУ</th>
-                                    <th>Категории</th>
-                                    <th>Теги</th>
+                                    <th>Частота просмотров</th>
+                                    <th>Товаров</th>
                                     <th>Статус</th>
                                     <th></th>
                                 </tr>
                                 </thead>
 
-                                <tbody class="ace-thumbnails clearfix">
-                                <?php $__empty_1 = true; $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                <tbody>
+                                <?php $__empty_1 = true; $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                     <tr <?php if($item->trashed()): ?>style="background-color: #F6CECE"<?php endif; ?>>
                                         <td>
-                                            <a href="<?php echo e(route('admin.articles.edit', $item->id)); ?>"><?php echo e($item->name); ?></a>
-                                        </td>
-                                        <td>
-                                            <?php echo e($item->dateLocale()); ?>
-
-                                        </td>
-                                        <td class="col-sm-1 center">
-                                            <?php if($item->img): ?>
-                                                <a data-rel="colorbox" href="<?php echo e($item->uploads->img->url()); ?>">
-                                                    <img src="<?php echo e($item->uploads->img->preview->url()); ?>" width="100" />
-                                                </a>
-                                            <?php endif; ?>
+                                            <a href="<?php echo e(route('admin.tags.edit', $item->id)); ?>"><?php echo e($item->name); ?></a>
                                         </td>
                                         <td><?php echo e($item->sysname); ?></td>
+                                        <td><?php echo e($item->views); ?></td>
                                         <td>
-                                            <?php $__currentLoopData = $item->categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <span class="label label-success arrowed"><?php echo e($category->name); ?></span>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        </td>
-                                        <td>
-                                            <?php $__currentLoopData = $item->tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <span class="label label-info arrowed-in-right arrowed"><?php echo e($tag->name); ?></span>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            <?php if($item->products->count()): ?>
+                                                <span class="badge badge-warning bigger-120"><?php echo e($item->products->count()); ?></span>
+                                                <a class="btn btn-minier btn-info" href="<?php echo e(route('admin.products.index')); ?>?f[tag]=<?php echo e($item->id); ?>" title="Товары с тэгом">
+                                                    <i class="ace-icon fa fa-pencil"></i>
+                                                </a>
+                                                <a class="btn btn-minier btn-pink" href="<?php echo e(route('admin.products.tag.sort', $item->id)); ?>" title="Сортировка внутри тэга">
+                                                    <i class="ace-icon glyphicon glyphicon-list-alt"></i>
+                                                </a>
+                                            <?php endif; ?>
+                                            <a class="btn btn-minier" href="<?php echo e(route('admin.tags.products', $item->id)); ?>" title="Привязка товаров">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </td>
                                         <td class="col-sm-1 center"><i class="ace-icon glyphicon <?php if($item->status): ?> glyphicon-ok green <?php else: ?> glyphicon-remove red <?php endif; ?>  bigger-120"></i></td>
                                         <td>
                                             <div class="hidden-sm hidden-xs btn-group">
                                                 <?php if($item->trashed()): ?>
-                                                <form method="POST" action='<?php echo e(route('admin.articles.restore', $item->id)); ?>' style="display:inline;">
-                                                    <input type="hidden" name="_method" value="PUT">
-                                                    <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
-                                                    <button class="btn btn-xs btn-purple action-restore" type="button" style="border-width: 1px;">
-                                                        <i class="ace-icon fa fa-undo bigger-120"></i>
-                                                    </button>
-                                                </form>
+                                                    <form method="POST" action='<?php echo e(route('admin.tags.restore', $item->id)); ?>' style="display:inline;">
+                                                        <input type="hidden" name="_method" value="PUT">
+                                                        <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
+                                                        <button class="btn btn-xs btn-purple action-restore" type="button" style="border-width: 1px;">
+                                                            <i class="ace-icon fa fa-undo bigger-120"></i>
+                                                        </button>
+                                                    </form>
                                                 <?php else: ?>
-                                                <a class="btn btn-xs btn-info" href="<?php echo e(route('admin.articles.edit', $item->id)); ?>">
+                                                <a class="btn btn-xs btn-info" href="<?php echo e(route('admin.tags.edit', $item->id)); ?>">
                                                     <i class="ace-icon fa fa-pencil bigger-120"></i>
                                                 </a>
-                                                <form method="POST" action='<?php echo e(route('admin.articles.destroy', $item->id)); ?>' style="display:inline;">
+                                                <form method="POST" action='<?php echo e(route('admin.tags.destroy', $item->id)); ?>' style="display:inline;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
                                                     <button class="btn btn-xs btn-danger action-delete" type="button" style="border-width: 1px;">
@@ -230,7 +177,7 @@
                                         </td>
                                     </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
-                                    <p>Нет статей</p>
+                                    <p>Нет тегов</p>
                                 <?php endif; ?>
                                 </tbody>
                             </table>
@@ -238,7 +185,7 @@
                             <div class="row" style="border-bottom:none;">
                                 <div class="col-xs-6">
                                     <div class="dataTables_paginate paging_simple_numbers" id="dynamic-table_paginate">
-                                        <?php echo $articles->render(); ?>
+                                        <?php echo $tags->render(); ?>
 
                                     </div>
                                 </div>
@@ -248,7 +195,7 @@
                         </div><!-- /.row -->
                     </div>
                 </div>
-                </div>
+
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.page-content -->

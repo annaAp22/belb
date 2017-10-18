@@ -11,14 +11,12 @@
         <div class="main-slider__wrap">
           <div class="main-slider__track">
             @foreach($banners as $banner)
-              @if($banner->url == "/bel/sl")
-                <a class="main-slider__item" @if($banner->url)href="{{ $banner->url }}"@endif>
+               <a class="main-slider__item" @if($banner->url)href="{{ $banner->url }}"@endif>
                   <img class="main-slider__banner main-slider__banner_md-up"
                        src="{{ $banner->uploads->img->lg->url() }}" alt="" role="presentation"/>
                   <img class="main-slider__banner main-slider__banner_sm"
                        src="{{ $banner->uploads->img->sm->url() }}" alt="" role="presentation"/>
                 </a>
-              @endif
             @endforeach
           </div>
         </div>
@@ -49,7 +47,9 @@
            $category3 = $categories->where('id', '54')->first();
         @endphp
         <a class="main-benefits-banner main-benefits-banner_green"
-           href="{{ route('catalog', ['sysname' => $category1->sysname]) }}">
+           {{--href="{{ route('catalog', ['sysname' => $category1->sysname]) }}">--}}
+          href="{{ route('tags', 'dlya-uyuta') }}">
+          {{--<a class="sidebar-tags__tag" href="{{ route('tags', $tag->sysname) }}">{{ $tag->name }}</a>--}}
           {{--<img class="main-benefits-banner__image" src="{{ $women->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
           <img class="main-benefits-banner__image" src="/img/img-benef1-min.jpg" alt="" role="presentation"/>
           <span class="main-benefits-banner__title">Для  уюта</span>
@@ -58,7 +58,8 @@
 
         </a>
         <a class="main-benefits-banner main-benefits-banner_light-gray"
-           href="{{ route('catalog', ['sysname' => $category2->sysname]) }}">
+           {{--href="{{ route('catalog', ['sysname' => $category2->sysname]) }}">--}}
+          href="{{ route('tags', 'dlya-zdorovya') }}">
           {{--<img class="main-benefits-banner__image" src="{{ $women->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
           <img class="main-benefits-banner__image" src="/img/img-benef2-min.jpg" alt="" role="presentation"/>
           <span class="main-benefits-banner__title">Для здоровья</span>
@@ -68,7 +69,8 @@
         </a>
         <!-- Men category -->
         <a class="main-benefits-banner main-benefits-banner_dark-gray"
-           href="{{ route('catalog', ['sysname' => $category3->sysname]) }}">
+           {{--href="{{ route('catalog', ['sysname' => $category3->sysname]) }}">--}}
+          href="{{ route('tags', 'dlya-krasoty') }}">
           {{--<img class="main-benefits-banner__image" src="{{ $men->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
           <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
           {{--<span class="main-benefits-banner__caption">--}}
