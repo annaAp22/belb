@@ -74,13 +74,14 @@
 
             </section>
           @endif
+          @if( isset($articles) )
           <div class="related-articles related-articles_content">
             <h3>Читайте также:</h3>
             <div class="articles articles--belb js-container-article">
               @include('articles.list-belb')
             </div>
           </div>
-
+          @endif
         </div>
       </section>
       <section class="content-full-width">

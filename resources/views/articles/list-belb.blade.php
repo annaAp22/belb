@@ -2,7 +2,7 @@
     @if( isset($tag) )
         <a href="{{ route('tag.article', ['sysname' => $item->sysname, 'tag_sysname' => $tag->sysname]) }}" class="articles-itm">
     @else
-        <a href="{{ route('article', ['sysname' => $item->sysname]) }}" class="articles-itm">
+         <a href="{{ route('article', ['sysname' => $item->sysname]) }}" class="articles-itm">
     @endif
 
         <div class="articles-itm__image">
