@@ -76,7 +76,7 @@
                             <i class="sprite sprite-favorite-heart-min normal"></i>
                             <i class="sprite sprite-favorite-heart-active active"></i>
                         </span>
-                        <i class="sprite sprite-tick-icon-blue-min done"></i>
+                        <i class="sprite sprite-icon-chk40 done"></i>
                         <!-- Popup-->
                         <span class="popup-notice popup-notice_wishlist">
                             <span class="popup-notice__triangle">▼</span>
