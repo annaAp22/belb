@@ -4,7 +4,7 @@
 /public/storage
 /public/hot
 /public/css
-/storage/*.key
+/storage
 /vendor
 /.idea
 Homestead.json
