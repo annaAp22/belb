@@ -14,14 +14,14 @@
         </div>
 
         <div class="mobile-sidebar__level-2 sidebar-geo__level-2 js-geo-mobile">
-            <button class="btn btn_more"><i class="sprite_main sprite_main-icon__arrow_to_top"></i><span>Вернуться назад</span></button>
+            <button class="btn btn_more"><i class="sprite sprite-arrow-top-min"></i><span>Вернуться назад</span></button>
 
             <form class="form-search geo-city__search js-prevent" method="POST">
                 <?php echo e(csrf_field()); ?>
 
                 <button class="icon-fade" type="submit">
                     <i class="sprite_main sprite_main-header__search_active normal"></i>
-                    <i class="sprite_main sprite_main-header__search active"></i>
+                    <i class="sprite sprite-search-icon-min active"></i>
                 </button>
                 <input class="js-geo-city-search" type="search" name="text" placeholder="Найти город..."/>
             </form>

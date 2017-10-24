@@ -48,7 +48,7 @@
         <div class="checkbox-filter sidebar-filter__item">
           <?php $__currentLoopData = $material->values; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <label>
-              <input type="checkbox" name="attribute[<?php echo e($material->id); ?>][]" value="<?php echo e($value); ?>"/>
+              <input type="checkbox" name="attribute[<?php echo e($material->id); ?>][]" value="<?php echo e($value); ?>" <?php if(isset($attributes[$material->id])and(in_array($value, $attributes[$material->id]))): ?> checked <?php endif; ?>/>
               <div class="checkbox-filter__checkbox">
               </div>
               <span><?php echo e($value); ?></span>
@@ -126,7 +126,6 @@
         </div>
 
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
     <?php $__env->startSection('more_filters'); ?>
       <div class="switch-additional-filters js-show-more"><i
             class="sprite_main sprite_main-listing__filter_arrow_down"></i><span>Показать больше</span><span>Скрыть фильтры</span><i
@@ -142,5 +141,6 @@
           class="sprite sprite-cross-red-min"></i><span>Сбросить фильтры</span>
     </button>
     <?php echo $__env->yieldContent('more_filters'); ?>
+
   </form>
 <?php endif; ?>

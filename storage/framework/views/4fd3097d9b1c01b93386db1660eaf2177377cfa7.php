@@ -42,13 +42,13 @@
                                     data-page="<?php echo e($articles->currentPage() + 1); ?>">
                                 <span class="text">Показать больше</span>
                                 <span class="count js-items-count">(<?php echo e($articles->total() - ($articles->currentPage() * $articles->perPage())); ?>)</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                                <i class="sprite sprite-arrow-down-blue2-min"></i>
                             </button>
                             <button class="btn btn_show-all js-action-link"
                                     data-url="<?php echo e(route('ajax.articles')); ?>"
                                     data-page="1">
                                 <span>Показать все статьи</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                                <i class="sprite sprite-arrow-down-blue2-min"></i>
                             </button>
                         </div>
                     <?php endif; ?>

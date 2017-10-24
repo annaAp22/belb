@@ -33,13 +33,13 @@
                                     data-page="{{$photos->currentPage() + 1}}">
                                 <span class="text">Показать больше</span>
                                 <span class="count js-items-count">({{ $photos->total() - ($photos->currentPage() * $photos->perPage()) }})</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                                <i class="sprite sprite-arrow-down-blue2-min"></i>
                             </button>
                             <button class="btn btn_show-all js-action-link"
                                     data-url="{{route('ajax.photos')}}"
                                     data-page="1">
                                 <span>Показать все фотографии</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                                <i class="sprite sprite-arrow-down-blue2-min"></i>
                             </button>
                         </div>
                     @endif

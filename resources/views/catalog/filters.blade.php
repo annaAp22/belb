@@ -46,7 +46,7 @@
         <div class="checkbox-filter sidebar-filter__item">
           @foreach($material->values as $value)
             <label>
-              <input type="checkbox" name="attribute[{{ $material->id }}][]" value="{{ $value }}"/>
+              <input type="checkbox" name="attribute[{{ $material->id }}][]" value="{{ $value }}" @if(isset($attributes[$material->id])and(in_array($value, $attributes[$material->id]))) checked @endif/>
               <div class="checkbox-filter__checkbox">
               </div>
               <span>{{ $value }}</span>
@@ -124,7 +124,6 @@
         </div>
 
       @endforeach
-
     @section('more_filters')
       <div class="switch-additional-filters js-show-more"><i
             class="sprite_main sprite_main-listing__filter_arrow_down"></i><span>Показать больше</span><span>Скрыть фильтры</span><i
@@ -140,5 +139,6 @@
           class="sprite sprite-cross-red-min"></i><span>Сбросить фильтры</span>
     </button>
     @yield('more_filters')
+
   </form>
 @endif
