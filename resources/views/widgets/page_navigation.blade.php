@@ -23,7 +23,7 @@
     <a class="nav-pages__item" href="{{ route('news') }}"><span>Акции</span></a>
     <a class="nav-pages__item" href="{{ route('reviews') }}"><span>Отзывы</span></a>
     <a class="nav-pages__item" href="{{ route('news') }}"><span>Наши клиенты</span></a>
-    <a class="nav-pages__item" href="{{ route('page', ['sysname' => 'iz_chego_shem']) }}"><span>Услуги</span></a>
+    <a class="nav-pages__item" href="{{ route('page', ['sysname' => 'shop_in_moscow']) }}"><span>Услуги</span></a>
     {{-- Contacts --}}
     <a class="nav-pages__item" href="{{ route('contacts') }}"><span>Контакты</span></a>
 

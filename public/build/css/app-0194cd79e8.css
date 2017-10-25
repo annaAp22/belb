@@ -7239,7 +7239,9 @@ footer {
 .map {
   height: 400px;
   width: 100%;
-  background: url(/img/footer-map-min.jpg) no-repeat top;
+  background: url(/img/map-min.jpg) no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .product-detailed {
@@ -10970,7 +10972,7 @@ h1 {
 
 h1 span {
   font-size: 16px;
-  color: #36b057;
+  color: #4c68a5;
 }
 
 h2 {
@@ -10996,7 +10998,7 @@ h3 {
 
 .page-text__title_green-line {
   position: relative;
-  border-left: 5px solid #36b057;
+  border-left: 5px solid #4c68a5;
   padding-left: 10px;
   line-height: .8;
 }
@@ -11276,7 +11278,7 @@ h3 {
 .spec-caption-1 {
   font-size: 1.5em;
   line-height: .8em;
-  color: #36b057;
+  color: #4c68a5;
   font-weight: 700;
   position: relative;
 }
@@ -11284,7 +11286,7 @@ h3 {
 .spec-caption-1:before {
   content: "";
   width: 4px;
-  background-color: #36b057;
+  background-color: #4c68a5;
   position: absolute;
   left: -20px;
   height: 18px;
@@ -11312,11 +11314,11 @@ h3 {
 }
 
 .spec-title-green {
-  background-color: #36b057;
+  background-color: #4c68a5;
 }
 
 .spec-title-red {
-  background-color: #e74949;
+  background-color: #ff852c;
 }
 
 .page-order-step .circle-black-white {
@@ -11343,7 +11345,7 @@ h3 {
 }
 
 .green-text {
-  color: #36b057;
+  color: #4c68a5;
 }
 
 .sponsor {

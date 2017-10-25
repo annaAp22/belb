@@ -214,7 +214,7 @@ function init() {
 
     // Let's also add a marker while we're at it
     var bigMarker = new google.maps.MarkerImage(
-        '/img/map_point-min.png',
+        '/img/locate-places-on-maps.svg',
         new google.maps.Size(126,132),
         new google.maps.Point(0,0),
         new google.maps.Point(118,91)
@@ -252,8 +252,8 @@ function init() {
         mapOptions.center = new google.maps.LatLng(lat, long);
         var map2 = new google.maps.Map(mapElement2, mapOptions);
         var markerImage = new google.maps.MarkerImage(
-            '/img/map-point-small-min.png',
-            new google.maps.Size(52,51),
+            '/img/locate-places-min.png',
+            new google.maps.Size(18,26),
             new google.maps.Point(0,0),
             new google.maps.Point(47,42)
         );
