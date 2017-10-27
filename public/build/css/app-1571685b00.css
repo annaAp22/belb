@@ -7245,6 +7245,7 @@ footer {
 }
 
 .map {
+  display: none;
   height: 400px;
   width: 100%;
   background: url(/img/map-min.jpg) no-repeat;

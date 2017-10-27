@@ -1,7 +1,7 @@
 <!-- Subscription-->
 <div class="subscription">
     <div class="subscription__image">
-        <img src="/img/relax.png" width="953" height="520"/>
+        <img src="/img/relax.png" width="953" height="520" alt="Изображение - Подпишитесь и получите скидку"/>
     </div>
     <form class="subscription__form js-form-ajax" action="{{route('ajax.subscribe')}}" method="post" enctype="application/x-www-form-urlencoded">
         {{ csrf_field() }}
