@@ -4764,7 +4764,6 @@ header:after {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: -3px;
 }
 
 .nav-catalog .nav-catalog__btn {
@@ -4902,30 +4901,32 @@ header:after {
   color: #3a69a8;
 }
 
-.nav-pages__item.active .nav-pages__dropdown {
-  max-height: 500px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
 .nav-pages__item.active i {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
+.nav-pages__item.active .nav-pages__dropdown {
+  max-height: 500px;
+}
+
+.nav-pages__item.active .nav-pages__dropdown li:not(:first-child) {
+  border-top: 1px solid #ebebeb;
+}
+
 .nav-pages__dropdown {
-  width: 260px;
-  background-color: #fff;
-  -webkit-box-shadow: 0 10px 24px 0 rgba(0,0,2,.09);
-  box-shadow: 0 10px 24px 0 rgba(0,0,2,.09);
+  width: 240px;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 0 5px 25.92px 1.08px rgba(0,0,0,.15);
+  box-shadow: 0 5px 25.92px 1.08px rgba(0,0,0,.15);
   position: absolute;
-  padding: 0 30px;
+  padding: 0;
   list-style: none;
   max-height: 0;
   overflow: hidden;
   z-index: 2;
-  top: 59px;
+  top: 100%;
   left: 0;
   margin: 0;
   -webkit-transition: max-height .3s ease,padding .3s ease;
@@ -4934,6 +4935,8 @@ header:after {
 }
 
 .nav-pages__dropdown a {
+  display: inline-block;
+  padding: 14px 30px;
   font-size: 14px;
   line-height: 24px;
   color: #272727;
@@ -5907,6 +5910,10 @@ header:after {
   margin-bottom: 0;
 }
 
+.mobile-sidebar .nav-pages__item.active .nav-pages__dropdown .mobile-sidebar__title {
+  border-top: none;
+}
+
 .mobile-sidebar__catalog {
   list-style: none;
   padding: 0;
@@ -6057,6 +6064,7 @@ header:after {
   cursor: auto;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: #fff;
   top: 0;
   padding: 50px 10px 50px 20px;
   width: 260px;
