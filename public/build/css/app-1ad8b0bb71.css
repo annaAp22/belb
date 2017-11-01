@@ -2656,6 +2656,10 @@ button {
   display: block;
 }
 
+.tabulator-details--expo .page>p {
+  font-family: Open Sans,sans-serif;
+}
+
 #cart-modal {
   max-width: 825px;
 }
@@ -6407,6 +6411,7 @@ header:after {
 }
 
 .subscription__text {
+  font-family: Open Sans,sans-serif;
   font-size: 14px;
   color: #303030;
   margin-bottom: 70px;
@@ -6431,7 +6436,7 @@ header:after {
 
 .subscription__input {
   position: relative;
-  border: 1px solid transparent;
+  border: 1px solid #c6c6c6;
   -webkit-transition: border-color .3s ease;
   -o-transition: border-color .3s ease;
   transition: border-color .3s ease;
@@ -7655,7 +7660,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px 20px 0 0;
   color: #666;
 }
@@ -7678,7 +7683,8 @@ footer {
 }
 
 .description-scroll__param-value {
-  font-weight: 500;
+  font-family: Open Sans,sans-serif;
+  font-weight: 400;
   color: #666;
 }
 
@@ -7821,6 +7827,7 @@ footer {
 }
 
 .product-delivery__note {
+  font-family: Open Sans,sans-serif;
   font-size: 12px;
   width: 100%;
 }
