@@ -17,6 +17,7 @@ class Attribute extends Model
         'type',
         'unit',
         'list',
+        'list_trans',
         'is_filter',
         'status'
     ];

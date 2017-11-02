@@ -295,7 +295,7 @@ class Product extends Model
 
         $attributes = [];
         foreach(Request::input('attributes') as $attr_id => $attr_value) {
-            if(is_array($attr_value)) $attr_value = json_encode($attr_value);
+            if(is_array($attr_value)) $attr_value = json_encode($attr_value, JSON_UNESCAPED_UNICODE);
 
             $validator = Validator::make([
                 'id'    => $attr_id,
