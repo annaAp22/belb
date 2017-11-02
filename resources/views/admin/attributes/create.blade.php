@@ -67,14 +67,15 @@
                         </div>
                     </div>
 
-                    <div class="form-group div-type-data" id="div-integer" @if(!old() || old('type') != 'integer') style="display:none" @endif>
+                    <div class="form-group div-type-data div-integer" id="div-integer" @if(!old() || old('type') != 'integer') style="display:none" @endif>
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Ед. измерения </label>
                         <div class="col-sm-9">
                             <input type="text" id="form-field-2" name="unit" placeholder="Ед. измерения" value="{{ old('unit') }}" class="col-sm-4">
                         </div>
                     </div>
 
-                    <div class="form-group div-type-data" id="div-list" @if(!old() || old('type') != 'list') style="display:none" @endif>
+
+                    <div class="form-group div-type-data div-list div-checklist" id="div-list" @if(!old() || old('type') != 'list') style="display:none" @endif>
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-3"> Значения </label>
                         <div class="col-sm-9">
                             <div class="dynamic-input">
