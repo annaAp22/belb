@@ -4,7 +4,6 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 
 use App\Models\Product;
 use App\Models\Attribute;
@@ -46,10 +45,18 @@ class AttributeController extends Controller
     public function store(\App\Http\Requests\admin\AttributeRequest $request)
     {
         $data = $request->input();
-        $data['list'] = ($data['type']=='list' ? json_encode($data['values']) : '');
+        if($data['type']=='list' || $data['type']=='checklist') {
+            $data['list'] = json_encode($data['values'], JSON_UNESCAPED_UNICODE);
+        } else {
+            $data['list'] = '';
+        }
         $data['unit'] = ($data['type']=='integer' ? $data['unit'] : '');
-        Attribute::create($data);
-        return redirect()->route('admin.attributes.index')->withMessage('Атрибут добавлен');
+        $attribute = Attribute::create($data);
+        if($attribute) {
+            return redirect()->route('admin.attributes.index')->withMessage('Атрибут добавлен');
+        }else {
+            return redirect()->route('admin.attributes.index')->withError('Не удалось добавить аттрибут');
+        }
     }
 
     /**
@@ -75,10 +82,20 @@ class AttributeController extends Controller
     public function update(\App\Http\Requests\admin\AttributeRequest $request, $id)
     {
         $data = $request->input();
-        $data['list'] = ($data['type']=='list' ? json_encode($data['values']) : '');
+        if($data['type']=='list' || $data['type']=='checklist') {
+            $data['list'] = json_encode($data['values'], JSON_UNESCAPED_UNICODE);
+        } else {
+            $data['list'] = '';
+        }
+
         $data['unit'] = ($data['type']=='integer' ? $data['unit'] : '');
-        Attribute::findOrFail($id)->update($data);
-        return redirect()->route('admin.attributes.index')->withMessage('Атрибут изменен');
+        $attribute = Attribute::findOrFail($id)->update($data);
+        if($attribute) {
+            return redirect()->route('admin.attributes.index')->withMessage('Атрибут изменен');
+        }else {
+            return redirect()->route('admin.attributes.index')->withError('Не удалось изменить аттрибут');
+        }
+
     }
 
     /**

@@ -224,7 +224,7 @@
                                     {{--</div>--}}
                                 {{--@endisset--}}
                                 @foreach($product->attributes as $item )
-                                    <div class="description-scroll__param-title description-scroll__mt"><strong>{{$item->name}}:</strong><span class="description-scroll__param-value">{{$item->pivot->value}}</span>
+                                    <div class="description-scroll__param-title description-scroll__mt"><strong>{{$item->name}}:</strong><span class="description-scroll__param-value">{{$item->pivot_values}}</span>
                                     </div>
                                 @endforeach
                                 {{--<!-- Country of origin-->--}}

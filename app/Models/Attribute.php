@@ -17,6 +17,7 @@ class Attribute extends Model
         'type',
         'unit',
         'list',
+        'list_trans',
         'is_filter',
         'status'
     ];
@@ -142,7 +143,15 @@ class Attribute extends Model
     public function scopePublished($query) {
         return $query->where('status', 1);
     }
+    //accessors
+    //
+    public function getPivotValuesAttribute() {
+        if(in_array($this->type, ['Список', 'Список чекбоксов']) && $this->list) {
+            return implode(',', json_decode($this->pivot->value, true));
+        }
+        return $this->pivot->value;
 
+    }
     // Get color name by its hash
     public function getColorAttribute($code = null)
     {

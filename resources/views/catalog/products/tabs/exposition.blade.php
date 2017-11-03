@@ -26,7 +26,7 @@
         </div>
         <div class="page js-tab-page">
             @foreach($product->attributes as $item )
-                <div class="page__param-title "><strong>{{$item->name}}:</strong><span class="page__param-value">{{$item->pivot->value}}</span>
+                <div class="page__param-title "><strong>{{$item->name}}:</strong><span class="page__param-value">{{$item->pivot_values}}</span>
                 </div>
             @endforeach
         </div>

@@ -1,6 +1,7 @@
 /node_modules
 /vendor
 /public/robots.txt
+/public/uploads
 /public/storage
 /public/hot
 /public/css

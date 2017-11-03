@@ -350,7 +350,7 @@ jQuery(function($) {
             $('.' + $(this).data('class')).hide();
         }
         if($(this).find('option:selected').data('id')) {
-            $('#' + $(this).find('option:selected').data('id')).show();
+            $('.' + $(this).find('option:selected').data('id')).show();
         }
     });
 
