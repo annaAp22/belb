@@ -2652,11 +2652,16 @@ button {
   display: none;
 }
 
+.tabulator-details .page>p,
+.tabulator-details .page li {
+  font-family: Open Sans,sans-serif;
+}
+
 .tabulator-details .page.active {
   display: block;
 }
 
-.tabulator-details--expo .page>p {
+.tabulator-details .page__param-value {
   font-family: Open Sans,sans-serif;
 }
 
@@ -7684,6 +7689,7 @@ footer {
 
 .description-scroll__param-value {
   font-family: Open Sans,sans-serif;
+  font-size: 14px;
   font-weight: 400;
   color: #666;
 }
@@ -8422,6 +8428,7 @@ footer {
   -webkit-flex-basis: -webkit-calc(100%/24 * 24 - 24px);
   -ms-flex-preferred-size: calc(100% / 24 * 24 - 24px);
   flex-basis: calc(100% / 24 * 24 - 24px);
+  font-family: Open Sans,sans-serif;
   font-size: 14px;
   color: #000;
 }
@@ -8754,7 +8761,7 @@ footer {
 .main-benefits-banner__image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .main-benefits-banner__caption {
