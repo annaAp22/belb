@@ -11041,7 +11041,8 @@ h3 {
 }
 
 .page-text__text {
-  font-size: 14px;
+  font-family: Open Sans,sans-serif;
+  font-size: 16px;
   margin: 30px 0 0;
   line-height: 24px;
 }
@@ -11089,9 +11090,10 @@ h3 {
   flex-basis: calc(100% / 24 * 24 - 24px);
 }
 
+.page-text p,
 .page-text ul {
-  font-size: 14px;
-  line-height: 24px;
+  font-family: Open Sans,sans-serif;
+  font-size: 16px;
 }
 
 .circle-black-white {
