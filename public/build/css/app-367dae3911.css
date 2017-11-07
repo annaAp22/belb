@@ -11090,6 +11090,7 @@ h3 {
   flex-basis: calc(100% / 24 * 24 - 24px);
 }
 
+.page-text ol,
 .page-text p,
 .page-text ul {
   font-family: Open Sans,sans-serif;
