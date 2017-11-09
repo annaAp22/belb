@@ -986,277 +986,283 @@ template {
 .sprite-arrow-down-blue-min {
   width: 8px;
   height: 6px;
-  background-position: -5px -5px;
+  background-position: -10px -10px;
 }
 
 .sprite-arrow-down-blue2-min {
   width: 10px;
   height: 7px;
-  background-position: -23px -5px;
+  background-position: -38px -10px;
 }
 
 .sprite-arrow-down-min {
   width: 21px;
   height: 12px;
-  background-position: -43px -5px;
+  background-position: -68px -10px;
 }
 
 .sprite-arrow-dwn-min {
   width: 10px;
   height: 6px;
-  background-position: -74px -5px;
+  background-position: -109px -10px;
 }
 
 .sprite-arrow-l-blue-min {
   width: 13px;
   height: 10px;
-  background-position: -94px -5px;
+  background-position: -139px -10px;
 }
 
 .sprite-arrow-l-icon-min {
   width: 8px;
   height: 16px;
-  background-position: -117px -5px;
+  background-position: -172px -10px;
 }
 
 .sprite-arrow-left-blue-min {
   width: 12px;
   height: 21px;
-  background-position: -135px -5px;
+  background-position: -200px -10px;
 }
 
 .sprite-arrow-r-blue-min {
   width: 19px;
   height: 13px;
-  background-position: -157px -5px;
+  background-position: -232px -10px;
 }
 
 .sprite-arrow-r-icon-min {
   width: 8px;
   height: 16px;
-  background-position: -186px -5px;
+  background-position: -271px -10px;
 }
 
 .sprite-arrow-right-blue-min {
   width: 12px;
   height: 21px;
-  background-position: -204px -5px;
+  background-position: -299px -10px;
 }
 
 .sprite-arrow-top-min {
   width: 12px;
   height: 16px;
-  background-position: -226px -5px;
+  background-position: -331px -10px;
 }
 
 .sprite-arrow-up-blue-min {
   width: 10px;
   height: 7px;
-  background-position: -248px -5px;
+  background-position: -363px -10px;
 }
 
 .sprite-arrow-up-min {
   width: 20px;
   height: 12px;
-  background-position: -268px -5px;
+  background-position: -10px -46px;
 }
 
 .sprite-burg-min {
   width: 20px;
   height: 15px;
-  background-position: -5px -27px;
+  background-position: -50px -46px;
 }
 
 .sprite-cart-icon-min {
   width: 32px;
   height: 32px;
-  background-position: -35px -27px;
+  background-position: -90px -46px;
 }
 
 .sprite-cart-icon-white-min {
   width: 24px;
   height: 24px;
-  background-position: -77px -27px;
+  background-position: -142px -46px;
 }
 
 .sprite-checkbox-pen-min {
   width: 31px;
   height: 31px;
-  background-position: -248px -27px;
+  background-position: -232px -46px;
 }
 
 .sprite-checked-symbol-min {
   width: 59px;
   height: 59px;
-  background-position: -77px -68px;
+  background-position: -283px -51px;
 }
 
 .sprite-comment-bubble-min {
   width: 36px;
   height: 32px;
-  background-position: -146px -68px;
+  background-position: -10px -130px;
+}
+
+.sprite-corner {
+  width: 57px;
+  height: 55px;
+  background-position: -66px -130px;
 }
 
 .sprite-cross-blue-min {
   width: 12px;
   height: 12px;
-  background-position: -289px -27px;
+  background-position: -363px -37px;
 }
 
 .sprite-cross-red-min {
   width: 10px;
   height: 10px;
-  background-position: -192px -49px;
+  background-position: -186px -69px;
 }
 
 .sprite-delivery-icon-min {
   width: 44px;
   height: 26px;
-  background-position: -212px -68px;
+  background-position: -143px -130px;
 }
 
 .sprite-favorite-heart-active {
   width: 27px;
   height: 25px;
-  background-position: -266px -68px;
+  background-position: -207px -130px;
 }
 
 .sprite-favorite-heart-min {
   width: 27px;
   height: 25px;
-  background-position: -5px -103px;
+  background-position: -254px -130px;
 }
 
 .sprite-favorite-icon-min {
   width: 17px;
   height: 14px;
-  background-position: -5px -68px;
+  background-position: -301px -130px;
 }
 
 .sprite-home-icon-min {
   width: 18px;
   height: 16px;
-  background-position: -42px -103px;
+  background-position: -338px -130px;
 }
 
 .sprite-icon-chk35 {
   width: 35px;
   height: 35px;
-  background-position: -266px -103px;
+  background-position: -301px -166px;
 }
 
 .sprite-icon-chk40 {
   width: 40px;
   height: 40px;
-  background-position: -192px -104px;
+  background-position: -10px -221px;
 }
 
 .sprite-icon-eye-min {
   width: 22px;
   height: 11px;
-  background-position: -5px -148px;
+  background-position: -356px -166px;
 }
 
 .sprite-information-symbol-min {
   width: 9px;
   height: 31px;
-  background-position: -37px -148px;
+  background-position: -362px -69px;
 }
 
 .sprite-instagram-icon-min {
   width: 36px;
   height: 35px;
-  background-position: -56px -148px;
+  background-position: -143px -197px;
 }
 
 .sprite-laundry-min {
   width: 28px;
   height: 30px;
-  background-position: -102px -148px;
+  background-position: -70px -221px;
 }
 
 .sprite-listing__filter {
   width: 19px;
   height: 18px;
-  background-position: -140px -148px;
+  background-position: -199px -197px;
 }
 
 .sprite-locate-places-min {
   width: 18px;
   height: 26px;
-  background-position: -242px -148px;
+  background-position: -238px -197px;
 }
 
 .sprite-money-tool-min {
   width: 27px;
   height: 31px;
-  background-position: -270px -148px;
+  background-position: -276px -221px;
 }
 
 .sprite-outline-min {
   width: 51px;
   height: 22px;
-  background-position: -102px -189px;
+  background-position: -323px -221px;
 }
 
 .sprite-person-min {
   width: 23px;
   height: 26px;
-  background-position: -5px -189px;
+  background-position: -118px -263px;
 }
 
 .sprite-phone-icon-min {
   width: 13px;
   height: 13px;
-  background-position: -169px -148px;
+  background-position: -161px -263px;
 }
 
 .sprite-phone-icon-white-min {
   width: 25px;
   height: 25px;
-  background-position: -163px -189px;
+  background-position: -194px -263px;
 }
 
 .sprite-play-button-min {
   width: 66px;
   height: 66px;
-  background-position: -198px -189px;
+  background-position: -239px -272px;
 }
 
 .sprite-product__basket_done {
   width: 26px;
   height: 19px;
-  background-position: -274px -189px;
+  background-position: -325px -263px;
 }
 
 .sprite-sale {
   width: 122px;
   height: 122px;
-  background-position: -311px -5px;
+  background-position: -395px -10px;
 }
 
 .sprite-search-icon-min {
   width: 17px;
   height: 17px;
-  background-position: -311px -137px;
+  background-position: -398px -152px;
 }
 
 .sprite-smile-succsess-gray {
   width: 46px;
   height: 46px;
-  background-position: -338px -137px;
+  background-position: -435px -152px;
 }
 
 .sprite-star-blue-big-min {
   width: 25px;
   height: 26px;
-  background-position: -394px -137px;
+  background-position: -394px -218px;
 }
 
 .sprite-star-blue-min {
   width: 16px;
   height: 16px;
-  background-position: -310px -173px;
+  background-position: -501px -152px;
 }
 
 #input-rating-1:checked~label[for=input-rating-2],
@@ -1272,79 +1278,79 @@ template {
 .sprite-star-min {
   width: 26px;
   height: 26px;
-  background-position: -394px -173px;
+  background-position: -439px -218px;
 }
 
 .sprite-star-white-min {
   width: 16px;
   height: 16px;
-  background-position: -38px -209px;
+  background-position: -501px -188px;
 }
 
 .sprite-thermometer-min {
   width: 20px;
   height: 34px;
-  background-position: -64px -209px;
+  background-position: -485px -224px;
 }
 
 .sprite-thumbs-up-hand-symbol-min {
   width: 29px;
   height: 29px;
-  background-position: -310px -209px;
+  background-position: -371px -278px;
 }
 
 .sprite-tick-icon-blue-min {
   width: 21px;
   height: 19px;
-  background-position: -349px -209px;
+  background-position: -70px -278px;
 }
 
 .sprite-trigon-l-min {
   width: 10px;
   height: 13px;
-  background-position: -380px -209px;
+  background-position: -10px -188px;
 }
 
 .sprite-trigon-r-blue-min {
   width: 10px;
   height: 12px;
-  background-position: -400px -209px;
+  background-position: -420px -278px;
 }
 
 .sprite-trigon-r-min {
   width: 10px;
   height: 13px;
-  background-position: -420px -209px;
+  background-position: -450px -278px;
 }
 
 .sprite-trigon-white-min {
   width: 52px;
   height: 61px;
-  background-position: -94px -231px;
+  background-position: -111px -311px;
 }
 
 .sprite-twitter-icon-min {
   width: 34px;
   height: 34px;
-  background-position: -380px -232px;
+  background-position: -480px -278px;
 }
 
 .sprite-video-player-min {
   width: 29px;
   height: 23px;
-  background-position: -5px -276px;
+  background-position: -10px -332px;
 }
 
 .sprite-vk-icon-min {
   width: 33px;
   height: 33px;
-  background-position: -44px -276px;
+  background-position: -183px -332px;
 }
 
 .sprite-youtube-logo-min {
   width: 75px;
   height: 61px;
-  background-position: -156px -276px;
+  background-position: -325px -332px;
 }
 
 #loader.hidden {
@@ -2341,56 +2347,58 @@ button {
 }
 
 .error-404 {
-  position: relative;
+  font-family: Open Sans,sans-serif;
+  margin-top: 48px;
+  margin-bottom: 140px;
 }
 
-.error-404 .ps,
-.error-404 h1 {
-  position: absolute;
-  z-index: 1;
-}
-
-.error-404 .ps {
-  top: 120px;
-  width: 280px;
-  color: #272727;
-  font-size: 14px;
+.error-404__corner1 {
+  width: 100%;
   text-align: left;
 }
 
-.error-404 .ps .sprite_main-close-2 {
-  display: block;
-  margin: 0 auto 60px;
+.error-404__corner2 {
+  width: 100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.error-404__wrap {
-  min-width: 100%;
-  padding-bottom: 100px;
+.error-404__corner2 i {
+  margin-right: 0;
+  margin-left: auto;
 }
 
-.error-404__404 {
-  font-size: 300px;
+.error-404__txt {
+  margin-bottom: 45px;
+  padding-left: 12%;
+  padding-right: 12%;
+  font-size: 24px;
+  color: #0b0b0b;
 }
 
-.error-404__text {
-  position: relative;
-}
-
-.error-404__text .btn {
-  position: absolute;
-  bottom: 13%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 272px;
-}
-
-.error-404 .img {
+.error-404__title,
+.error-404__txt {
+  width: 100%;
   text-align: center;
+  font-weight: 800;
 }
 
-.error-404 .img img {
-  max-width: 100%;
+.error-404__title {
+  margin-top: 40px;
+  margin-bottom: 90px;
+  font-size: 229px;
+  color: #3a69a8;
+}
+
+.error-404 a {
+  margin: 0 auto;
+}
+
+.error-404 .btn_blue-border {
+  padding: 12px 70px;
+  color: #0b0b0b;
+  font-size: 18px;
 }
 
 .total-list-1-header {
@@ -16264,10 +16272,6 @@ h3 {
     width: 100%;
   }
 
-  .error-404 .ps {
-    display: none;
-  }
-
   .grid {
     max-width: 792px;
   }
@@ -17217,8 +17221,8 @@ h3 {
     background-color: #f5f5f5;
   }
 
-  .error-404__text {
-    margin-top: 20px;
+  .error-404__title {
+    font-size: 168px;
   }
 
   .grid {
@@ -19195,10 +19199,6 @@ h3 {
 @media screen and (min-width:1203px) and (max-width:1491px) {
   .container {
     max-width: 1155px;
-  }
-
-  .error-404 .img img {
-    margin-left: 100px;
   }
 
   header {

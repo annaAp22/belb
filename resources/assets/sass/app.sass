@@ -309,45 +309,85 @@ input, textarea
 
 // Error 404 page
 .error-404
-  position: relative
-  h1
-    position: absolute
-    z-index: 1
-  .ps
-    position: absolute
-    z-index: 1
-    top: 120px
-    width: 280px
-    color: #272727
-    font-size: 14px
+  font-family: "Open Sans", sans-serif
+
+  margin-top: 48px
+  margin-bottom: 140px
+  &__corner1
+    width: 100%
     text-align: left
-    +hidden-md(down)
-    .sprite_main-close-2
-      display: block
-      margin: 0 auto 60px
-  &__wrap
-    min-width: 100%
-    padding-bottom: 100px
-  &__404
-    font-size: 300px
-  &__text
-    position: relative
-    +media-sm(down)
-      margin-top: 20px
-    .btn
-      position: absolute
-      bottom: 13%
-      left: 0
-      right: 0
-      margin: auto
-      width: 272px
-  .img
+  &__corner2
+    width: 100%
+    transform: rotate(180deg)
+    i
+      margin-right: 0
+      margin-left: auto
+  &__txt
+    width: 100%
     text-align: center
-    img
-      max-width: 100%
-    +media-lg()
-      img
-        margin-left: 100px
+    margin-bottom: 45px
+    padding-left: 12%
+    padding-right: 12%
+    font-size: 24px
+    font-weight: 800
+    color: #0b0b0b
+  &__title
+    width: 100%
+    margin-top: 40px
+    margin-bottom: 90px
+    font-size: 229px
+    font-weight: 800
+    color: #3a69a8
+    text-align: center
+    +media-sm(down)
+      font-size: 168px
+  a
+    margin: 0 auto
+
+  .btn_blue-border
+    padding: 12px 70px
+    color: #0b0b0b
+    font-size: 18px
+
+  //position: relative
+  //h1
+  //  position: absolute
+  //  z-index: 1
+  //.ps
+  //  position: absolute
+  //  z-index: 1
+  //  top: 120px
+  //  width: 280px
+  //  color: #272727
+  //  font-size: 14px
+  //  text-align: left
+  //  +hidden-md(down)
+  //  .sprite_main-close-2
+  //    display: block
+  //    margin: 0 auto 60px
+  //&__wrap
+  //  min-width: 100%
+  //  padding-bottom: 100px
+  //&__404
+  //  font-size: 300px
+  //&__text
+  //  position: relative
+  //  +media-sm(down)
+  //    margin-top: 20px
+  //  .btn
+  //    position: absolute
+  //    bottom: 13%
+  //    left: 0
+  //    right: 0
+  //    margin: auto
+  //    width: 272px
+  //.img
+  //  text-align: center
+  //  img
+  //    max-width: 100%
+  //  +media-lg()
+  //    img
+  //      margin-left: 100px
 //списки
 .total-list-1-header
   color: #000
