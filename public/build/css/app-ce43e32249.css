@@ -2661,6 +2661,14 @@ button {
   display: block;
 }
 
+.tabulator-details .page__param-title {
+  margin-bottom: 10px;
+}
+
+.tabulator-details .page__param-title strong {
+  margin-right: 10px;
+}
+
 .tabulator-details .page__param-value {
   font-family: Open Sans,sans-serif;
 }
