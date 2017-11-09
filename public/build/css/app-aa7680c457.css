@@ -2661,6 +2661,14 @@ button {
   display: block;
 }
 
+.tabulator-details .page__param-title {
+  margin-bottom: 10px;
+}
+
+.tabulator-details .page__param-title strong {
+  margin-right: 10px;
+}
+
 .tabulator-details .page__param-value {
   font-family: Open Sans,sans-serif;
 }
@@ -7643,7 +7651,7 @@ footer {
 }
 
 .description-scroll ::-webkit-scrollbar-thumb:hover {
-  background-color: #fcd82f;
+  background-color: #5a6daa;
 }
 
 .description-scroll ::-webkit-scrollbar-button {
