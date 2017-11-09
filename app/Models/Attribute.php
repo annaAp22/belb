@@ -147,7 +147,7 @@ class Attribute extends Model
     //
     public function getPivotValuesAttribute() {
         if(in_array($this->type, ['Список', 'Список чекбоксов']) && isset($this->pivot)) {
-            return implode(',', json_decode($this->pivot->value, true));
+            return implode(', ', json_decode($this->pivot->value, true));
         }
         return $this->pivot->value;
 
