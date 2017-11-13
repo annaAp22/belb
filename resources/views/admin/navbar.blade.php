@@ -18,7 +18,7 @@
             <a href="{{route('admin.main')}}" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    Fit2U | Панель управления
+                    Belberg | Панель управления
                 </small>
             </a>
         </div>

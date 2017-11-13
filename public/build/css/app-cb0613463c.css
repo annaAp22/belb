@@ -1879,10 +1879,11 @@ button {
 
 .btn_more {
   font-size: 24px;
+  line-height: 24px;
   font-weight: 700;
   color: #4c68a5;
   border: 1px solid #4c68a5;
-  padding: 15px 20px;
+  padding: 14px 20px 22px;
   -webkit-transition: background-color .3s ease;
   -o-transition: background-color .3s ease;
   transition: background-color .3s ease;
@@ -1894,7 +1895,7 @@ button {
 }
 
 .btn_more .count {
-  margin: 0 20px 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .btn_more:hover {
@@ -10083,7 +10084,7 @@ footer {
 }
 
 .checkout-steps__number.active {
-  background-color: #fcd82f;
+  background-color: #4c68a5;
   color: #fff;
 }
 
@@ -10292,7 +10293,7 @@ footer {
 .form-secure__title {
   font-size: 18px;
   font-weight: 700;
-  color: #43b562;
+  color: #4c68a5;
 }
 
 .form-secure__text {
@@ -10317,7 +10318,7 @@ footer {
 .form-secure-2__title {
   font-size: 18px;
   font-weight: 700;
-  color: #43b562;
+  color: #4c68a5;
 }
 
 .form-secure-2__text {
@@ -10335,7 +10336,7 @@ footer {
 }
 
 .checkout-delivery>input:checked+span {
-  border: 2px solid #36b057;
+  border: 2px solid #4c68a5;
 }
 
 .checkout-delivery>input:checked+span>i {
@@ -10410,9 +10411,9 @@ footer {
 .checkout-delivery__price {
   padding: 7px 10px;
   width: 90px;
-  background-color: #fcd82f;
+  background-color: #4c68a5;
   font-size: 14px;
-  color: #000;
+  color: #fff;
   display: block;
   text-align: center;
   position: absolute;
@@ -10464,7 +10465,7 @@ footer {
 }
 
 .order-success__number>span {
-  color: #36b057;
+  color: #4c68a5;
 }
 
 .order-success__text {
@@ -10915,6 +10916,12 @@ footer {
 
 .contacts__map>img {
   max-width: 100%;
+}
+
+.contacts .btn-callback {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 .delivery {
@@ -18164,6 +18171,26 @@ h3 {
     -webkit-flex-basis: -webkit-calc(100%/24 * 24 - 24px);
     -ms-flex-preferred-size: calc(100% / 24 * 24 - 24px);
     flex-basis: calc(100% / 24 * 24 - 24px);
+  }
+
+  .contacts .btn-callback {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-left: 12px;
+    margin-right: 12px;
+    max-width: -webkit-calc(100%/24 * 20 - 24px);
+    max-width: calc(100% / 24 * 20 - 24px);
+    -webkit-flex-basis: -webkit-calc(100%/24 * 20 - 24px);
+    -ms-flex-preferred-size: calc(100% / 24 * 20 - 24px);
+    flex-basis: calc(100% / 24 * 20 - 24px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .delivery {
