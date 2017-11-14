@@ -56,7 +56,7 @@
                     <div class="form-header__title js-step js-step js-step_2"><i class="sprite sprite-delivery-icon-min"></i><span>Как мы доставим Ваш товар?</span>
                     </div>
                     <!-- Step 3-->
-                    <div class="form-header__title js-step js-step js-step_3" id="js-order-success"><i class="sprite_main sprite_main-checkout-flag-green"></i><span>Готово!</span>
+                    <div class="form-header__title js-step js-step js-step_3" id="js-order-success"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i><span>Готово!</span>
                     </div>
                 </div>
                 <div class="form-body">
