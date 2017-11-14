@@ -2,7 +2,7 @@
 <head></head>
 <body style="font-family: Verdana, Geneva, sans-serif;font-size:16px;line-height:28px;">
 <a href="{{$global_settings['site_url']}}">
-    <img src="{{$global_settings['site_url']}}/img/header__logo-min.png" alt="belberg"/>
+    <img src="{{$global_settings['site_url']}}/img/belberg_logo.png" alt="belberg"/>
 </a>
 <br><br>
 Здравствуйте! Для сброса пароля на сайте <a style="color:#000;" href="{{$global_settings['site_url']}}">{{$global_settings['site_url']}}</a>  перейдите по ссылке:

@@ -16,7 +16,6 @@
 
             <!-- Site logo -->
             <a class="header__logo" href="/">
-                {{--<img src="/img/header__logo-min.png" alt="belberg"/>--}}
                 <img src="/img/belberg_logo.svg" alt="belberg_logo"/>
             </a>
 
