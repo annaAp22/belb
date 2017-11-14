@@ -498,7 +498,7 @@ class FrontApiController extends Controller
                     'phone' => strip_tags($phone),
                     'siteUrl' => $siteUrl,
                 ], function ($message) use ($request) {
-                    $caption = 'Ваш заказ с сайта fit2u';
+                    $caption = 'Ваш заказ с сайта belberg';
                     $message->to($request->input('email'))->subject($caption);
                 });
         }
