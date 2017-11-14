@@ -16,7 +16,7 @@
 
             <!-- Site logo -->
             <a class="header__logo" href="/">
-                {{--<img src="/img/header__logo-min.png" alt="fit2u"/>--}}
+                {{--<img src="/img/header__logo-min.png" alt="belberg"/>--}}
                 <img src="/img/belberg_logo.svg" alt="belberg_logo"/>
             </a>
 
@@ -50,7 +50,7 @@
                         {{--<a target="_blank" href="https://api.whatsapp.com/send?phone={{ $global_settings['phone_number']->number['msk'] }}" rel="nofollow" class="sprite_main sprite_main-header__phones_whatsapp messenger"></a>--}}
                     {{--</i>--}}
                     {{--<i>--}}
-                        {{--<a target="_blank" href="https://mssg.me/fit2u" rel="nofollow" class="sprite_main sprite_main-header__phones_viber messenger"></a>--}}
+                        {{--<a target="_blank" href="https://mssg.me/belberg" rel="nofollow" class="sprite_main sprite_main-header__phones_viber messenger"></a>--}}
                     {{--</i>--}}
                     {{--&nbsp;--}}
                 {{--</div>--}}

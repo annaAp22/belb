@@ -3,7 +3,7 @@
 <head></head>
 <body style="font-family: Verdana, Geneva, sans-serif;font-size:16px;line-height:28px;">
 <a href="{{$siteUrl}}">
-    <img src="{{$siteUrl}}/img/header__logo-min.png" alt="fit2u"/>
+    <img src="{{$siteUrl}}/img/header__logo-min.png" alt="belberg"/>
 </a>
 <br><br>
 Здравствуйте! Благодарим вас за покупку!<br>

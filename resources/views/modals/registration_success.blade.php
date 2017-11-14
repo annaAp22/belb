@@ -14,7 +14,7 @@
             @section('list-marker-1')
                 <div class="sprite_main sprite_main-green-checked"></div>
             @endsection
-            <div class="total-list-1-header">Создав личный кабинет Вы получайте ряд преимуществ в магазине Fit2U</div>
+            <div class="total-list-1-header">Создав личный кабинет Вы получайте ряд преимуществ в магазине Belberg</div>
             <ul class="total-list-1">
                 <li>
                     @yield('list-marker-1')

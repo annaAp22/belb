@@ -28,7 +28,7 @@
                 <div class="page-text__title_h3 page-text__title_700">По всем вопросам звоните:</div>
                 <div class="contacts__text contacts__text_phones">
                     Телефон магазина: <br><strong>{!! $global_settings['phone_number']->value['msk'] !!}</strong>
-                    <a target="_blank" href="https://mssg.me/fit2u" rel="nofollow">
+                    <a target="_blank" href="https://mssg.me/belberg" rel="nofollow">
                         <img src="{{ asset('assets/uploads/contacts-phones-1-min.jpg') }}" alt="">
                     </a>
                 </div>

@@ -1,6 +1,6 @@
 <div class="products-carousel-block instagram">
     <div class="products-carousel-block__title instagram__title">Звезды выбирают
-        <img src="/img/logo-min.png" alt="fit2u">
+        <img src="/img/logo-min.png" alt="belberg">
     </div>
     <div class="products-carousel products-carousel_full-width js-instagram-gallery">
         <button class="btn btn_carousel-control">
