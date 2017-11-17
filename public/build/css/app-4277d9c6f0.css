@@ -13997,11 +13997,11 @@ h3 {
     flex: 0 0 auto;
     margin-left: 12px;
     margin-right: 12px;
-    max-width: -webkit-calc(100%/24 * 11 - 24px);
-    max-width: calc(100% / 24 * 11 - 24px);
-    -webkit-flex-basis: -webkit-calc(100%/24 * 11 - 24px);
-    -ms-flex-preferred-size: calc(100% / 24 * 11 - 24px);
-    flex-basis: calc(100% / 24 * 11 - 24px);
+    max-width: -webkit-calc(100%/24 * 24 - 24px);
+    max-width: calc(100% / 24 * 24 - 24px);
+    -webkit-flex-basis: -webkit-calc(100%/24 * 24 - 24px);
+    -ms-flex-preferred-size: calc(100% / 24 * 24 - 24px);
+    flex-basis: calc(100% / 24 * 24 - 24px);
   }
 
   .delivery__courier {
@@ -14013,11 +14013,11 @@ h3 {
     flex: 0 0 auto;
     margin-left: 12px;
     margin-right: 12px;
-    max-width: -webkit-calc(100%/24 * 12.5 - 24px);
-    max-width: calc(100% / 24 * 12.5 - 24px);
-    -webkit-flex-basis: -webkit-calc(100%/24 * 12.5 - 24px);
-    -ms-flex-preferred-size: calc(100% / 24 * 12.5 - 24px);
-    flex-basis: calc(100% / 24 * 12.5 - 24px);
+    max-width: -webkit-calc(100%/24 * 24 - 24px);
+    max-width: calc(100% / 24 * 24 - 24px);
+    -webkit-flex-basis: -webkit-calc(100%/24 * 24 - 24px);
+    -ms-flex-preferred-size: calc(100% / 24 * 24 - 24px);
+    flex-basis: calc(100% / 24 * 24 - 24px);
   }
 
   .delivery__payment-methods>.images>div {

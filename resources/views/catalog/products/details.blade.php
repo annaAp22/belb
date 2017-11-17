@@ -345,3 +345,47 @@
         </section>
     </main>
 @endsection
+//
+<div class="container-in delivery"><!-- Header -->
+    <!-- With post payment -->
+
+    <div class="delivery__num-list">
+        <div class="page-text__title_700 page-text__title_h2">Другие города России и зарубежья:</div>
+
+        <div class="page-text__title_700 page-text__title_h3"><span class="circle-black-white">1.</span> Без предоплаты.</div>
+
+        <div class="delivery__text">Мы отправим Ваш заказ без предоплаты до 5000 руб.<br />
+            <br />
+            После оформления заказа, с вами свяжется наш менеджер для подтверждения заказа. Стоимость отправки посылки 300 руб. ( В случае, если в заказе одна маленькая вещь - мы можем отправить за 150 руб). Стоимость отправки мы прибавим к сумме наложенного платежа.<br />
+            <br />
+            После отправки мы вышлем вам номер трекинга для отслеживания посылки. Оплатить заказ необходимо на почте при получении. Учтите, что сумма будет выше на 8-12% чем стоимость заказа, т.к. Почта России берет свою комиссию за денежные переводы.</div>
+    </div>
+    <!-- With pre payment -->
+
+    <div class="delivery__num-list">
+        <div class="page-text__title_700 page-text__title_h3"><span class="circle-black-white">2.</span> С предоплатой.</div>
+
+        <div class="delivery__text">Почему удобно платить 100%?<br />
+            <br />
+            Это действительно выгодно! Ваш заказ отправляется 1м классом, что значительно ускоряет его доставку (до 5-7 дней), ну и, конечно, Вы не переплачиваете 8-12% на почте за услуги денежных переводов.</div>
+    </div>
+    <!-- Other payment methods -->
+
+    <div class="delivery__payment-methods">
+        <div class="page-text__title_700 page-text__title_h2">Способы оплаты заказов, оформленных через интернет:</div>
+
+        <div class="container-in images">
+            <div><img alt="" src="/assets/uploads/delivery-alfa-bank-logo-telefon-min.png" /></div>
+
+            <div><img alt="" src="/assets/uploads/delivery-mastercard-logo-2x1-min.png" /></div>
+
+            <div><img alt="" src="/assets/uploads/delivery-qiwi-min.png" /></div>
+
+            <div><img alt="" src="/assets/uploads/delivery-Qu_b6juSazM-min.png" /></div>
+
+            <div><img alt="" src="/assets/uploads/delivery-Visa_Inc._logo.svg_-min.png" /></div>
+
+            <div><img alt="" src="/assets/uploads/delivery-yandex_money-min.png" /></div>
+        </div>
+    </div>
+</div>
