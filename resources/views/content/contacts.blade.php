@@ -32,10 +32,12 @@
                         <img src="{{ asset('assets/uploads/contacts-phones-1-min.jpg') }}" alt="">
                     </a>
                 </div>
+                @if( isset($global_settings['phone_number']->value['free']))
                 <div class="contacts__text contacts__text_phones">
                     Бесплатный номер: <br><strong>{!! $global_settings['phone_number']->value['free'] !!}</strong>
                     <img src="{{ asset('assets/uploads/contacts-phones-2-min.jpg') }}" alt="">
                 </div>
+                @endif
                 <div class="contacts__text contacts__text_phones">
                     Наш email: <br><strong>{!! $global_settings['email_support']->value !!}</strong>
                 </div>

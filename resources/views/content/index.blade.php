@@ -130,19 +130,19 @@
               <span>Читать статьи</span>
             </a>
           </div>
-          <div class="main-aside__item main-aside__item--reviews ">
-            <h3 class="main-aside__header"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i> Отзывы наших клиентов
-            </h3>
-            <a class="main-aside__link main-aside__link--reviews "
-               href="{{ route('reviews') }}">
-              <img class="main-aside__image" src="/img/review_img-min.jpg" alt="" role="presentation"/>
-              <h4 class="main-aside__title">Отзывы наших клиентов.</h4>
-              <p class="main-aside__text">
-                Мы существуем достаточно длительное время и отзывы наших клиентов-это то,чем...
-              </p>
-              <span>Читать отзывы</span>
-            </a>
-          </div>
+          {{--<div class="main-aside__item main-aside__item--reviews ">--}}
+            {{--<h3 class="main-aside__header"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i> Отзывы наших клиентов--}}
+            {{--</h3>--}}
+            {{--<a class="main-aside__link main-aside__link--reviews "--}}
+               {{--href="{{ route('reviews') }}">--}}
+              {{--<img class="main-aside__image" src="/img/review_img-min.jpg" alt="" role="presentation"/>--}}
+              {{--<h4 class="main-aside__title">Отзывы наших клиентов.</h4>--}}
+              {{--<p class="main-aside__text">--}}
+                {{--Мы существуем достаточно длительное время и отзывы наших клиентов-это то,чем...--}}
+              {{--</p>--}}
+              {{--<span>Читать отзывы</span>--}}
+            {{--</a>--}}
+          {{--</div>--}}
           {{--<div class="main-aside__item main-aside__item--video">--}}
             {{--Видео--}}
           {{--</div>--}}

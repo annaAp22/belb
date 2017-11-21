@@ -113,16 +113,17 @@
           font-size: 30px
           font-weight: 700
       .old-price
-        position: static
-        margin-left: 0
-        font-size: 18px
-        text-align: center
+        position: relative
         top: auto
         left: auto
+        font-size: 18px
+        text-align: center
         line-height: 33px
-        padding-right: 30px
+        padding-right: 10px
+        margin-left: 0
+        //text-decoration: line-through
         &:after
-          top: 9px
+          top: 17px
 
   &__size
     padding-top: 0
@@ -330,7 +331,7 @@
     &:hover
       & + .product-gallery__thumb_video__play
         &:before
-          border-color: transparent transparent transparent #fcd82f
+          border-color: transparent transparent transparent #5a6daa
   &__image-wrap
     position: relative
     display: block
@@ -386,7 +387,7 @@
   &__link
     display: block
     font-size: 14px
-    color: #36b057
+    color: #5a6daa
   &__param-title
     & > span, & > strong
       margin-right: 10px
@@ -447,7 +448,7 @@
   &__title
     font-size: 13px
     font-weight: 700
-    color: #36b057
+    color: #5a6daa
     margin-bottom: 5px
   &__note
     font-size: 12px
@@ -583,7 +584,7 @@
   +col-lg(8)
   +col-xl(6)
   height: 350px
-  background: url('/img/product-set-banner-min.jpg') top right no-repeat #fcd82f
+  background: url('/img/product-set-banner-min.jpg') top right no-repeat #f4f4f4
   +media-xs(down)
     background-position: bottom right -15px
   &__title
@@ -730,7 +731,8 @@
       & > span
         display: block
       .old-price
-        position: static
+        //text-decoration: line-through
+        position: relative
         margin-left: 0
         margin-right: 0
         padding-right: 0
@@ -810,7 +812,7 @@
       font-size: 18px
       color: #969696
     &:hover, &:focus, &.active
-      border-color: #fcd82f
+      border-color: #3c6aa9
   &__separator
     width: 1px
     height: 36px
@@ -999,11 +1001,11 @@
     margin-top: 30px
     font-size: 36px
     font-weight: 900
-    color: #fcd82f
+    color: #3c6aa9
   &__text
     margin-top: 30px
     & > span
-      color: #36b057
+      color: #3c6aa9
     padding: 30px 40px 70px
     & > .form-success__text
       max-width: 420px

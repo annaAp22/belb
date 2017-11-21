@@ -7393,18 +7393,18 @@ footer {
 }
 
 .product-detailed__price.product__price .old-price {
-  position: static;
-  margin-left: 0;
-  font-size: 18px;
-  text-align: center;
+  position: relative;
   top: auto;
   left: auto;
+  font-size: 18px;
+  text-align: center;
   line-height: 33px;
-  padding-right: 30px;
+  padding-right: 10px;
+  margin-left: 0;
 }
 
 .product-detailed__price.product__price .old-price:after {
-  top: 9px;
+  top: 17px;
 }
 
 .product-detailed__size {
@@ -7607,7 +7607,7 @@ footer {
 }
 
 .product-gallery__video:hover+.product-gallery__thumb_video__play:before {
-  border-color: transparent transparent transparent #fcd82f;
+  border-color: transparent transparent transparent #5a6daa;
 }
 
 .product-gallery__image-wrap {
@@ -7690,7 +7690,7 @@ footer {
 .description-scroll__link {
   display: block;
   font-size: 14px;
-  color: #36b057;
+  color: #5a6daa;
 }
 
 .description-scroll__param-title>span,
@@ -7779,7 +7779,7 @@ footer {
 .product-warranty__title {
   font-size: 13px;
   font-weight: 700;
-  color: #36b057;
+  color: #5a6daa;
   margin-bottom: 5px;
 }
 
@@ -7988,7 +7988,7 @@ footer {
   -ms-flex-preferred-size: calc(100% / 24 * 24 - 24px);
   flex-basis: calc(100% / 24 * 24 - 24px);
   height: 350px;
-  background: url(/img/product-set-banner-min.jpg) 100% 0 no-repeat #fcd82f;
+  background: url(/img/product-set-banner-min.jpg) 100% 0 no-repeat #f4f4f4;
 }
 
 .product-set-banner__title {
@@ -8208,7 +8208,7 @@ footer {
 }
 
 .product-set-item__price.product__price .old-price {
-  position: static;
+  position: relative;
   margin-left: 0;
   margin-right: 0;
   padding-right: 0;
@@ -8358,7 +8358,7 @@ footer {
 .product-reviews-and-comments__tab.active,
 .product-reviews-and-comments__tab:focus,
 .product-reviews-and-comments__tab:hover {
-  border-color: #fcd82f;
+  border-color: #3c6aa9;
 }
 
 .product-reviews-and-comments__separator {
@@ -8622,7 +8622,7 @@ footer {
   margin-top: 30px;
   font-size: 36px;
   font-weight: 900;
-  color: #fcd82f;
+  color: #3c6aa9;
 }
 
 .form-success__text {
@@ -8631,7 +8631,7 @@ footer {
 }
 
 .form-success__text>span {
-  color: #36b057;
+  color: #3c6aa9;
 }
 
 .form-success__text>.form-success__text {
