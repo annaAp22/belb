@@ -7,11 +7,11 @@
                 <div class="product-review__date">{{ $comment->created_at->format('Y.m.d') }}</div>
                 <div class="product-rating">
                     @for($i = 0; $i < $comment->rating; $i++)
-                        <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                        <div class="icon-fade product-rating__star active"><i class="sprite sprite-star-white-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
                         </div>
                     @endfor
                     @for(;$i < 5; $i++)
-                        <div class="icon-fade product-rating__star"><i class="sprite sprite-star-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
+                        <div class="icon-fade product-rating__star"><i class="sprite sprite-star-white-min normal"></i><i class="sprite sprite-star-blue-min active"></i>
                         </div>
                     @endfor
                 </div>
