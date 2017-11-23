@@ -10946,10 +10946,12 @@ footer {
 }
 
 .delivery__courier {
+  font-family: Open Sans,sans-serif;
   margin-top: 30px;
 }
 
 .delivery__text {
+  font-family: Open Sans,sans-serif;
   margin-top: 30px;
   line-height: 24px;
   font-size: 14px;

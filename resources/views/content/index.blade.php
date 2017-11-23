@@ -46,6 +46,18 @@
            $category2 = $categories->where('id', '50')->first();
            $category3 = $categories->where('id', '54')->first();
         @endphp
+      <!-- -->
+        <a class="main-benefits-banner main-benefits-banner_dark-gray"
+           {{--href="{{ route('catalog', ['sysname' => $category3->sysname]) }}">--}}
+           href="{{ route('tags', 'dlya-krasoty') }}">
+          {{--<img class="main-benefits-banner__image" src="{{ $men->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
+          <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
+          {{--<span class="main-benefits-banner__caption">--}}
+          <span class="main-benefits-banner__title">Для красоты</span>
+          {{--<span class="main-benefits-banner__text">Износостойкая, брендовая спортивная одежда</span>--}}
+          {{--<button class="btn btn_white main-benefits-banner__link">Смотреть<i class="sprite_main sprite_main-button-arrow-right-black"></i></button>--}}
+          {{--</span>--}}
+        </a>
         <a class="main-benefits-banner main-benefits-banner_green"
            {{--href="{{ route('catalog', ['sysname' => $category1->sysname]) }}">--}}
           href="{{ route('tags', 'dlya-uyuta') }}">
@@ -62,23 +74,12 @@
           href="{{ route('tags', 'dlya-zdorovya') }}">
           {{--<img class="main-benefits-banner__image" src="{{ $women->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
           <img class="main-benefits-banner__image" src="/img/img-benef2-min.jpg" alt="" role="presentation"/>
-          <span class="main-benefits-banner__title">Для здоровья</span>
+          <span class="main-benefits-banner__title">Для реабилитации</span>
           {{--<span class="main-benefits-banner__text">Яркая, стильная и удобная спортивная одежда</span>--}}
           {{--<button class="btn btn_white main-benefits-banner__link">Смотреть<i class="sprite_main sprite_main-button-arrow-right-black"></i></button>--}}
 
         </a>
-        <!-- Men category -->
-        <a class="main-benefits-banner main-benefits-banner_dark-gray"
-           {{--href="{{ route('catalog', ['sysname' => $category3->sysname]) }}">--}}
-          href="{{ route('tags', 'dlya-krasoty') }}">
-          {{--<img class="main-benefits-banner__image" src="{{ $men->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
-          <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
-          {{--<span class="main-benefits-banner__caption">--}}
-          <span class="main-benefits-banner__title">Для красоты</span>
-          {{--<span class="main-benefits-banner__text">Износостойкая, брендовая спортивная одежда</span>--}}
-          {{--<button class="btn btn_white main-benefits-banner__link">Смотреть<i class="sprite_main sprite_main-button-arrow-right-black"></i></button>--}}
-          {{--</span>--}}
-        </a>
+
       </div>
       {{--@include('blocks.best-clothes')--}}
     </div>
