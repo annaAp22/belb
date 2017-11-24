@@ -112,14 +112,12 @@
           @else
             <div class="checkbox-filter sidebar-filter__item">
               @foreach($filter->values as $value)
-                @if (isset($filter->status))
-                <label>
+                 <label>
                   <input type="checkbox" name="attribute[{{ $filter->id }}][]" value="{{ $value }}"/>
                   <div class="checkbox-filter__checkbox">
                   </div>
                   <span>{{ $value }}</span>
                 </label>
-                @endif
               @endforeach
             </div>
           @endif
