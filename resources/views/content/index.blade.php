@@ -123,10 +123,9 @@
             <a class="main-aside__link main-aside__link--article "
                href="{{ route('articles') }}">
               <img class="main-aside__image" src="/img/article_img-min.jpg" alt="" role="presentation"/>
-              <h4 class="main-aside__title">Электроспротыни Belberg</h4>
+              <h4 class="main-aside__title">Зеркала Belberg</h4>
               <p class="main-aside__text">
-                Кайфовые простыни самые лучшее очень круто я в улете,вообще атас кайф круто кайф ням сам трам тарарам бам
-                пум...
+                Бьюти инструмент, благодаря которому забота о себе становится легче, и интереснее...
               </p>
               <span>Читать статьи</span>
             </a>
