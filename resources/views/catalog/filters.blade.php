@@ -139,6 +139,7 @@
           class="sprite sprite-cross-red-min"></i><span>Сбросить фильтры</span>
     </button>
     @yield('more_filters')
-
+    <button class="btn btn_blue-border btn_w100p btn__sidebar-close js-toggle-sidebar js-filter-visible" type="button">Скрыть панель
+    </button>
   </form>
 @endif

@@ -77,13 +77,15 @@
                             {{--<img class="banner-look__image banner-look__image_md" src="{{ $offer->uploads->image->lg->url() }}" alt="" role="presentation"/>--}}
                         </a>
                     @endif
-                            <!-- Show filters button md down-->
-                    <button class="btn btn_filter js-toggle-sidebar" data-target=".js-filter-visible">Фильтры подбора товаров</button>
+                    <div class="listing-settings">
+                        <!-- Show filters button md down-->
+                    <button class="btn btn_filter js-toggle-sidebar" data-target=".js-filter-visible">Фильтры</button>
                     <!-- Sorting and view-->
-                    <div class="goods-sorting"><i class="sprite sprite-listing__filter"></i><span>Сортировать товары:</span>
+                    <div class="goods-sorting">
+                        {{--<i class="sprite sprite-listing__filter"></i><span>Сортировать товары:</span>--}}
                         @php
                         $sortNames = array(
-                        'sort' => 'По умолчанию',
+                        'sort' => 'По рейтингу',
                         'expensive' => 'Сначала дороже',
                         'cheaper' => 'Сначала дешевле',
                         'hit' => 'По популярности',
@@ -110,7 +112,7 @@
 
                     <!-- Look md down-->
                     {{--<a class="btn btn_look" href="#">Подобрать<strong> Look</strong></a>--}}
-
+                    </div>
                     <!-- Goods listing-->
                     <div class="goods-listing js-view" id="js-goods">
                         @if($products->count())

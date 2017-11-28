@@ -305,22 +305,33 @@
     //  +hidden-md(down)
     //&_md
     //  +hidden-lg(up)
-
+.listing-settings
+  display: flex
+  width: 100%
+  align-items: flex-start
 // Filter show button
 .btn_filter
   +hidden-lg(up)
-  +col(24)
-  margin-bottom: 25px
-
+  +col(8)
+  +media-sm(down)
+    +col(12)
+  //
+  //+col(24)
+  //margin-bottom: 25px
+.btn__sidebar-close
+  +hidden-lg(up)
 // Sorting
 .goods-sorting
+  display: flex
+  +align(start)
   +media-sm(down)
     flex-wrap: wrap
-  +col(24)
-  +col-lg(12)
-  +col-md(14)
-  display: flex
-  +align(start, center)
+  +col(8)
+  +media-sm(down)
+    +col(12)
+  //+col(24)
+  //+col-lg(12)
+  //+col-md(14)
   & > *
     vertical-align: middle
   & > span
@@ -330,7 +341,7 @@
     margin-left: 10px
     margin-right: 20px
 .sorting-select
-  width: 198px
+  width: 100%
   padding: 8px 18px
   border: 1px solid #B0C0CE
   font-size: 14px
@@ -353,10 +364,10 @@
     width: 42%
   &.year
     width: 23%
-  +media-sm(down)
-    width: 100%
-    margin: 20px 0
-    padding: 11px 18px
+  //+media-sm(down)
+  //  width: 100%
+  //  margin: 20px 0
+  //  padding: 11px 18px
   i
     position: absolute
     right: 10px
@@ -633,7 +644,7 @@
   //  left: -5px
   &__ribbon
     display: block
-    width: 100px
+    width: 60px
     //height: 51px
     //border-radius: 50%
     //line-height: 53px
@@ -642,9 +653,9 @@
     text-transform: uppercase
     color: #ffffff
     text-align: center
-    margin-bottom: 5px
+    //margin-bottom: 5px
     +media-xs()
-      transform: scale(0.7)
+      transform: scale(0.7) translate(-20%,-20%)
     &_hit
       background-color: #ff7b41
     &_new
