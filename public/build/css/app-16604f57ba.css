@@ -4569,7 +4569,7 @@ header:after {
 }
 
 .header__logo {
-  min-width: 130px;
+  min-width: 90px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -19661,6 +19661,10 @@ h3 {
 
   header:after {
     content: "sm";
+  }
+
+  .header__basket {
+    margin-right: 0;
   }
 
   .main-benefits-made-from__col:first-child {

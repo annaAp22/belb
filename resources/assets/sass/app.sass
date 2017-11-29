@@ -80,6 +80,13 @@ a
     max-width: $lg - $margin * 2
   +media-xs()
     padding: 0 12px
+
+.container--wide
+  +media-md(down)
+    padding: 0 12px
+  +media-xs()
+    padding: 0
+
 .container-in
   +grid-in()
 input, textarea

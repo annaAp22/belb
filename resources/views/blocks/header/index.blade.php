@@ -1,6 +1,6 @@
 <header>
     {{--<div class="line line_lg"></div>--}}
-    <div class="container">
+    <div class="container container--wide">
         <div class="header">
             <!-- Schedule -->
             {{--<div class="header__time">с {{ $global_settings['schedule']->value['start_workday'] }} до {{ $global_settings['schedule']->value['end_workday'] }} без выходных</div>--}}
@@ -16,7 +16,6 @@
 
             <!-- Site logo -->
             <a class="header__logo" href="/">
-                {{--<img src="/img/header__logo-min.png" alt="fit2u"/>--}}
                 <img src="/img/belberg_logo.svg" alt="belberg_logo"/>
             </a>
 
