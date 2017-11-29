@@ -67,6 +67,7 @@
     display: none
     &.active
       display: block
+
 .tabulator-details
   padding-bottom: 40px
   padding-top: 40px
@@ -145,9 +146,17 @@
     width: 100%
     margin-top: 24px
   .page
+    > p,li
+      font-family: "Open Sans", sans-serif
     display: none
     &.active
       display: block
+    &__param-title
+      margin-bottom: 10px
+      strong
+        margin-right: 10px
+    &__param-value
+      font-family: "Open Sans", sans-serif
 .tabulator-details--expo
   +media-lg(up)
     padding-top: 0

@@ -6,7 +6,7 @@
             {{ csrf_field() }}
             <button class="icon-fade" type="submit">
                 <i class="sprite_main sprite_main-header__search_active normal"></i>
-                <i class="sprite_main sprite_main-header__search active"></i>
+                <i class="sprite sprite-search-icon-min active"></i>
             </button>
             <input class="js-geo-city-search" type="search" name="text" placeholder="Найти город..."/>
         </form>

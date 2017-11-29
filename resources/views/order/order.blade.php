@@ -48,15 +48,15 @@
             <form name="checkout-form" class="checkout-form" action="{{ route('order.details') }}" method="post">
                 <div class="form-header">
                     <!-- Step 1-->
-                    <div class="form-header__title js-step js-step js-step_1 active"><i class="sprite_main sprite_main-form-header-smile-green"></i><span>Давайте знакомиться!</span>
+                    <div class="form-header__title js-step js-step js-step_1 active"><i class="sprite sprite-smile-succsess-gray"></i><span>Давайте знакомиться!</span>
                     </div>
                     <div class="form-header__notice form-required js-step js-step js-step_1">- эти поля нужно заполнять обязательно
                     </div>
                     <!-- Step 2-->
-                    <div class="form-header__title js-step js-step js-step_2"><i class="sprite_main sprite_main-checkout-truck-green"></i><span>Как мы доставим Ваш товар?</span>
+                    <div class="form-header__title js-step js-step js-step_2"><i class="sprite sprite-delivery-icon-min"></i><span>Как мы доставим Ваш товар?</span>
                     </div>
                     <!-- Step 3-->
-                    <div class="form-header__title js-step js-step js-step_3" id="js-order-success"><i class="sprite_main sprite_main-checkout-flag-green"></i><span>Готово!</span>
+                    <div class="form-header__title js-step js-step js-step_3" id="js-order-success"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i><span>Готово!</span>
                     </div>
                 </div>
                 <div class="form-body">
@@ -98,7 +98,7 @@
                                 <label class="checkout-delivery js-delivery">
                                     <input class="checkout-delivery__input" type="radio" name="delivery_id" value="{{ $delivery->id }}" {{ $key ? '' : 'checked="checked"' }}/>
                                     <span class="checkout-delivery__fake-radio">
-                                        <i class="sprite_main sprite_main-checkout-checked-green"></i>
+                                        <i class="sprite sprite-arrow-down-min"></i>
                                     </span>
                                     <span class="checkout-delivery__description">
                                         <span class="checkout-delivery__title">{{ $delivery->name }}</span>
@@ -116,20 +116,20 @@
                 <div class="form-footer js-step js-step js-step_2 active">
                     <!-- Step 1-->
                     <div class="container-in js-step js-step_1 active">
-                        <button id="order-finish-btn" class="btn btn_green form-footer__btn form-footer__btn_step-1 js-step-next" data-next_step="2" disabled><span>Подтвердить</span><i class="sprite_main sprite_main-icon-arrow-small-right-dark-green"></i>
+                        <button id="order-finish-btn" class="btn btn_green form-footer__btn form-footer__btn_step-1 js-step-next" data-next_step="2" disabled><span>Подтвердить</span>
                         </button>
-                        <div class="form-secure"><i class="form-secure__icon sprite sprite_main sprite sprite_main-form-secure-lock-gray"></i>
+                        <div class="form-secure"><i class="form-secure__icon sprite_main sprite_main-form-secure-lock-gray"></i>
                             <div>
                                 <div class="form-secure__title">Ваши данные защищены
                                 </div>
-                                <div class="form-secure__text">Магазин Fit2U дает абсолютную гарантию на полную конфеденциальность Вашей личной информации
+                                <div class="form-secure__text">Магазин Belberg дает абсолютную гарантию на полную конфеденциальность Вашей личной информации
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Step 2-->
                     <div class="container-in js-step js-step_2">
-                        <button class="btn btn_green form-footer__btn form-footer__btn_step-2" id="js-order-submit"><span>Подтвердить</span><i class="sprite_main sprite_main-icon-arrow-small-right-dark-green"></i>
+                        <button class="btn btn_green form-footer__btn form-footer__btn_step-2" id="js-order-submit"><span>Подтвердить</span>
                         </button>
                         <div class="checkout-total">
                             <div class="checkout-total__text">Итоговая стоимость с учетом доставки:

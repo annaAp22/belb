@@ -30,7 +30,7 @@ class FooterList extends AbstractWidget
      */
     public function run()
     {
-        $pages = Page::type($this->config['type'])->get();
+        $pages = Page::type($this->config['type'])->published()->get();
         return view("widgets.footer_list", [
             'config' => $this->config,
             'pages' => $pages,

@@ -46,6 +46,18 @@
            $category2 = $categories->where('id', '50')->first();
            $category3 = $categories->where('id', '54')->first();
         @endphp
+      <!-- -->
+        <a class="main-benefits-banner main-benefits-banner_dark-gray"
+           {{--href="{{ route('catalog', ['sysname' => $category3->sysname]) }}">--}}
+           href="{{ route('tags', 'dlya-krasoty') }}">
+          {{--<img class="main-benefits-banner__image" src="{{ $men->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
+          <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
+          {{--<span class="main-benefits-banner__caption">--}}
+          <span class="main-benefits-banner__title">Для красоты</span>
+          {{--<span class="main-benefits-banner__text">Износостойкая, брендовая спортивная одежда</span>--}}
+          {{--<button class="btn btn_white main-benefits-banner__link">Смотреть<i class="sprite_main sprite_main-button-arrow-right-black"></i></button>--}}
+          {{--</span>--}}
+        </a>
         <a class="main-benefits-banner main-benefits-banner_green"
            {{--href="{{ route('catalog', ['sysname' => $category1->sysname]) }}">--}}
           href="{{ route('tags', 'dlya-uyuta') }}">
@@ -62,23 +74,12 @@
           href="{{ route('tags', 'dlya-zdorovya') }}">
           {{--<img class="main-benefits-banner__image" src="{{ $women->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
           <img class="main-benefits-banner__image" src="/img/img-benef2-min.jpg" alt="" role="presentation"/>
-          <span class="main-benefits-banner__title">Для здоровья</span>
+          <span class="main-benefits-banner__title">Для реабилитации</span>
           {{--<span class="main-benefits-banner__text">Яркая, стильная и удобная спортивная одежда</span>--}}
           {{--<button class="btn btn_white main-benefits-banner__link">Смотреть<i class="sprite_main sprite_main-button-arrow-right-black"></i></button>--}}
 
         </a>
-        <!-- Men category -->
-        <a class="main-benefits-banner main-benefits-banner_dark-gray"
-           {{--href="{{ route('catalog', ['sysname' => $category3->sysname]) }}">--}}
-          href="{{ route('tags', 'dlya-krasoty') }}">
-          {{--<img class="main-benefits-banner__image" src="{{ $men->uploads->img_main->original->url() }}" alt="" role="presentation"/>--}}
-          <img class="main-benefits-banner__image" src="/img/img-benef3-min.jpg" alt="" role="presentation"/>
-          {{--<span class="main-benefits-banner__caption">--}}
-          <span class="main-benefits-banner__title">Для красоты</span>
-          {{--<span class="main-benefits-banner__text">Износостойкая, брендовая спортивная одежда</span>--}}
-          {{--<button class="btn btn_white main-benefits-banner__link">Смотреть<i class="sprite_main sprite_main-button-arrow-right-black"></i></button>--}}
-          {{--</span>--}}
-        </a>
+
       </div>
       {{--@include('blocks.best-clothes')--}}
     </div>
@@ -122,27 +123,26 @@
             <a class="main-aside__link main-aside__link--article "
                href="{{ route('articles') }}">
               <img class="main-aside__image" src="/img/article_img-min.jpg" alt="" role="presentation"/>
-              <h4 class="main-aside__title">Электроспротыни Belberg</h4>
+              <h4 class="main-aside__title">Зеркала Belberg</h4>
               <p class="main-aside__text">
-                Кайфовые простыни самые лучшее очень круто я в улете,вообще атас кайф круто кайф ням сам трам тарарам бам
-                пум...
+                Бьюти инструмент, благодаря которому забота о себе становится легче, и интереснее...
               </p>
               <span>Читать статьи</span>
             </a>
           </div>
-          <div class="main-aside__item main-aside__item--reviews ">
-            <h3 class="main-aside__header"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i> Отзывы наших клиентов
-            </h3>
-            <a class="main-aside__link main-aside__link--reviews "
-               href="{{ route('reviews') }}">
-              <img class="main-aside__image" src="/img/review_img-min.jpg" alt="" role="presentation"/>
-              <h4 class="main-aside__title">Отзывы наших клиентов.</h4>
-              <p class="main-aside__text">
-                Мы существуем достаточно длительное время и отзывы наших клиентов-это то,чем...
-              </p>
-              <span>Читать отзывы</span>
-            </a>
-          </div>
+          {{--<div class="main-aside__item main-aside__item--reviews ">--}}
+            {{--<h3 class="main-aside__header"><i class="sprite sprite-thumbs-up-hand-symbol-min"></i> Отзывы наших клиентов--}}
+            {{--</h3>--}}
+            {{--<a class="main-aside__link main-aside__link--reviews "--}}
+               {{--href="{{ route('reviews') }}">--}}
+              {{--<img class="main-aside__image" src="/img/review_img-min.jpg" alt="" role="presentation"/>--}}
+              {{--<h4 class="main-aside__title">Отзывы наших клиентов.</h4>--}}
+              {{--<p class="main-aside__text">--}}
+                {{--Мы существуем достаточно длительное время и отзывы наших клиентов-это то,чем...--}}
+              {{--</p>--}}
+              {{--<span>Читать отзывы</span>--}}
+            {{--</a>--}}
+          {{--</div>--}}
           {{--<div class="main-aside__item main-aside__item--video">--}}
             {{--Видео--}}
           {{--</div>--}}

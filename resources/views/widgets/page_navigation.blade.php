@@ -10,7 +10,7 @@
         <div class="nav-pages__item js-toggle-active" data-reset=".js-catalog"><span>Помощь</span><i class="sprite_main sprite_main-icon__arrow_green_down"></i>
             <ul class="nav-pages__dropdown">
                 {{-- MD down visible --}}
-                <li><button class="btn btn_more"><i class="sprite_main sprite_main-icon__arrow_to_top"></i><span>Вернуться назад</span></button></li>
+                <li><button class="btn btn_more"><i class="sprite sprite-arrow-top-min"></i><span>Вернуться назад</span></button></li>
                 <li class="mobile-sidebar__title">Помощь</li>
 
                 @foreach($help as $page)
@@ -21,9 +21,9 @@
     @endif
 
     <a class="nav-pages__item" href="{{ route('news') }}"><span>Акции</span></a>
-    <a class="nav-pages__item" href="{{ route('reviews') }}"><span>Отзывы</span></a>
-    <a class="nav-pages__item" href="{{ route('news') }}"><span>Наши клиенты</span></a>
-    <a class="nav-pages__item" href="{{ route('page', ['sysname' => 'iz_chego_shem']) }}"><span>Услуги</span></a>
+    {{--<a class="nav-pages__item" href="{{ route('reviews') }}"><span>Отзывы</span></a>--}}
+    {{--<a class="nav-pages__item" href="{{ route('news') }}"><span>Наши клиенты</span></a>--}}
+    {{--<a class="nav-pages__item" href="{{ route('page', ['sysname' => 'shop_in_moscow']) }}"><span>Услуги</span></a>--}}
     {{-- Contacts --}}
     <a class="nav-pages__item" href="{{ route('contacts') }}"><span>Контакты</span></a>
 
@@ -33,7 +33,7 @@
 
         <ul class="nav-pages__dropdown">
             {{-- MD down visible --}}
-            <li><button class="btn btn_more"><i class="sprite_main sprite_main-icon__arrow_to_top"></i><span>Вернуться назад</span></button></li>
+            <li><button class="btn btn_more"><i class="sprite sprite-arrow-top-min"></i><span>Вернуться назад</span></button></li>
             <li class="mobile-sidebar__title">Информация</li>
             @include('blocks.info-additional')
             {{-- Static pages --}}

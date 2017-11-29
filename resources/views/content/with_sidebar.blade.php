@@ -10,7 +10,8 @@
             {{--@widget('TagsWidget')--}}
             @widget('BannerLeftWidget')
         </aside>
-        <section class="content">
+        <section class="content content--deliv">
+            {{--{{dd($page)}}--}}
             {!! $page->content !!}
         </section>
 

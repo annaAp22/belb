@@ -19,11 +19,11 @@ class ProductPhoto extends Model
             'preview'    => '45x67',
             'thumb'      => '96x144',
             'cart'       => '81x122',
-            'modal'      => '120x180',
-            'listing'    => '360x540',
-            'kit'        => '330x495',
-            'detail'     => '408x613',
-            'big'        => '1240x1860'
+            'modal'      => '90x94',
+            'listing'    => '264x231',
+            'kit'        => '264x231',
+            'detail'     => '384x328',
+            'big'        => '1390x1200'
         ],
     ];
 

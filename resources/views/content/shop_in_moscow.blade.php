@@ -14,11 +14,11 @@
         <div class="contacts__text">
             <p style="background-color:#e64141; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:136px">г.Москва</p>
 
-            <p style="background-color:#36b057; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:175px">м.Автозаводская</p>
+            <p style="background-color:#36b057; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:175px">м.А.....</p>
 
-            <p style="background-color:#417291; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:279px">ул.Ленинская слобода, д.26, БЦ</p>
+            <p style="background-color:#417291; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:279px">ул.Ленинская, д.26, </p>
 
-            <p style="background-color:#8783c0; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:279px">БЦ &quot;ОМЕГА-2&quot;, корпус А</p>
+            <p style="background-color:#8783c0; color:#ffffff; height:38px; line-height:38px; padding-left:15px; width:279px">корпус А</p>
         </div>
     </div>
     <!-- Time -->

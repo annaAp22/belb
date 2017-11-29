@@ -247,8 +247,8 @@ $(function(){
             // women.prependTo('.js-women-desktop');
             // men.prependTo('.js-men-desktop');
             // training.prependTo('.js-training-desktop');
-            //filter.prependTo('.sidebar');
-            filter.insertAfter('.sidebar-catalog');
+            filter.prependTo('.sidebar');
+            // filter.insertAfter('.sidebar-catalog');
             geo.appendTo('.js-geo-desktop');
 
         } else {

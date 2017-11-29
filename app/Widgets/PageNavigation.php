@@ -20,7 +20,7 @@ class PageNavigation extends AbstractWidget
     public function run()
     {
         // Get info pages
-        $info = \App\Models\Page::info()->get();
+        $info = \App\Models\Page::info()->published()->get();
 
         // Get help pages
         $help = \App\Models\Page::help()->get();

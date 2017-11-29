@@ -36,6 +36,8 @@
       +col-lg(13)
     &--rigth
       +col-lg(11)
+      +media-lg(up)
+        flex-direction: column
     +media-md(down)
       width: 100%
       flex-wrap: wrap
@@ -111,16 +113,17 @@
           font-size: 30px
           font-weight: 700
       .old-price
-        position: static
-        margin-left: 0
-        font-size: 18px
-        text-align: center
+        position: relative
         top: auto
         left: auto
+        font-size: 18px
+        text-align: center
         line-height: 33px
-        padding-right: 30px
+        padding-right: 10px
+        margin-left: 0
+        //text-decoration: line-through
         &:after
-          top: 9px
+          top: 17px
 
   &__size
     padding-top: 0
@@ -328,7 +331,7 @@
     &:hover
       & + .product-gallery__thumb_video__play
         &:before
-          border-color: transparent transparent transparent #fcd82f
+          border-color: transparent transparent transparent #5a6daa
   &__image-wrap
     position: relative
     display: block
@@ -361,7 +364,7 @@
     border-radius: 10px
     background-color: #ebebeb
     &:hover
-      background-color: #fcd82f
+      background-color: #5a6daa
   //background image in sprite_main css
   ::-webkit-scrollbar-button
     background: url(data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAABHElEQVRIS2NkGGSAcZC5h2HUQYRiZGiE0KVLl9b9//9fiJ2d3VdDQ+MzyFc3btzg/fnz52ZGRsZ3enp6QYR8iix/5swZLjY2tvVAM//9/v072MTE5Bsu/VhD6OLFi3uBGpyA+Oj379+9QJo5OTm3ASlrIN6vr68PkiMKgBzDysq6GWoeSM8+oKN8cTkKq4OgPtoK9JEDEB8DmQIMGSsgdQiIvYAO+kqMa5DNAao/AdVjATTrwK9fv7yxOQpnGiLVZ9gcCAtpkKf+/PkDDmkWFpZtUM/tA3rMGV0f3kQNi3uQJqCPAvHFPQ4HrQaKiwGj3dfCwuITSM2JEyf4gNG/Cch8DXRQKEkOIiZaqK1maGR7avuaFPNGQ4hQaAEAw810EAtWPwoAAAAASUVORK5CYII=) no-repeat
@@ -377,14 +380,14 @@
     width: 100%
     height: 100%
     overflow-y: scroll
-    font-size: 14px
+    font-size: 18px
     padding: 10px 20px 0 0
     color: #666666
 
   &__link
     display: block
     font-size: 14px
-    color: #36b057
+    color: #5a6daa
   &__param-title
     & > span, & > strong
       margin-right: 10px
@@ -395,7 +398,9 @@
       font-weight: 700
       color: #000000
   &__param-value
-    font-weight: 500
+    font-family: "Open Sans", sans-serif
+    font-size: 14px
+    font-weight: 400
     color: #666666
   &__mt
     margin-top: 10px
@@ -443,7 +448,7 @@
   &__title
     font-size: 13px
     font-weight: 700
-    color: #36b057
+    color: #5a6daa
     margin-bottom: 5px
   &__note
     font-size: 12px
@@ -490,6 +495,7 @@
       //  border-top: 1px solid #dddddd
       //+media-lg(up)
   &__note
+    font-family: "Open Sans", sans-serif
     font-size: 12px
     width: 100%
   &__title
@@ -578,7 +584,7 @@
   +col-lg(8)
   +col-xl(6)
   height: 350px
-  background: url('/img/product-set-banner-min.jpg') top right no-repeat #fcd82f
+  background: url('/img/product-set-banner-min.jpg') top right no-repeat #f4f4f4
   +media-xs(down)
     background-position: bottom right -15px
   &__title
@@ -725,7 +731,8 @@
       & > span
         display: block
       .old-price
-        position: static
+        //text-decoration: line-through
+        position: relative
         margin-left: 0
         margin-right: 0
         padding-right: 0
@@ -805,7 +812,7 @@
       font-size: 18px
       color: #969696
     &:hover, &:focus, &.active
-      border-color: #fcd82f
+      border-color: #3c6aa9
   &__separator
     width: 1px
     height: 36px
@@ -853,6 +860,7 @@
   &__text
     +col(24)
     +col-md(15)
+    font-family: "Open Sans", sans-serif
     font-size: 14px
     color: #000000
     &_answer
@@ -993,11 +1001,11 @@
     margin-top: 30px
     font-size: 36px
     font-weight: 900
-    color: #fcd82f
+    color: #3c6aa9
   &__text
     margin-top: 30px
     & > span
-      color: #36b057
+      color: #3c6aa9
     padding: 30px 40px 70px
     & > .form-success__text
       max-width: 420px

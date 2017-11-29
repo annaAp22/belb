@@ -224,7 +224,7 @@
                                     {{--</div>--}}
                                 {{--@endisset--}}
                                 @foreach($product->attributes as $item )
-                                    <div class="description-scroll__param-title description-scroll__mt"><strong>{{$item->name}}:</strong><span class="description-scroll__param-value">{{$item->pivot->value}}</span>
+                                    <div class="description-scroll__param-title description-scroll__mt"><strong>{{$item->name}}:</strong><span class="description-scroll__param-value">{{$item->pivot_values}} {{$item->unit}}</span>
                                     </div>
                                 @endforeach
                                 {{--<!-- Country of origin-->--}}
@@ -241,7 +241,7 @@
                                 {{--@if(isset($product->material))--}}
                                     {{--<div class="description-scroll__param-title description-scroll__mt"><strong>Состав ткани:</strong><span class="description-scroll__param-value">{{$product->material}}</span>--}}
                                     {{--</div>--}}
-                                    {{--<a href="https://fit2u.ru/page/iz_chego_shem">Подробнее о тканях</a>--}}
+                                    {{--<a href="https://belberg.ru/page/iz_chego_shem">Подробнее о тканях</a>--}}
                                 {{--@endif--}}
                                 <!-- Other description-->
                                 {{--<div class="description-scroll__param-value description-scroll__mt">--}}

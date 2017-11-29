@@ -58,7 +58,7 @@ class Product extends Model
             'listing'    => '264x231',
             'kit'        => '264x231',
             'detail'     => '384x328',
-            'big'        => '384x328'
+            'big'        => '1390x1200'
         ],
     ];
     private $_availableSizes = null;
@@ -295,7 +295,7 @@ class Product extends Model
 
         $attributes = [];
         foreach(Request::input('attributes') as $attr_id => $attr_value) {
-            if(is_array($attr_value)) $attr_value = json_encode($attr_value);
+            if(is_array($attr_value)) $attr_value = json_encode($attr_value, JSON_UNESCAPED_UNICODE);
 
             $validator = Validator::make([
                 'id'    => $attr_id,

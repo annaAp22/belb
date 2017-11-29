@@ -11,7 +11,7 @@
     <div class="page-wrapper">
         <div class="page js-tab-page active" data-complete="1">
             <!-- Reviews-->
-            <div id="product-reviews" class="product-reviews container-in active js-reviews" data-count="{{$comments->count()}}">
+            <div id="product-reviews" class="product-reviews-and-comments container-in active js-reviews" data-count="{{$comments->count()}}">
                 <!-- Reviews items-->
                 @if($comments->count())
                     <div class="js-container-comments wrapper">

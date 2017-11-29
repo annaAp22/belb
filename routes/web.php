@@ -60,7 +60,7 @@ Route::group([
     Route::get('/photos', ['as' => 'photos', 'uses' => 'PhotoController@index']);
 
     // Look Book
-    Route::get('/look-book', 'LookController@index')->name('look_book');
+    Route::get('/look-bok', 'LookController@index')->name('look_book');
 
     // Woman adn man main category
     Route::get('woman', 'CatalogController@main_category')->name('main_woman');
