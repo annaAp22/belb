@@ -165,12 +165,13 @@ header
       max-width: 70%
     +col-lg(9)
     +col-xl(6)
+    +hidden-xs(down)
   &__phones
     +col-xl(4)
     +col-lg(4)
     +col-md(6)
     +col-sm(8)
-
+    +hidden-xs()
     //& > div
     //  margin: 5px 0 10px
     +media-sm(down)
@@ -201,7 +202,7 @@ header
     i
       +hidden-xs()
   &__basket
-    +col(6)
+    +col(11)
     +col-sm(7)
     +col-md(6)
     +col-lg(3)
@@ -259,7 +260,77 @@ header
         top: -5px
         right: -7px
         +hidden-xs()
+        //mobil
 
+  &__search-btn
+    margin-right: $padding
+    +hidden-sm(up)
+    .icon
+      cursor: pointer
+    .form-search
+      margin: 0 $padding
+    .wrapper
+      position: absolute
+      z-index: 101
+      top: 81px
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 100%
+      display: none
+      &.active
+        display: block
+  &__phone-menu
+    margin: 0 $padding
+    text-align: center
+    +hidden-sm(up)
+    .icon
+      cursor: pointer
+      height: 19px
+    .phone
+      margin-top: 10px
+      text-decoration: none
+      font-weight: 700
+      font-size: 14px
+      color: #000000
+      span
+        display: block
+        margin-top: 4px
+        font-size: 13px
+        line-height: 14px
+        font-weight: 300
+        color: #b0b0b0
+    .messenger
+      min-width: 140px
+    .time
+      margin-top: 6px
+      text-align: center
+      font-size: 14px
+      line-height: 18px
+      font-weight: 300
+      color: #b0b0b0
+      //+col(8)
+      width: 100%
+    .wrapper
+      +grid()
+      z-index: 101
+      top: 71px
+      left: 0
+      right: 0
+      margin: 0 auto
+      position: absolute
+      width: 280px
+      background: #fff
+      padding: 20px
+      box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.3)
+      +align(center, center)
+      display: none
+      &.active
+        display: flex
+      a
+        text-decoration: none
+
+  //}mobil
   &__navigation
     +hidden-md(down)
     +col-lg(24)

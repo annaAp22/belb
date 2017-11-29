@@ -2,7 +2,13 @@ $(function(){
     ///^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
     var email_pattern =/.+@.+\..+/i;
     var $body = $('body');
-
+    //
+    $body.on("click", ".js-input-focus", function(e){
+        var $this = $(this);
+        setTimeout(function() {
+            $($this.data('focus')).focus();
+        }, 200)
+    });
     // Toggle active class
     $body.on("click", ".js-toggle-active", function(e){
         e.stopPropagation();

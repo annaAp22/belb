@@ -1,6 +1,6 @@
 <header>
     {{--<div class="line line_lg"></div>--}}
-    <div class="container container--wide">
+    <div class="container ">
         <div class="header">
             <!-- Schedule -->
             {{--<div class="header__time">с {{ $global_settings['schedule']->value['start_workday'] }} до {{ $global_settings['schedule']->value['end_workday'] }} без выходных</div>--}}
@@ -112,7 +112,57 @@
                         <span class="popup-notice__text">Просмотренное</span>
                     </span>
         </a>
-
+{{--MOBIL--}}
+        <div class="header__search-btn">
+          <i class="icon sprite sprite-search-icon-min js-toggle-active-target js-input-focus" data-target=".js-search-dropdown" data-focus="#js-search-input"></i>
+          <div class="wrapper js-search-dropdown">
+            <form class="form-search" method="POST" action="{{ route('search') }}">
+              {{ csrf_field() }}
+              <button class="icon-fade" type="submit">
+                <i class="sprite sprite-search-icon-min normal"></i>
+                <i class="sprite sprite-search-icon-min active"></i>
+              </button>
+              <input id="js-search-input" type="search" name="text" placeholder="Поиск по товарам..."/>
+            </form>
+          </div>
+        </div>
+        {{--  <form id="search" class="header__search form-search" method="POST" action="{{ route('search') }}">
+        {{ csrf_field() }}
+        <input type="search" name="text" placeholder="Поиск по товарам..."/>
+        <button class="icon-fade " type="submit">
+          <i class="sprite sprite-search-icon-min normal"></i>
+          <i class="sprite sprite-search-icon-min active"></i>
+        </button>
+      </form>
+        --}}
+        <div class="header__phone-menu">
+          <i class="icon sprite sprite-phone-icon-min js-toggle-active-target" data-target=".js-phone-dropdown"></i>
+          <div class="wrapper js-phone-dropdown">
+            {{--<a target="_blank" href="https://mssg.me/fit2u" rel="nofollow" class="messenger">--}}
+              {{--<div class="sprite_main sprite_main-social_32_whatsapp"></div>--}}
+              {{--<div class="sprite_main sprite_main-social_32_viber"></div>--}}
+              {{--<div class="sprite_main sprite_main-social_32_vk"></div>--}}
+              {{--<div class="sprite_main sprite_main-social_32_telegram"></div>--}}
+            {{--</a>--}}
+            {{--<div class="time">с 10 до 20 <br> без выходных</div>--}}
+            {{--<a class="phone roistat-phone" href="tel:+78002221546">--}}
+              {{--<div>8 (800) 222-15-46</div>--}}
+              {{--<span>Бесплатно по России</span>--}}
+            {{--</a>--}}
+            <div class="header__itm">
+              <i class="sprite sprite-phone-icon-min"></i>{!! $global_settings['phone_number']->value['msk'] !!}<br/>
+              <span>с {{ $global_settings['schedule']->value['start_workday'] }}
+                до {{ $global_settings['schedule']->value['end_workday'] }} без выходных</span>
+            </div>
+            @if( isset($global_settings['phone_number']->value['free']))
+              <div class="header__itm"><i
+                    class="sprite sprite-phone-icon-min"></i>{!! $global_settings['phone_number']->value['free'] !!}
+                <br/><span>Бесплатно по России</span>
+              </div>
+            @endif
+          </div>
+        </div>
+        {{--MOBIL--/}}
         {{-- Basket--}}
         @widget('HeaderBasket')
 
