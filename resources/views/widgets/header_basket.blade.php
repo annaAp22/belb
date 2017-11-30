@@ -1,4 +1,4 @@
-<a href="{{ route('cart') }}">
+<a class="basket-lnk" href="{{ route('cart') }}">
     <div class="count">
         <span class="js-cart-quantity">{{ $config['count'] }}</span>
     </div>

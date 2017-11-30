@@ -18747,10 +18747,6 @@ h3 {
   }
 
   .header__phones {
-    display: none;
-  }
-
-  .header__phones {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
@@ -18761,6 +18757,7 @@ h3 {
     border-bottom: 1px solid #e3e3e3;
   }
 
+  .header__phones,
   .header__phones i {
     display: none;
   }
@@ -18771,6 +18768,15 @@ h3 {
 
   .header__basket .seen {
     display: none;
+  }
+
+  .header__basket .basket {
+    width: 24px;
+    height: 26px;
+  }
+
+  .header__basket .count {
+    right: -5px;
   }
 
   .header__basket .count_wishlist {
