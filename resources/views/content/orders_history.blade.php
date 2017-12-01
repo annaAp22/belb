@@ -6,7 +6,7 @@
         <!-- Header -->
         <div class="header-room">
             <h1>Мой кабинет</h1>
-            <div class="icon sprite_main sprite_main-header__enter"></div>
+            <div class="icon sprite sprite-person-min"></div>
             <div class="name">{{$user->name}}</div>
             <div class="id-wrapper">
                 <span class="text">Мой id:</span>
@@ -31,10 +31,10 @@
             </table>
             <div class="horizontal_scroller hidden-md-up js-buttons-wrapper">
                 <div class="left js-left-btn">
-                    <span class="sprite_main sprite_main-icon-arrow-gray-left"></span>
+                    <span class="sprite sprite-arrow-l-icon-min"></span>
                 </div>
                 <div class="right js-right-btn">
-                    <span class="sprite_main sprite_main-icon-arrow-gray-left"></span>
+                    <span class="sprite sprite-arrow-l-icon-min"></span>
                 </div>
             </div>
         </div>

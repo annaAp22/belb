@@ -7,7 +7,7 @@
 
 	<div class="products-carousel product-set-goods" id="js-product-set">
 		<button class="btn btn_carousel-control">
-			<i class="sprite_main sprite_main-icon_arrow_gray_up"></i>
+			<i class="sprite sprite-arrow-up-min"></i>
 		</button>
 			<div class="products-carousel__wrap">
 				<div class="products-carousel__track">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		<button class="btn btn_carousel-control">
-			<i class="sprite_main sprite_main-icon_arrow_gray_up"></i>
+			<i class="sprite sprite-arrow-up-min"></i>
 		</button>
 	</div>
 

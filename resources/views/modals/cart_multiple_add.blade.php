@@ -23,7 +23,7 @@
                             <div id="size" class="sorting-select sorting-select_size js-toggle-active js-select">
                                 <input class="js-value js-required-fields" type="hidden" name="sizes[{{$product->id}}]" value="1"/>
                                 <span class="js-selected">Не задан</span>
-                                <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+                                <i class="sprite sprite-arrow-down-blue2-min"></i>
                                 <div class="sorting-select__dropdown">
                                     @foreach($product->sizes as $size)
                                         <div class="sorting-select__option js-option">{{ $size }}</div>

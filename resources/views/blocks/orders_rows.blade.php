@@ -14,10 +14,10 @@
                 <span class="text close">Подробнеe</span>
                 <span class="text open">Скрыть</span>
                 <span class="close">
-                            <span class="sprite_main sprite_main-icon__arrow_green_down"></span>
+                            <span class="sprite sprite-arrow-down-blue2-min"></span>
                         </span>
                 <span class="open">
-                            <span class="sprite_main sprite_main-icon__arrow_green_up"></span>
+                            <span class="sprite sprite-arrow-up-blue-min"></span>
                         </span>
             </div>
         </td>

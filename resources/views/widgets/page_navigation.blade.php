@@ -7,7 +7,7 @@
     {{--<a class="nav-pages__item" href="{{ route('reviews') }}"><span>Отзывы</span></a>--}}
     @if($help->count())
         {{-- Help pages --}}
-        <div class="nav-pages__item js-toggle-active" data-reset=".js-catalog"><span>Помощь</span><i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+        <div class="nav-pages__item js-toggle-active" data-reset=".js-catalog"><span>Помощь</span><i class="sprite sprite-arrow-down-blue2-min"></i>
             <ul class="nav-pages__dropdown">
                 {{-- MD down visible --}}
                 <li><button class="btn btn_more"><i class="sprite sprite-arrow-top-min"></i><span>Вернуться назад</span></button></li>

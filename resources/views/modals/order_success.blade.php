@@ -1,6 +1,6 @@
 <div id="order-success">
     <div class="modal-box">
-        <div class="form-success form-success_modal"><i class="sprite_main sprite_main-form-succsess-smile-gray"></i>
+        <div class="form-success form-success_modal"><i class="sprite sprite-smile-succsess-gray"></i>
             <div class="form-success__title">Спасибо, {{ $user_name }}!
             </div>
             <div class="form-success__text">

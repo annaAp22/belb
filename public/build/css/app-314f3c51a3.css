@@ -17329,7 +17329,7 @@ h3 {
   }
 }
 
-@media screen and (max-width:1202px) and (max-width:574px) {
+@media screen and (max-width:1202px) and (max-width:575px) {
   .main-find-size__title>div>span:first-child {
     font-size: 24px;
   }
@@ -18643,7 +18643,7 @@ h3 {
   }
 }
 
-@media screen and (max-width:574px) {
+@media screen and (max-width:575px) {
   .container {
     padding: 0 12px;
   }
@@ -18747,6 +18747,10 @@ h3 {
   }
 
   .header__phones {
+    display: none;
+  }
+
+  .header__phones {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
@@ -18757,7 +18761,6 @@ h3 {
     border-bottom: 1px solid #e3e3e3;
   }
 
-  .header__phones,
   .header__phones i {
     display: none;
   }
@@ -19386,7 +19389,7 @@ h3 {
   }
 }
 
-@media screen and (max-width:574px) and (max-width:574px) {
+@media screen and (max-width:575px) and (max-width:575px) {
   .product-cart-table__header>div:nth-child(3),
   .product-cart-table__header>div:nth-child(4),
   .product-cart-table__header>div:nth-child(5),
@@ -20165,7 +20168,7 @@ h3 {
   }
 }
 
-@media screen and (min-width:1203px) and (max-width:574px) {
+@media screen and (min-width:1203px) and (max-width:575px) {
   .goods-listing {
     max-width: 100%;
   }

@@ -6,12 +6,12 @@
         <button class="btn btn_more" type="submit">
             <span class="text">Показать больше</span>
             <span class="count">(<span class="js-orders-remaining">{{$ordersRemained}}</span>)</span>
-            <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+            <i class="sprite sprite-arrow-down-blue2-min"></i>
         </button>
         <input type="hidden" name="perPage">
         <button class="btn btn_show-all" name="showAll" type="submit" value="all" onclick="this.form.perPage.value = this.value">
             <span>Показать все заказы</span>
-            <i class="sprite_main sprite_main-icon__arrow_green_down"></i>
+            <i class="sprite sprite-arrow-down-blue2-min"></i>
         </button>
     </form>
 @endif
