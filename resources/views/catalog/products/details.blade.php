@@ -10,7 +10,14 @@
         <section class="container-in product-detailed">
             <!-- H1 title md down-->
             <h1 class="product-detailed__title product-detailed__title_md-down">
-                {{ $product->name }}
+                @if($link = $product->categories->first())
+                    <a class="btn product-detailed__title-btn" href="{{route('catalog', ['sysname' => $link->sysname])}}" >
+                        <i class="sprite sprite-arrow-left-blue-min"></i>
+                    </a>
+                @endif
+                <span class="product-detailed__title-txt" >
+                    {{ $product->name }}
+                </span>
             </h1>
 
             <!-- Article md down-->
@@ -20,7 +27,18 @@
                     <span class="product-detailed__art-stock"><i class="sprite sprite-tick-icon-blue-min"></i><span>В наличии</span></span>
                 @endif
             </div>
-
+            <!-- -->
+            <div class="product-details-carousel" id="js-product-details-carousel">
+                <div class="product-details-carousel__wrap">
+                    <div class="product-details-carousel__track">
+                        @foreach($product->photos as $i => $photo)
+                            <a class="product__image" data-fancybox="group" href="{{ $photo->uploads->img->url() }}">
+                                <img src="{{ $photo->uploads->img->detail->url() }}" alt="{{ $product->name }}" role="presentation"/>
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
             <!-- Image gallery-->
             <div class="product-gallery product-detailed__gallery" id="js-product-gallery">
                 <div class="product-gallery__navigation" id="js-product-gallery-nav">

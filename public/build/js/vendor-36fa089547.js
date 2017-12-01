@@ -97,6 +97,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
                 });
             }
             self.items.attr('draggable', false);
+            self.items.attr('ondragstart', 'return false;');
             self.items.find('*').attr('draggable', false);
             self.position = 0;
             self.delta = 0;
@@ -112,6 +113,14 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
                 self.delta = 0;
                 self.move();
             }
+        };
+        // Middle slide
+        this.middle = function(){
+            self.position = Math.ceil(self.count / 2);
+            self.delta = self.move((-self.position + 1) * (self.dimension));
+            console.log(self.position);
+            console.log(self.delta);
+            console.log(self.dimension);
         };
 
         // Previous slide

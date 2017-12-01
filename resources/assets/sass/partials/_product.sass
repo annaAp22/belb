@@ -18,12 +18,39 @@
     +col(24)
     margin-bottom: 54px
     margin-top: 0
-    font-weight: 700
-    font-size: 32px
-    color: #464646
-    +media-md(down)
-      font-size: 24px
-      font-weight: 500
+    +media-xs()
+      display: flex
+      align-items: center
+      margin-bottom: 12px
+      order: -1
+    &-txt
+      display: block
+      font-weight: 700
+      font-size: 32px
+      color: #464646
+      +media-md(down)
+        font-size: 24px
+        font-weight: 500
+      +media-xs()
+        font-size: 18px
+        line-height: 18px
+
+      //div
+      //  margin-top: 5px
+      //  display: inline-block
+      //  vertical-align: top
+      //  width: calc(100% - 50px)
+    &-btn
+      +hidden-sm(up)
+      padding: 5px 12px
+      //margin: 0 5px 5px 0
+      margin-right: 5px
+      background: #f3f3f3
+      text-align: center
+      //i
+      //  vertical-align: middle
+  //+hidden-sm()
+      //margin-right: 5px
 
 
   &__column
@@ -74,6 +101,7 @@
         +col(24)
         margin-top: 50px
   &__art
+    +hidden-xs()
     display: flex
     flex-wrap: wrap
     //justify-content: space-between
@@ -213,6 +241,7 @@
   &__link
     min-width: 20px
 .product-gallery
+  +hidden-xs()
   +media-sm(down)
     width: 100%
     flex-direction: column
@@ -1028,3 +1057,43 @@
   margin-bottom:  30px
   +media-md(down)
     text-align: center
+.product-details-carousel
+  +hidden-sm(up)
+  position: relative
+  display: flex
+  overflow: hidden
+  flex-wrap: wrap
+  +align(between)
+  &__wrap
+    min-width: calc(100% - 2*47px)
+    overflow: hidden
+    +media-sm(down)
+      width: 100%
+  &__track
+    +grid-in()
+    &:not(.js-dragged)
+      transition: transform .3s ease
+  &:hover
+    overflow: visible
+    z-index: 2
+  & > .carousel-pagination
+    position: static
+    margin: 12px 0
+    & > .carousel-pagination__page
+      border-color: #bebebe
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        width: 13px
+        height: 13px
+        border-radius: 100%
+        transition: width .2s ease, height .2s ease
+      &.active
+        border-color: #ffffff
+        &:after
+          top: -8px
+          left: -8px
+          width: 21px
+          height: 21px
+          border: 2px solid #bebebe
