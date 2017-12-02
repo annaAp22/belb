@@ -1,7 +1,9 @@
 $(function(){
     ///^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
-    var email_pattern =/.+@.+\..+/i;
+    // var email_pattern =/.+@.+\..+/i;
+    var email_pattern=/^.+@[a-z\d-]+\.[a-z]+$/i;
     var $body = $('body');
+    var discountCodes = {};
     //
     $body.on("click", ".js-input-focus", function(e){
         var $this = $(this);
@@ -311,6 +313,7 @@ $(function(){
     $("#js-product-gallery-nav").carousel({
         vertical : true,
         margin: 0,
+        pagination: true,
         responsive: {
             1492: {items: 3, options: {margin: 0, vertical: true}},
             1203: {items: 3, options: {margin: 0, vertical: true}},
@@ -322,6 +325,7 @@ $(function(){
 
     //Product set carousel
     $("#js-product-set").carousel( {
+        margin: 6,
         responsive: {
             1492 : {items: 5},
             1203 : {items: 4},
@@ -332,7 +336,22 @@ $(function(){
         }
     });
     // Product seen carousel
-    $(".js-product-carousel").carousel();
+    $(".js-product-carousel").carousel({
+        margin: 6
+    });
+    $("#js-product-details-carousel").carousel({
+        margin: 0,
+        pagination: true,
+        items: 1,
+        responsive: {
+            1492 : {items: 5},
+            1203 : {items: 4},
+            840 : {items: 3},
+            576 : {items: 2},
+            300 : {items: 1},
+            0 : {items: 1}
+        }
+    });
 
     // Main page banners slider
     $(".js-single-banner").carousel({
@@ -631,7 +650,10 @@ $(function(){
         images.removeClass('active');
         images.eq($this.index()).addClass('active');
     });
-
+    $body.on('click', '#js-product-gallery-nav .carousel-pagination__page', function(e) {
+        $this = $(this);
+        $('.js-gallery-thumb:eq(' + $this.index() + ')').click();
+    });
     $.fancybox.defaults.hash = false;
     //прокрутка до последнего просмотренного продукта
     $scrollTarget = $('#scrollTarget');
@@ -1090,12 +1112,18 @@ function productsSliderInit() {
             productsSlider.push(slider);
             $(slider).carousel({
                 responsive: {
-                    1492 : {items: 4},
-                    1203 : {items: 3},
-                    840 : {items: 2},
-                    576 : {items: 2},
+                    1492 : {items: 6},
+                    1203 : {items: 5},
+                    840 : {items: 5},
+                    576 : {items: 3},
                     300 : {items: 2},
                     0 : {items: 1}
+                    // 1492 : {items: 4},
+                    // 1203 : {items: 3},
+                    // 840 : {items: 3},
+                    // 576 : {items: 2},
+                    // 300 : {items: 2},
+                    // 0 : {items: 1}
                 }
             });
         }

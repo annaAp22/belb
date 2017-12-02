@@ -31,9 +31,13 @@
             <div class="product-details-carousel" id="js-product-details-carousel">
                 <div class="product-details-carousel__wrap">
                     <div class="product-details-carousel__track">
+                        <a class="product-details-carousel__link" data-fancybox="group" href="{{ $product->uploads->img->url() }}">
+                            <img  src="{{ $product->uploads->img->detail->url() }}" alt="{{ $product->name }}" role="presentation"/>
+                        </a>
                         @foreach($product->photos as $i => $photo)
-                            <a class="product__image" data-fancybox="group" href="{{ $photo->uploads->img->url() }}">
+                            <a class="product-details-carousel__link" data-fancybox="group" href="{{ $photo->uploads->img->url() }}">
                                 <img src="{{ $photo->uploads->img->detail->url() }}" alt="{{ $product->name }}" role="presentation"/>
+
                             </a>
                         @endforeach
                     </div>
