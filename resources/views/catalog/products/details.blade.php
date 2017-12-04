@@ -293,24 +293,24 @@
                             {{--</div>--}}
                         {{--</div>--}}
                         {{--payment--}}
-                        <div class="product-delivery product-detailed__delivery js-toggle-active">
-                            <div class="product-delivery__wrap">
-                                <div class="product-delivery__title"><i class="sprite sprite-money-tool-min"></i><i>Способы оплаты</i><i class="sprite sprite-arrow-up-blue-min"></i>
-                                </div>
-                                <div class="product-delivery__note">Потребление отталкивает социометрический выставочный стенд.
-                                </div>
-                            </div>
-                            <div class="product-delivery__hidden">
-                                Потребление отталкивает социометрический выставочный стенд.
-                            </div>
-                        </div>
+                        {{--<div class="product-delivery product-detailed__delivery js-toggle-active">--}}
+                            {{--<div class="product-delivery__wrap">--}}
+                                {{--<div class="product-delivery__title"><i class="sprite sprite-money-tool-min"></i><i>Способы оплаты</i><i class="sprite sprite-arrow-up-blue-min"></i>--}}
+                                {{--</div>--}}
+                                {{--<div class="product-delivery__note">Потребление отталкивает социометрический выставочный стенд.--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="product-delivery__hidden">--}}
+                                {{--Потребление отталкивает социометрический выставочный стенд.--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <!-- Delivery-->
                         <div class="product-delivery product-delivery--deliv product-detailed__delivery js-toggle-active">
                             <div class="product-delivery__wrap">
                                 <div class="product-delivery__title"><i class="sprite sprite-delivery-icon-min"></i><i>Доставка</i>
                                     <i class="sprite sprite-arrow-up-blue-min"></i>
                                 </div>
-                                <div class="product-delivery__note">{{ $user_city == 'Москва' ? 'Уже завтра!' : 'Почтой' }}
+                                <div class="product-delivery__note">{{ $user_city == 'Москва' ? 'Уже завтра!' : 'Курьером/ТК/Почтой' }}
                                 </div>
                             </div>
 
@@ -318,14 +318,15 @@
                                 <div class="product-delivery__city js-product-delivery__city"><span>Ваш город:</span><span class="">{{ $user_city }}<i class="sprite sprite-arrow-up-blue-min"></i></span>
                                 </div>
                                 @if( $user_city == 'Москва' )
-                                    <div class="product-delivery__cost"><span>Стоимость:</span><span>Курьером: от 300 руб.<br/>При заказе от 6 000 руб<br/>Бесплатно</span></div>
-                                @else
-                                    <div class="product-delivery__cost"><span>Стоимость:</span><span> от 300 руб.</span></div>
+                                    <div class="product-delivery__cost"><span>На все группы товаров по мск <b>бесплатно</b> от 3000 р</span></div>
+                                {{--@else--}}
                                 @endif
-                                <div class="product-delivery__link"><a href="{{ route('delivery') }}">Подробнее о доставке по России</a>
+                                    <div class="product-delivery__cost"><b>Стоимость:</b><span> уточняйте у менеджера</span></div>
+
+                                <div class="product-delivery__link"><a href="{{ route('delivery') }}">Подробнее о доставке</a>
                                 </div>
-                                <div class="product-delivery__store"><i class="sprite sprite-locate-places-min"></i><a href="{{ route('contacts') }}">Магазин в Москве</a>
-                                </div>
+                                {{--<div class="product-delivery__store"><i class="sprite sprite-locate-places-min"></i><a href="{{ route('contacts') }}">Магазин в Москве</a>--}}
+                                {{--</div>--}}
                             </div>
                         </div>
 

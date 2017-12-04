@@ -7,17 +7,17 @@
 </a>
 <br><br>
 Здравствуйте! Благодарим вас за покупку!<br>
-Вы оформили заказ в магазине крутой фитнес-одежды на сайте <a style="color:#000;text-decoration:none;" href="{{$siteUrl}}">{{$siteUrl}}</a><br>
+Вы оформили заказ на сайте <a style="color:#000;text-decoration:none;" href="{{$siteUrl}}">{{$siteUrl}}</a><br>
 <b>Ваш заказ №{{$order->id}}.</b><br>
-Сумма заказа с учётом стоимости доставки {{$order->totalWithDelivery}} р.<br>
-@if(isset($order->delivery))
-    Тип доставки: {{$order->delivery->name}}
-@else
-    Тип доставки: не указан
-@endif
-<br><br>
-<b>Судя по составу заказа, у вас прекрасный вкус:</b>
-<br>
+Сумма заказа без учёта стоимости доставки {{$order->totalWithDelivery}} р.<br>
+{{--@if(isset($order->delivery))--}}
+    {{--Тип доставки: {{$order->delivery->name}}--}}
+{{--@else--}}
+    {{--Тип доставки: не указан--}}
+{{--@endif--}}
+{{--<br><br>--}}
+{{--<b>Судя по составу заказа, у вас прекрасный вкус:</b>--}}
+{{--<br>--}}
 <table cellspacing="0" cellpadding="10" width="100%" style="line-height:16px;border-collapse: collapse;">
     <tr style="color:#a7a7a7;font-size:12px;border-bottom:1px solid #d9d9d9;line-height:24px;white-space:nowrap;">
         <th style="text-align: left;">фото товара:</th>

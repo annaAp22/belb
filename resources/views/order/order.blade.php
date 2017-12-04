@@ -102,13 +102,14 @@
                                     </span>
                                     <span class="checkout-delivery__description">
                                         <span class="checkout-delivery__title">{{ $delivery->name }}</span>
-                                        <span class="checkout-delivery__text">{{ $delivery->descr }}
-                                            <span class="checkout-delivery__price js-price" data-price="{{ $delivery->price }}">{{ $delivery->price }} ₽</span>
-                                        </span>
+                                        {{--<span class="checkout-delivery__text">{{ $delivery->descr }}--}}
+                                            {{--<span class="checkout-delivery__price js-price" data-price="{{ $delivery->price }}">{{ $delivery->price }} ₽</span>--}}
+                                        {{--</span>--}}
                                     </span>
                                 </label>
-                            @endforeach
+                        @endforeach
                         @endisset
+                        <div class="checkout-delivery__ps">Точную стоимость доставки Вам сообщит менеджер</div>
                     </div>
                     <!-- Step 3-->
                     <div class="container-in js-step js-step_3" id="order-success"></div>
@@ -131,12 +132,12 @@
                     <div class="container-in js-step js-step_2">
                         <button class="btn btn_green form-footer__btn form-footer__btn_step-2" id="js-order-submit"><span>Подтвердить</span>
                         </button>
-                        <div class="checkout-total">
-                            <div class="checkout-total__text">Итоговая стоимость с учетом доставки:
-                            </div>
-                            <div class="checkout-total__price js-total" data-amount="{{ $cart['amount'] }}">{{ number_format($cart['amount'], 0, '.', ' ') }} ₽
-                            </div>
-                        </div>
+                        {{--<div class="checkout-total">--}}
+                            {{--<div class="checkout-total__text">Итоговая стоимость с учетом доставки:--}}
+                            {{--</div>--}}
+                            {{--<div class="checkout-total__price js-total" data-amount="{{ $cart['amount'] }}">{{ number_format($cart['amount'], 0, '.', ' ') }} ₽--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </form>

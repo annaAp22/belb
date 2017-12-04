@@ -490,7 +490,7 @@ class FrontApiController extends Controller
                     $caption = 'Быстрый заказ';
                     $message->to($email)->subject($caption);
                 });
-            $phone = \App\Models\Setting::getVar('phone_number')['free'];
+            $phone = \App\Models\Setting::getVar('phone_number')['msk'];
             $siteUrl = env('DEV_SITE_URL', $request->root());
             Mail::send('emails.order_for_user',
                 [

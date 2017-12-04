@@ -1,8 +1,9 @@
 @if($category)
 <div class="sidebar-catalog">
+  @if ($config['type'] !== 'belb')
     <div class="sidebar-catalog__title">{{ $category->name }}:
     </div>
-  @if ($config['type'] !== 'belb')
+  {{--@if ($config['type'] !== 'belb')--}}
   <ul class="sidebar-catalog__level-1">
       @foreach($category->children as $key => $subcategory)
           <li class="list-item js-listing-catalog-{{ $key }}{{ ( ($config['current']->id == $category->id && $loop->first) || $config['current']->parent_id == $subcategory->id || $config['current']->id == $subcategory->id)  ? ' active' : '' }}">
