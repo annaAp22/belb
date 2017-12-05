@@ -430,9 +430,9 @@ body
     transition: visibility 0s ease
   .mobile-sidebar__title
     text-transform: uppercase
-    font-size: 24px
+    font-size: 18px
     font-weight: 900
-    line-height: 36px
+    line-height: 24px
     color: #272727
     margin-bottom: 20px
 
@@ -440,6 +440,24 @@ body
     margin-bottom: 0
   .nav-pages__item.active .nav-pages__dropdown .mobile-sidebar__title
     border-top: none
+
+  .mobile-sidebar__title2-back
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 10px 0
+    margin-bottom: 10px
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 900
+    line-height: 20px
+    color: #272727
+    &:hover, &:focus
+      background-color: #f3f3f3
+    & > i
+      transform: rotate(90deg)
+
 
 
   &__catalog
@@ -466,7 +484,7 @@ body
       & > div
         transform: translateX(0) translateZ(0)
   &__level-2
-    padding: 50px 10px 50px 20px
+    padding: 0 10px 50px 20px
     width: 260px
     position: absolute
     top: 0
@@ -494,6 +512,7 @@ body
         display: block
         &:hover, &:focus
           font-weight: 700
+
   & > .nav-pages
     flex-direction: column
     margin-right: 0
