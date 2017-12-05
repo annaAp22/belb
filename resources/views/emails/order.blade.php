@@ -23,7 +23,7 @@ Email: <b>{{$order->email}}</b><br>
     <tr>
         <th></th>
         <th>название</th>
-        <th>размер</th>
+        {{--<th>размер</th>--}}
         <th>количество</th>
         <th>стоимость</th>
     </tr>
@@ -31,7 +31,7 @@ Email: <b>{{$order->email}}</b><br>
         <tr>
             <td><img src="{{Request::root().$product->uploads->img->preview->url()}}" alt=""></td>
             <td><a href="{{route('product', ['sysname' => $product->sysname])}}">{{$product->name}}</a></td>
-            <td align="center">{{$order->getSizeByProduct($product)}}</td>
+            {{--<td align="center">{{$order->getSizeByProduct($product)}}</td>--}}
             <td align="center">{{$product->pivot->cnt}}</td>
             <td>{{ $product->price * $product->pivot->cnt }} р.</td>
         </tr>

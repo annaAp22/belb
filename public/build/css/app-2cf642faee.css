@@ -1058,211 +1058,235 @@ template {
 .sprite-arrow-up-min {
   width: 20px;
   height: 12px;
-  background-position: -10px -46px;
+  background-position: -10px -37px;
 }
 
 .sprite-burg-min {
   width: 20px;
   height: 15px;
-  background-position: -50px -46px;
+  background-position: -363px -37px;
 }
 
 .sprite-cart-icon-min {
   width: 32px;
   height: 32px;
-  background-position: -90px -46px;
+  background-position: -50px -46px;
 }
 
 .sprite-cart-icon-white-min {
   width: 24px;
   height: 24px;
-  background-position: -142px -46px;
+  background-position: -102px -72px;
 }
 
 .sprite-checkbox-pen-min {
   width: 31px;
   height: 31px;
-  background-position: -232px -46px;
+  background-position: -146px -46px;
 }
 
 .sprite-checked-symbol-min {
   width: 59px;
   height: 59px;
-  background-position: -283px -51px;
+  background-position: -197px -72px;
 }
 
 .sprite-comment-bubble-min {
   width: 36px;
   height: 32px;
-  background-position: -10px -130px;
+  background-position: -276px -72px;
 }
 
 .sprite-corner {
   width: 57px;
   height: 55px;
-  background-position: -66px -130px;
+  background-position: -10px -124px;
 }
 
 .sprite-cross-blue-min {
   width: 12px;
   height: 12px;
-  background-position: -363px -37px;
+  background-position: -10px -72px;
 }
 
 .sprite-cross-red-min {
   width: 10px;
   height: 10px;
-  background-position: -186px -69px;
+  background-position: -332px -72px;
 }
 
 .sprite-delivery-icon-min {
   width: 44px;
   height: 26px;
-  background-position: -143px -130px;
+  background-position: -332px -102px;
 }
 
 .sprite-favorite-heart-active {
   width: 27px;
   height: 25px;
-  background-position: -207px -130px;
+  background-position: -87px -148px;
 }
 
 .sprite-favorite-heart-min {
   width: 27px;
   height: 25px;
-  background-position: -254px -130px;
+  background-position: -134px -148px;
 }
 
 .sprite-favorite-icon-min {
   width: 17px;
   height: 14px;
-  background-position: -301px -130px;
+  background-position: -276px -148px;
+}
+
+.sprite-header__search_active {
+  width: 18px;
+  height: 18px;
+  background-position: -313px -148px;
 }
 
 .sprite-home-icon-min {
   width: 18px;
   height: 16px;
-  background-position: -338px -130px;
+  background-position: -351px -148px;
 }
 
 .sprite-icon-chk35 {
   width: 35px;
   height: 35px;
-  background-position: -301px -166px;
+  background-position: -181px -184px;
 }
 
 .sprite-icon-chk40 {
   width: 40px;
   height: 40px;
-  background-position: -10px -221px;
+  background-position: -236px -184px;
 }
 
 .sprite-icon-eye-min {
   width: 22px;
   height: 11px;
-  background-position: -356px -166px;
+  background-position: -351px -184px;
+}
+
+.sprite-icon__popup_info {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -215px;
 }
 
 .sprite-information-symbol-min {
   width: 9px;
   height: 31px;
-  background-position: -362px -69px;
+  background-position: -52px -215px;
 }
 
 .sprite-instagram-icon-min {
   width: 36px;
   height: 35px;
-  background-position: -143px -197px;
+  background-position: -81px -215px;
 }
 
 .sprite-laundry-min {
   width: 28px;
   height: 30px;
-  background-position: -70px -221px;
+  background-position: -296px -215px;
 }
 
 .sprite-listing__filter {
   width: 19px;
   height: 18px;
-  background-position: -199px -197px;
+  background-position: -137px -215px;
+}
+
+.sprite-listing__filter_arrow_down {
+  width: 10px;
+  height: 12px;
+  background-position: -344px -215px;
 }
 
 .sprite-locate-places-min {
   width: 18px;
   height: 26px;
-  background-position: -238px -197px;
+  background-position: -176px -247px;
 }
 
 .sprite-money-tool-min {
   width: 27px;
   height: 31px;
-  background-position: -276px -221px;
+  background-position: -214px -247px;
 }
 
 .sprite-outline-min {
   width: 51px;
   height: 22px;
-  background-position: -323px -221px;
+  background-position: -261px -265px;
 }
 
 .sprite-person-min {
   width: 23px;
   height: 26px;
-  background-position: -118px -263px;
+  background-position: -344px -247px;
 }
 
 .sprite-phone-icon-min {
   width: 13px;
   height: 13px;
-  background-position: -161px -263px;
+  background-position: -10px -293px;
 }
 
 .sprite-phone-icon-white-min {
   width: 25px;
   height: 25px;
-  background-position: -194px -263px;
+  background-position: -43px -293px;
 }
 
 .sprite-play-button-min {
   width: 66px;
   height: 66px;
-  background-position: -239px -272px;
+  background-position: -88px -307px;
+}
+
+.sprite-product-set-banner-cycle-white {
+  width: 33px;
+  height: 42px;
+  background-position: -332px -293px;
 }
 
 .sprite-product__basket_done {
   width: 26px;
   height: 19px;
-  background-position: -325px -263px;
+  background-position: -10px -355px;
 }
 
 .sprite-sale {
   width: 122px;
   height: 122px;
-  background-position: -395px -10px;
+  background-position: -403px -10px;
 }
 
 .sprite-search-icon-min {
   width: 17px;
   height: 17px;
-  background-position: -398px -152px;
+  background-position: -393px -152px;
 }
 
 .sprite-smile-succsess-gray {
   width: 46px;
   height: 46px;
-  background-position: -435px -152px;
+  background-position: -430px -152px;
 }
 
 .sprite-star-blue-big-min {
   width: 25px;
   height: 26px;
-  background-position: -394px -218px;
+  background-position: -496px -152px;
 }
 
 .sprite-star-blue-min {
   width: 16px;
   height: 16px;
-  background-position: -501px -152px;
+  background-position: -393px -198px;
 }
 
 #input-rating-1:checked~label[for=input-rating-2],
@@ -1278,79 +1302,79 @@ template {
 .sprite-star-min {
   width: 26px;
   height: 26px;
-  background-position: -439px -218px;
+  background-position: -496px -198px;
 }
 
 .sprite-star-white-min {
   width: 16px;
   height: 16px;
-  background-position: -501px -188px;
+  background-position: -387px -244px;
 }
 
 .sprite-thermometer-min {
   width: 20px;
   height: 34px;
-  background-position: -485px -224px;
+  background-position: -423px -244px;
 }
 
 .sprite-thumbs-up-hand-symbol-min {
   width: 29px;
   height: 29px;
-  background-position: -371px -278px;
+  background-position: -463px -244px;
 }
 
 .sprite-tick-icon-blue-min {
   width: 21px;
   height: 19px;
-  background-position: -70px -278px;
+  background-position: -463px -293px;
 }
 
 .sprite-trigon-l-min {
   width: 10px;
   height: 13px;
-  background-position: -10px -188px;
+  background-position: -512px -244px;
 }
 
 .sprite-trigon-r-blue-min {
   width: 10px;
   height: 12px;
-  background-position: -420px -278px;
+  background-position: -181px -152px;
 }
 
 .sprite-trigon-r-min {
   width: 10px;
   height: 13px;
-  background-position: -450px -278px;
+  background-position: -512px -277px;
 }
 
 .sprite-trigon-white-min {
   width: 52px;
   height: 61px;
-  background-position: -111px -311px;
+  background-position: -174px -310px;
 }
 
 .sprite-twitter-icon-min {
   width: 34px;
   height: 34px;
-  background-position: -480px -278px;
+  background-position: -246px -310px;
 }
 
 .sprite-video-player-min {
   width: 29px;
   height: 23px;
-  background-position: -10px -332px;
+  background-position: -385px -332px;
 }
 
 .sprite-vk-icon-min {
   width: 33px;
   height: 33px;
-  background-position: -183px -332px;
+  background-position: -434px -332px;
 }
 
 .sprite-youtube-logo-min {
   width: 75px;
   height: 61px;
-  background-position: -325px -332px;
+  background-position: -246px -385px;
 }
 
 #loader.hidden {
@@ -2179,7 +2203,8 @@ button {
 .btn_blue-border-4.active,
 .btn_blue-border-4:active,
 .btn_blue-border-4:hover {
-  background-color: #4c68a5;
+  background-color: #2d4f7e;
+  border-color: #2d4f7e;
   color: #fff;
 }
 
@@ -3362,6 +3387,9 @@ button {
 .form-main-callb__btn {
   font-size: 16px;
   font-weight: 400;
+  line-height: 20px;
+  width: auto;
+  text-transform: none;
   padding: 12px 45px;
 }
 
@@ -8276,6 +8304,12 @@ footer {
   -o-transition: transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease;
+}
+
+.products-carousel-2__track .wishlist,
+.products-carousel__track .wishlist {
+  top: 2px;
+  right: 2px;
 }
 
 .products-carousel-2:hover,

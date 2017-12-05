@@ -229,7 +229,7 @@
                     href="{{route('page', ['sysname' => 'polzovatelskoe-soglashenie'])}}">обработку персональных данных</a></span>
               </label>
             </div>
-            <button class="btn btn_blue-border form-main-callb__btn " type="submit">Готово</button>
+            <button class="btn btn_blue-border-4 form-main-callb__btn " type="submit">Готово</button>
          </form>
         </div>
         <div class="main-callback__image">
