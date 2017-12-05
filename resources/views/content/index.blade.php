@@ -179,7 +179,7 @@
           </div>
           <div class="main-catalog">
             <h3>Каталог товаров</h3>
-            <p class="main-catalog__sub-title">Более 5 000 товаров</p>
+            <p class="main-catalog__sub-title">{{$cnt_products}} товаров</p>
             <ul class="main-catalog__list">
               @foreach($categories as $category)
                 {{--{{dd($category-> products->count())}}--}}
@@ -203,43 +203,38 @@
         </div>
       </section>
     </div>
-    <div class="colored-bg colored-bg_edf5fc ">
-      <div class="container main-callback">
-        <div class="main-callback__image">
-          {{--<img  src="/img/callb-min.jpg" alt=""/>--}}
-        </div>
+    <div class="container main-callback">
         <div class="main-callback__form">
           <form class="form-main-callb js-form-ajax " id="main-callback" action="{{ route('ajax.callback') }}"
                 method="POST">
             {{ csrf_field() }}
             <input type="hidden" name="is_multiple" value="1">
-
             <div class="form-main-callb_title">Есть вопросы о товаре?</div>
             <p class="form-main-callb_text">Оставьте заявку на обратный звонок,и наш специалист свяжется с Вами!</p>
-            <div class="form-main-callb_line form-main-callb_line--hidden">
-              <label>Ваше имя: <span class="mod-col-or">*</span></label>
-              <input class="js-required-fields input input_text" type="text" name="name" placeholder="Имя" value="x">
+            <div class="form-main-callb_line ">
+              {{--<label>Ваше имя: <span class="mod-col-or">*</span></label>--}}
+              <input class="js-required-fields input input_text" type="text" name="name" placeholder="Введите Ваше имя..." >
             </div>
             <div class="form-main-callb_line">
               <input class="js-required-fields js-phone input " type="text" name="phone"
-                     placeholder="Введите ваш номер...+7 (xxx) xxx xx xx ">
+                     placeholder="Введите Ваш номер телефона...">
               {{--<script type="text/javascript">--}}
               {{--$('.js-phone').mask("+7 000 000 00 00", {placeholder: "+7 ___ ___ __ __"});--}}
               {{--</script>--}}
-              <button class="form-main-callb__btn " type="submit">
-                <i class="sprite sprite-phone-icon-white-min normal"></i>
-              </button>
             </div>
-            <div class="form-main-callb_line form-main-callb_line--hidden">
+            <div class="form-main-callb_line">
               <label class="radio radio_box">
-                <input class="js-required-fields" name="rating" value="1" type="checkbox"><span
-                    class="fake-input"><span></span></span><span class="label">Я соглашаюсь, на <a target="_blank"
-                                                                                                   href="{{route('page', ['sysname' => 'polzovatelskoe-soglashenie'])}}">обработку персональных данных</a></span>
+                <input class="js-required-fields" name="rating"  type="checkbox" value=1><span
+                    class="fake-input"><span></span></span><span class="label">Я соглас(ен/на) на <a target="_blank"
+                    href="{{route('page', ['sysname' => 'polzovatelskoe-soglashenie'])}}">обработку персональных данных</a></span>
               </label>
             </div>
-          </form>
+            <button class="btn btn_blue-border form-main-callb__btn " type="submit">Готово</button>
+         </form>
         </div>
-      </div>
+        <div class="main-callback__image">
+          {{--<img  src="/img/callb-min.jpg" alt=""/>--}}
+        </div>
     </div>
     <section class="main-trust container">
       <h3>Почему нам можно доверять?</h3>

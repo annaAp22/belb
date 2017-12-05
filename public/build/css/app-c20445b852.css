@@ -3309,69 +3309,60 @@ button {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 100%;
-  padding-left: 30px;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  color: #292929;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  color: #222;
 }
 
 .form-main-callb_title {
-  margin-bottom: 80px;
-  font-size: 36px;
+  margin-bottom: 22px;
+  font-size: 24px;
   font-weight: 700;
 }
 
 .form-main-callb_text {
-  max-width: 340px;
-  margin-bottom: 80px;
-  font-family: Open Sans,sans-serif;
-  font-size: 24px;
+  margin-bottom: 35px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .form-main-callb_line {
   position: relative;
+  width: 100%;
+  margin-bottom: 26px;
 }
 
 .form-main-callb_line--hidden {
   display: none;
 }
 
-.form-main-callb_line input {
+.form-main-callb_line .input {
   width: 100%;
   font-size: 17px;
   color: #484848;
   padding: 13px 60px 13px 15px;
   border: 1px solid #e2f1ff;
-  -webkit-box-shadow: 0 5px 26px 1px rgba(0,0,0,.24);
-  box-shadow: 0 5px 26px 1px rgba(0,0,0,.24);
 }
 
-.form-main-callb_line input:active,
-.form-main-callb_line input:focus {
+.form-main-callb_line .input:active,
+.form-main-callb_line .input:focus {
   border: 1px solid #3a68a9;
   color: #000;
 }
 
-.form-main-callb_line input.error {
+.form-main-callb_line .input.error {
   border: 1px solid red;
 }
 
 .form-main-callb__btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  padding: 0;
-  width: 60px;
-  height: 48px;
-  background-color: #0069ac;
-}
-
-.form-main-callb__btn:focus,
-.form-main-callb__btn:hover {
-  background-color: #2d4f7e;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 45px;
 }
 
 /*! nouislider - 9.2.0 - 2017-01-11 10:35:35 */
@@ -9396,16 +9387,18 @@ footer {
   flex: 0 0 auto;
   margin-left: 0;
   margin-right: 0;
-  max-width: 58.33333%;
-  -webkit-flex-basis: 58.33333%;
-  -ms-flex-preferred-size: 58.33333%;
-  flex-basis: 58.33333%;
-  background: url(/img/callb-min.jpg) no-repeat #edf5fc;
+  max-width: 50%;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  background: #f6f7f7 url(/img/callb2.jpg) no-repeat 100% 0;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .main-callback__form {
+  padding: 0 7.2%;
+  background-color: #f6f7f7;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -9414,10 +9407,10 @@ footer {
   flex: 0 0 auto;
   margin-left: 0;
   margin-right: 0;
-  max-width: 41.66667%;
-  -webkit-flex-basis: 41.66667%;
-  -ms-flex-preferred-size: 41.66667%;
-  flex-basis: 41.66667%;
+  max-width: 50%;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
 }
 
 .main-trust {
@@ -17070,6 +17063,25 @@ h3 {
     line-height: 28px;
   }
 
+  .main-callback__image {
+    display: none;
+  }
+
+  .main-callback__form {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
   .video-and-quality .youtube-video__title {
     background-color: hsla(0,0%,100%,.5);
     display: block;
@@ -18094,25 +18106,6 @@ h3 {
     position: static;
     width: 100%;
     font-size: 16px;
-  }
-
-  .main-callback__image {
-    display: none;
-  }
-
-  .main-callback__form {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
   }
 
   .main-quality {
@@ -19319,6 +19312,10 @@ h3 {
 
   .form-footer {
     padding: 0 20px 20px;
+  }
+
+  .checkout-delivery__description {
+    padding: 12px;
   }
 
   .order-success__title {

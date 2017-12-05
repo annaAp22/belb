@@ -9,7 +9,8 @@
 Здравствуйте! Благодарим вас за покупку!<br>
 Вы оформили заказ на сайте <a style="color:#000;text-decoration:none;" href="{{$siteUrl}}">{{$siteUrl}}</a><br>
 <b>Ваш заказ №{{$order->id}}.</b><br>
-Сумма заказа без учёта стоимости доставки {{$order->totalWithDelivery}} р.<br>
+Сумма заказа без учёта стоимости доставки {{$order->amount}} р.<br>
+{{--Сумма заказа без учёта стоимости доставки {{$order->totalWithDelivery}} р.<br>--}}
 {{--@if(isset($order->delivery))--}}
     {{--Тип доставки: {{$order->delivery->name}}--}}
 {{--@else--}}

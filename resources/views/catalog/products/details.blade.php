@@ -310,7 +310,7 @@
                                 <div class="product-delivery__title"><i class="sprite sprite-delivery-icon-min"></i><i>Доставка</i>
                                     <i class="sprite sprite-arrow-up-blue-min"></i>
                                 </div>
-                                <div class="product-delivery__note">{{ $user_city == 'Москва' ? 'Уже завтра!' : 'Курьером/ТК/Почтой' }}
+                                <div class="product-delivery__note">{{ $user_city == 'Москва' ? 'Уже завтра!' : 'Курьером/ТК/ПВЗ' }}
                                 </div>
                             </div>
 
