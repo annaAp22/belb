@@ -413,7 +413,7 @@ body
   left: 0
   width: 260px
   visibility: hidden
-  padding: 50px 20px 50px 20px
+  padding: 0 20px 50px 20px
   transition: visibility 0s ease .3s
   .btn_more
     color: #515151
@@ -434,25 +434,29 @@ body
     font-weight: 900
     line-height: 24px
     color: #272727
-    margin-bottom: 20px
+    margin-bottom: 10px
 
   .mobile-sidebar__title--catalog
     margin-bottom: 0
-  .nav-pages__item.active .nav-pages__dropdown .mobile-sidebar__title
-    border-top: none
+  .nav-pages__item.active .nav-pages__dropdown li
+    border: none
 
   .mobile-sidebar__title2-back
     display: flex
     justify-content: space-between
     align-items: center
-    width: 100%
-    padding: 10px 0
+    //width: 100%
+    padding: 10px
     margin-bottom: 10px
+    margin-left: -10px
+    margin-right: -10px
     text-transform: uppercase
     font-size: 16px
     font-weight: 900
     line-height: 20px
     color: #272727
+    font-family: inherit
+    cursor: pointer
     &:hover, &:focus
       background-color: #f3f3f3
     & > i
@@ -484,7 +488,7 @@ body
       & > div
         transform: translateX(0) translateZ(0)
   &__level-2
-    padding: 0 10px 50px 20px
+    padding: 0 10px 50px 10px
     width: 260px
     position: absolute
     top: 0
@@ -516,7 +520,7 @@ body
   & > .nav-pages
     flex-direction: column
     margin-right: 0
-    margin-bottom: 50px
+    margin-bottom: 20px
 
   .nav-pages__item
     position: static
@@ -535,22 +539,30 @@ body
       box-shadow: none
       background-color: #ffffff
       top: 0
-      padding: 50px 10px 50px 20px
+      padding: 0 10px 50px 10px
       width: 260px
-      min-height: 1000px
+      min-height: 700px
       z-index: 1
       transition: transform .3s ease
       transform: translateX(-260px) translateZ(0)
       & > li > a
         font-size: 16px
-        line-height: 36px
-        padding: 10px 0
+        line-height: 20px
+        //padding: 10px
+        &:hover, &:focus
+          background-color: #f3f3f3
+      & > li:not(:first-child) > a
+        display: inline-block
+        width: 100%
+        padding: 5px 12px
+  //padding: 14px 30px
   .sidebar-filter
     border: none
     padding-left: 0
     padding-right: 0
     & > .sidebar-filter__title
       font-size: 18px
+
 
 // Geo city change
 .sidebar-geo

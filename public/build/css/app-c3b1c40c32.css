@@ -6027,7 +6027,7 @@ header:after {
   left: 0;
   width: 260px;
   visibility: hidden;
-  padding: 50px 20px;
+  padding: 0 20px 50px;
   -webkit-transition: visibility 0s ease .3s;
   -o-transition: visibility 0s ease .3s;
   transition: visibility 0s ease .3s;
@@ -6064,15 +6064,15 @@ header:after {
   font-weight: 900;
   line-height: 24px;
   color: #272727;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .mobile-sidebar .mobile-sidebar__title--catalog {
   margin-bottom: 0;
 }
 
-.mobile-sidebar .nav-pages__item.active .nav-pages__dropdown .mobile-sidebar__title {
-  border-top: none;
+.mobile-sidebar .nav-pages__item.active .nav-pages__dropdown li {
+  border: none;
 }
 
 .mobile-sidebar .mobile-sidebar__title2-back {
@@ -6088,14 +6088,17 @@ header:after {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  padding: 10px 0;
+  padding: 10px;
   margin-bottom: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 900;
   line-height: 20px;
   color: #272727;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .mobile-sidebar .mobile-sidebar__title2-back:focus,
@@ -6160,7 +6163,7 @@ header:after {
 }
 
 .mobile-sidebar__level-2 {
-  padding: 0 10px 50px 20px;
+  padding: 0 10px 50px;
   width: 260px;
   position: absolute;
   top: 0;
@@ -6220,7 +6223,7 @@ header:after {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-right: 0;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .mobile-sidebar .nav-pages__item {
@@ -6261,9 +6264,9 @@ header:after {
   box-shadow: none;
   background-color: #fff;
   top: 0;
-  padding: 50px 10px 50px 20px;
+  padding: 0 10px 50px;
   width: 260px;
-  min-height: 1000px;
+  min-height: 700px;
   z-index: 1;
   -webkit-transition: -webkit-transform .3s ease;
   transition: -webkit-transform .3s ease;
@@ -6276,8 +6279,18 @@ header:after {
 
 .mobile-sidebar .nav-pages__item .nav-pages__dropdown>li>a {
   font-size: 16px;
-  line-height: 36px;
-  padding: 10px 0;
+  line-height: 20px;
+}
+
+.mobile-sidebar .nav-pages__item .nav-pages__dropdown>li>a:focus,
+.mobile-sidebar .nav-pages__item .nav-pages__dropdown>li>a:hover {
+  background-color: #f3f3f3;
+}
+
+.mobile-sidebar .nav-pages__item .nav-pages__dropdown>li:not(:first-child)>a {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 12px;
 }
 
 .mobile-sidebar .sidebar-filter {
