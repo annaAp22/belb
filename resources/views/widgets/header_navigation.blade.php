@@ -1,4 +1,7 @@
 <div class="header__navigation">
+  {{--@php--}}
+  {{--var_dump($categories);--}}
+  {{--@endphp--}}
   <div class="nav-catalog">
     <div class="nav-catalog__btn nav-pages__item js-toggle-active js-catalog-belb " data-reset=".js-pages" ><i
           class="sprite sprite-burg-min nav-pages__icon-burg "></i>
@@ -11,10 +14,17 @@
           <a class="mobile-sidebar__title2-back" ><span>Каталог</span> <i class="sprite sprite-arrow-down-blue2-min"></i>
           </a>
         </li>
+
+
         @foreach($categories as $category)
+          @if(isset($category) && $category->children->count())
+            @include('catalog.dropdown2', ['category' => $category])
+          @else
+
           <li>
             <a href="{{route('catalog', $category->sysname)}}">{{$category->name}}</a>
           </li>
+          @endif
         @endforeach
         {{--<li><a href="{{route('catalog', 'elektroprostyni')}}">Электропростыни</a></li>--}}
       </ul>
