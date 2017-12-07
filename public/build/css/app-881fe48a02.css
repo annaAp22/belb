@@ -14838,6 +14838,7 @@ h3 {
     flex-basis: calc(100% / 24 * 24 - 24px);
   }
 
+  .nav-pages__dropdown .mobile-sidebar__title2-back,
   .nav-pages__dropdown>.mobile-sidebar__title,
   .nav-pages__dropdown>li>button {
     display: none;
