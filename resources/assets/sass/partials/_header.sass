@@ -445,14 +445,14 @@ header
     transition: color .3s ease
     & > *
       vertical-align: middle
-    span
+    & > span
       font-weight: 700
       font-size: 16px
       color: #2d2d2d
       display: inline-block
     & > i
       transition: transform .3s ease
-    &:hover span, &.active span
+    &:hover > span, &.active > span
       cursor: pointer
       color: #3A69A8
       z-index: 6
@@ -487,6 +487,46 @@ header
     &_wide
       span
         width: 150px
+.nav-catalog__itm
+  color: #272727
+  transition:  color .3s ease
+  &:hover span, &.active span
+    cursor: pointer
+    color: #3A69A8
+  &.active
+    i
+      transform: rotate(-180deg)
+    .nav-catalog__dropdown
+      display: block
+  &-title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0
+    padding: 14px 30px
+    font-size: 14px
+    line-height: 24px
+    font-weight: 400
+
+.nav-catalog__dropdown
+  display: none
+  padding: 0
+  list-style: none
+  overflow: hidden
+  margin: 0
+  border-left: 6px solid #3A69A8
+  a
+    display: inline-block
+    padding: 14px 30px
+    font-size: 14px
+    line-height: 24px
+    color: #272727
+    text-decoration: none
+    transition: font-weight .3s ease, color .3s ease
+    &:hover, &:focus
+      font-weight: 700
+      color: #3a69a8
+
 .nav-pages
   display: flex
   margin-right: 30px
@@ -510,7 +550,7 @@ header
       color: #3a69a8
     &.active
       color: #3a69a8
-      i
+      & > i
         transform: rotate(180deg)
 
       .nav-pages__dropdown

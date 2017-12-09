@@ -18,9 +18,18 @@
 
         @foreach($categories as $category)
           @if(isset($category) && $category->children->count())
-            @include('catalog.dropdown2', ['category' => $category])
+            <li class="nav-catalog__itm js-toggle-active">
+              <h5 class="nav-catalog__itm-title" >
+                <span>{{ $category->name }}</span><i class="sprite sprite-arrow-down-blue2-min"></i></h5>
+              <ul class="nav-catalog__dropdown ">
+                @foreach($category->children as $subcat)
+                  <li >
+                    <a href="{{ route('catalog', $subcat->sysname) }}">{{ $subcat->name }}</a>
+                  </li>
+                @endforeach
+              </ul>
+           </li>
           @else
-
           <li>
             <a href="{{route('catalog', $category->sysname)}}">{{$category->name}}</a>
           </li>

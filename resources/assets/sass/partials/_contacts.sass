@@ -106,3 +106,76 @@
     +media-sm(down)
       +col(20)
       justify-content: center
+
+.cooperation
+  margin-top: 50px
+  margin-bottom: 50px
+  background: #938a81 url("/img/cooperation.jpg") no-repeat right top
+  background-size: cover
+  +media-md(down)
+    background: none
+  &__wrap
+    display: flex
+    justify-content: center
+    width: 48.2%
+    margin-left: 0
+    margin-right: auto
+    background-color: rgba(0, 0, 0, 0.259)
+    +media-md(down)
+      width: 100%
+.cooperation__form
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 452px
+  margin-top: 49px
+  margin-bottom: 49px
+  color: #ffffff
+  +media-xs(down)
+    width: 100%
+    padding: 0 10px
+  &-title
+    margin: 0
+    margin-bottom: 12px
+    font-size: 30px
+    line-height: 36px
+    font-weight: 500
+  &-text
+    margin-bottom: 30px
+    font-family: "Open Sans" ,sans-serif
+    font-size: 16px
+    font-weight: 400
+  &-line
+    position: relative
+    width: 100%
+    margin-bottom: 45px
+    &--hidden
+      display: none
+    .input
+      width: 100%
+      font-size: 16px
+      line-height: 36px
+      color: #484848
+      padding: 6px 15px
+      border: 1px solid transparent
+      //box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.24)
+      &:focus, &:active
+        border: 1px solid #3a68a9
+        color: #000
+      &.error
+        border: 1px solid red
+  &-line--r
+    margin-top: -24px
+    margin-bottom: 30px
+    .label
+      font-style: italic
+      color: #ffffff
+      font-family: "Open Sans" ,sans-serif
+
+
+.cooperation__form-btn
+  line-height: 22px
+  width: auto
+  //text-transform: none
+  padding: 12px 45px
+

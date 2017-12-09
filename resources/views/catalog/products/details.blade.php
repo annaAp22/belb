@@ -364,7 +364,8 @@
             @include('looks.product_detailed')
 
             @widget('SimilarProductsWidget', ['product' => $product])
-            @widget('SubscribeWidget')
+            {{--@widget('SubscribeWidget')--}}
+            @widget('CooperationWidget')
         </section>
     </main>
 @endsection
