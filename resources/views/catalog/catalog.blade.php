@@ -155,11 +155,11 @@
 
                 </div>
 
-                @if(isset($category))
-                    @widget('ArticlesWidget', ['category_id' => $category->id,'full' => 1])
-                @elseif(isset($tag))
-                    @widget('ArticlesWidget', ['tag_id' => $tag->id ,'full' => 1])
-                @endif
+                {{--@if(isset($category))--}}
+                    {{--@widget('ArticlesWidget', ['category_id' => $category->id,'full' => 1])--}}
+                {{--@elseif(isset($tag))--}}
+                    {{--@widget('ArticlesWidget', ['tag_id' => $tag->id ,'full' => 1])--}}
+                {{--@endif--}}
             {{--?типа преимущества в статьях ?--}}
                 @widget('adviceWidget', ['tag_id' => 1])
                 {{--@widget('SubscribeWidget')--}}
