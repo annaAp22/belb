@@ -166,9 +166,11 @@ class FrontApiController extends Controller
         Mail::send('emails.cooperation',
             ['name' => $request->input('name'),
                 'email' => $request->input('email')], function ($message) use ($request) {
-                $email = \App\Models\Setting::getVar('email_support');
+//                $email = \App\Models\Setting::getVar('email_support');
+                $email = \App\Models\Setting::getVar('email_opt');
                 $caption = 'Запрос на сотрудничество '.$request->root();
                 $message->to($email)->subject($caption);
+
             });
 
         return response()->json([
