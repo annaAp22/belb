@@ -64,7 +64,7 @@
           @if ($category)
             <section class="article__category-offers">
               <div class="article__category-txt">
-                <h3>{{ $category->title }}</h3>
+                <h3>{{ $category->name }}</h3>
                 <p>{{ $category->text_preview }}</p>
                 <a class="btn btn_green" href="{{route('catalog', $category->sysname)}}">ВЫБРАТЬ</a>
               </div>
