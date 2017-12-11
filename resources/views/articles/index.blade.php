@@ -56,7 +56,7 @@
                 </div>
             </section>
             <section class="content-full-width">
-                @widget('SubscribeWidget')
+                @widget('CooperationWidget') {{--@widget('SubscribeWidget')--}}
             </section>
         </div>
     </main>

@@ -24,7 +24,7 @@
         <div id="js-vk_reviews"></div>
 
         <section class="content-full-width">
-            @widget('SubscribeWidget')
+            @widget('CooperationWidget') {{--@widget('SubscribeWidget')--}}
         </section>
     </main>
 

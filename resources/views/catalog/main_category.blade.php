@@ -21,8 +21,9 @@
 
                 @widget('InstagramWidget')
 
-                @widget('SubscribeWidget')
+                 {{--@widget('SubscribeWidget')--}}
             </section>
         </div>
+        @widget('CooperationWidget')
     </main>
 @stop

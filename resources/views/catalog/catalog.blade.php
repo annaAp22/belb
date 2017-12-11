@@ -166,9 +166,10 @@
             </section>
         </div>
     </main>
-    <div class="colored-bg__f3f2f2">
-        <div class="container">
-            @widget('SubscribeWidget')
-        </div>
-    </div>
+    {{--<div class="colored-bg__f3f2f2">--}}
+        {{--<div class="container">--}}
+           {{--@widget('SubscribeWidget')--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    @widget('CooperationWidget')
 @endsection

@@ -12,9 +12,10 @@
 
 
 		</div>
-        <section class="content-full-width">
-            @widget('SubscribeWidget')
-        </section>
+        {{--<section class="content-full-width">--}}
+             {{--@widget('SubscribeWidget')--}}
+        {{--</section>--}}
 	</main>
+	@widget('CooperationWidget')
 
 @endsection

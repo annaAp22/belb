@@ -105,7 +105,7 @@
         </form>
         <!-- Full width content-->
         <section class="content-full-width">
-            @widget('SubscribeWidget')
+            @widget('CooperationWidget') {{--@widget('SubscribeWidget')--}}
         </section>
     </main>
 @stop
