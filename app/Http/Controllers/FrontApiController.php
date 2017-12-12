@@ -156,6 +156,7 @@ class FrontApiController extends Controller
     public function cooperation(Request $request) {
         $validator = Validator::make($request->input(), [
             'email' => 'required',
+            'phone' => 'required',
             'name' => 'required',
         ]);
 
@@ -165,7 +166,8 @@ class FrontApiController extends Controller
 
         Mail::send('emails.cooperation',
             ['name' => $request->input('name'),
-                'email' => $request->input('email')], function ($message) use ($request) {
+              'phone' => $request->input('phone'),
+              'email' => $request->input('email')], function ($message) use ($request) {
 //                $email = \App\Models\Setting::getVar('email_support');
                 $email = \App\Models\Setting::getVar('email_opt');
                 $caption = 'Запрос на сотрудничество '.$request->root();

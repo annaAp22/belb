@@ -6,5 +6,6 @@
 <br>
 На сайте {{Request::root()}} оставили заявку на сотрудничество:<br>
 Имя:{{$name}}<br>
-e-mail:{{$email}}
+E-mail:{{$email}}
+Телефон:{{$phone}}
 </body>
