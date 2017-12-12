@@ -236,28 +236,28 @@
           {{--<img  src="/img/callb-min.jpg" alt=""/>--}}
         </div>
     </div>
-    <section class="main-trust container">
-      <h3>Почему нам можно доверять?</h3>
-      <div class="main-trust__wrap">
-        <ul class="main-trust__items">
-          <li class="main-trust__item">
-            <h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Качество</span></h4>
-            <p class="main-trust__text">Немецкое товары проверенные временем .</p>
-          </li>
-          <li class="main-trust__item">
-            <h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Гарантия</span></h4>
-            <p class="main-trust__text">Гарантия на нашу продукцию от одного года.</p>
-          </li>
-          <li class="main-trust__item">
-            <h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Материалы</span></h4>
-            <p class="main-trust__text">Наша продукция выполняется из надежных качественных немецких материалов.</p>
-          </li>
-        </ul>
-        <div class="main-trust__img">
-          <img src="/img/germany-min.jpg" alt="Германия"/>
-        </div>
-      </div>
-    </section>
+    {{--<section class="main-trust container">--}}
+      {{--<h3>Почему нам можно доверять?</h3>--}}
+      {{--<div class="main-trust__wrap">--}}
+        {{--<ul class="main-trust__items">--}}
+          {{--<li class="main-trust__item">--}}
+            {{--<h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Качество</span></h4>--}}
+            {{--<p class="main-trust__text">Немецкое товары проверенные временем .</p>--}}
+          {{--</li>--}}
+          {{--<li class="main-trust__item">--}}
+            {{--<h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Гарантия</span></h4>--}}
+            {{--<p class="main-trust__text">Гарантия на нашу продукцию от одного года.</p>--}}
+          {{--</li>--}}
+          {{--<li class="main-trust__item">--}}
+            {{--<h4 class="main-trust__title"><i class="sprite sprite-checked-symbol-min"></i><span>Материалы</span></h4>--}}
+            {{--<p class="main-trust__text">Наша продукция выполняется из надежных качественных немецких материалов.</p>--}}
+          {{--</li>--}}
+        {{--</ul>--}}
+        {{--<div class="main-trust__img">--}}
+          {{--<img src="/img/germany-min.jpg" alt="Германия"/>--}}
+        {{--</div>--}}
+      {{--</div>--}}
+    {{--</section>--}}
     {{--<!-- Main find size-->--}}
     {{--<div class="colored-bg colored-bg_f3f3f3 colored-bg_mt">--}}
     {{--<div class="container">--}}
