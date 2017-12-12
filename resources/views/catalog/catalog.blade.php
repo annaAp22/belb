@@ -70,12 +70,15 @@
                     </div>
 
                     {{-- Category Offer Look banner --}}
-                    @if( isset($category->offers->published) && $category->offers->published->count() )
-                        @php $offer = $category->offers->first(); @endphp
-                        <a class="banner-look" href="{{ $offer->url ?: '' }}" target="_blank">
-                            <img class="banner-look__image banner-look__image_xl" src="{{ $offer->uploads->image->url() }}" alt="" role="presentation"/>
+                    @if( isset($category->offers) && $category->offers->count() )
+                        @php $offer = $category->offers->where('status', 1)->first(); @endphp
+                        @if (isset($offer))
+                        <a class="banner-look"
+                           @if (isset($offer->url))  href="{{ $offer->url }}" target="_blank" @endif>
+                             <img class="banner-look__image banner-look__image_xl" src="{{ $offer->uploads->image->url() }}" alt="" role="presentation"/>
                             {{--<img class="banner-look__image banner-look__image_md" src="{{ $offer->uploads->image->lg->url() }}" alt="" role="presentation"/>--}}
                         </a>
+                        @endif
                     @endif
                     <div class="listing-settings">
                         <!-- Show filters button md down-->
