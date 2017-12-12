@@ -25,7 +25,7 @@ class Offer extends Model
         'image' => [
             'extensions' => 'jpeg,jpg,png',
             'preview'    => '231x45@80',
-            'lg'         => '1155x226@80',
+            'lg'         => '1155x200',
         ]
     ];
 
